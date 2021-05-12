@@ -1,5 +1,5 @@
 ---
-title: Tools
+title: Resource
 nav:
   order: 2
   tooltip: Protocols, datasets, and more
