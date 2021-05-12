@@ -11,12 +11,12 @@ redirect_from:
   - /trainees
 ---
 
-# <i class="fas fa-users"></i>Nat Pombubpa Lab Team
+# <i class="fas fa-users"></i>Nat Pombubpa Team
 
 
 Our lab is recently established in 2021 and we are recruiting both graduate and undergraduate students. We work with a wide range of outstanding groups from around the world, and we are always on the lookout for exciting and unique perspectives. <br>
 
-ห้องปฏิบัติการของเราถูกจัดตั้งในปี 2564 นี้ และเราเปิดรับนิสิตที่สนใจทั้งในระดับปริญญาตรีและปริญญาโท-เอก ห้องปฏิบัติการทำงานร่วมกับนักงิจัยแนวหน้าจากหลายๆแห่งทั่วโลก และเรามองหาทีมงานใหม่ๆ ที่มีมุมมองและความคิดที่น่าตื่นเต้นและไม่เหมือนใครอยู่เสมอๆ 
+ห้องปฏิบัติการของเราถูกจัดตั้งขี้นในปี 2564 นี้ และเราเปิดรับนิสิตที่สนใจทั้งในระดับปริญญาตรีและปริญญาโท-เอก เราทำงานร่วมกับนักวิจัยแนวหน้าจากหลายๆแห่งทั่วโลก และเรามองหาทีมงานใหม่ๆ ที่มีมุมมองและความคิดที่น่าตื่นเต้นและไม่เหมือนใครอยู่เสมอๆ 
 
 {% include list.html data="members" component="portrait" filters="role: pi, group: " %}
 {% include list.html data="members" component="portrait" filters="role: postdoc, group: " %}
@@ -27,6 +27,7 @@ Our lab is recently established in 2021 and we are recruiting both graduate and 
 
 {% include section.html dark=true %}
 
+{:.center}
 We are recruiting, please contct us!!! นิสิตที่สนใจร่วมงานกับเรา ดิดต่อเราได้เลย!!!
 
 {%
