@@ -1,7 +1,7 @@
 ---
 title: Resources
 nav:
-  order: 2
+  order: 3
   tooltip: Protocols, datasets, and more
 redirect_from:
   - /webservers
