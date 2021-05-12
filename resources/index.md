@@ -1,5 +1,5 @@
 ---
-title: Resource
+title: Resources
 nav:
   order: 2
   tooltip: Protocols, datasets, and more
@@ -9,7 +9,7 @@ redirect_from:
   - /apps
 ---
 
-# <i class="fas fa-tools"></i>Tools
+# <i class="fas fa-tools"></i>Resources
 
 We believe in open access and we share our SOPs, protocols, codes, datasets and resources which are publically available on our website. If you have any questions and comments about our resources, please contact us and let us know.
 
