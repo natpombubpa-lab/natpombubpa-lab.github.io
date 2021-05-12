@@ -28,7 +28,7 @@ We use high throughput sequencing (HTS) and bioinformatics to answer important q
 %}
 
 {% capture text %}
-We believe in open access and we share our SOPs, protocols, codes, and resources which are publically available on our website. <br> เราเชื่อมั่นในการแบ่งปันองค์ความรู้ เราจึงเปิดโอกาสให้ทุกท่านสามารถเข้าถึงงานวิจัย ข้อมูล เอกสาร <br> รวมถึงขั้นตอนวิจัยต่างๆ ของเราได้
+We believe in open access and we share our SOPs, protocols, codes, and resources which are publically available on our website. <br> เราเชื่อมั่นในการแบ่งปันองค์ความรู้ เราจึงเปิดโอกาสให้ทุกท่านสามารถเข้าถึงงานวิจัย ข้อมูล เอกสาร รวมถึงขั้นตอนวิจัยต่างๆ ของเราได้
 
 [See our protocols &nbsp;→](resources)
 {:.center}
@@ -43,7 +43,7 @@ We believe in open access and we share our SOPs, protocols, codes, and resources
 %}
 
 {% capture text %}
-We are a team of enthusiastic researchers who committed to improve our understanding about the impact of environmental and agricultural microbiome variation. <br> สมาชิกในกลุ่มวิจัยของเรามุ่งมั่นที่จะสร้างองค์ความรู้เกี่ยวกับการเปลี่ยนแปลงของจุลินทรีย์ในสิ่งแวดล้อม <br> ให้ก้าวหน้าและเข้าใจอย่างลึกซึ้ง
+We are a team of enthusiastic researchers who committed to improve our understanding about the impact of environmental and agricultural microbiome variation. <br> สมาชิกในกลุ่มวิจัยของเรามุ่งมั่นที่จะสร้างองค์ความรู้เกี่ยวกับการเปลี่ยนแปลงของจุลินทรีย์ในสิ่งแวดล้อม ให้ก้าวหน้าและเข้าใจอย่างลึกซึ้ง
 
 [Meet our team &nbsp;→](team)
 {:.center}
