@@ -1,0 +1,253 @@
+# GENERATED AUTOMATICALLY, DO NOT EDIT
+
+- id: doi:10.1093/femsec/fiaa125
+  title: 'Insights into dryland biocrust microbiome: geography, soil depth and crust
+    type affect biocrust microbial communities and networks in Mojave Desert, USA'
+  authors:
+  - Nuttapon Pombubpa
+  - Nicole Pietrasiak
+  - "Paul De\_Ley"
+  - Jason E Stajich
+  publisher: FEMS Microbiology Ecology
+  date: '2020-06-23'
+  link: https://doi.org/d9zk
+  image: https://user-images.githubusercontent.com/54328862/94088799-3901e980-fdc6-11ea-9598-8d23b300f725.png
+  extra-links:
+  - type: journal
+  tags:
+  - Biocrust
+  - Fungi-bacteria networks
+  - Desert microbes
+  - Amplicon sequencing
+  - Fungi
+- id: doi:10.3390/microorganisms8060942
+  title: Uncovered Microbial Diversity in Antarctic Cryptoendolithic Communities Sampling
+    Three Representative Locations of the Victoria Land
+  authors:
+  - Claudia Coleine
+  - Nuttapon Pombubpa
+  - Laura Zucconi
+  - Silvano Onofri
+  - Benedetta Turchetti
+  - Pietro Buzzini
+  - Jason E. Stajich
+  - Laura Selbmann
+  publisher: Microorganisms
+  date: '2020-06-23'
+  link: https://doi.org/ghcm9g
+  image: https://www.mdpi.com/microorganisms/microorganisms-08-00942/article_deploy/html/images/microorganisms-08-00942-g001.png
+  extra-links:
+  - type: journal
+  tags:
+  - Antarctica
+  - Endolithic communities
+  - Fungi
+  - Amplicon sequencing
+- id: doi:10.1007/s00300-020-02625-2
+  title: Sampling strategies to assess microbial diversity of Antarctic cryptoendolithic
+    communities
+  authors:
+  - Claudia Coleine
+  - Jason E. Stajich
+  - Nuttapon Pombubpa
+  - Laura Zucconi
+  - Silvano Onofri
+  - Laura Selbmann
+  publisher: Polar Biology
+  date: '2020-02-17'
+  link: https://doi.org/ghcnbw
+  image: https://www.biorxiv.org/content/biorxiv/early/2019/06/21/676775/F1.large.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Antarctica
+  - Endolithic communities
+  - Amplicon sequencing
+- id: doi:10.3390/life10020013
+  title: Endolithic Fungal Species Markers for Harshest Conditions in the McMurdo
+    Dry Valleys, Antarctica
+  authors:
+  - Claudia Coleine
+  - Nuttapon Pombubpa
+  - Laura Zucconi
+  - Silvano Onofri
+  - Jason E. Stajich
+  - Laura Selbmann
+  publisher: Life
+  date: '2020-02-06'
+  link: https://doi.org/ghcng2
+  image: https://www.mdpi.com/life/life-10-00013/article_deploy/html/images/life-10-00013-g001.png
+  extra-links:
+  - type: journal
+  tags:
+  - Antarctica
+  - Endolithic communities
+  - Amplicon sequencing
+  - McMurdo Dry Valleys
+  - Fungi
+- id: doi:10.1111/1758-2229.12788
+  title: Altitude and fungal diversity influence the structure of Antarctic cryptoendolithic
+    Bacteria communities
+  authors:
+  - Claudia Coleine
+  - Jason E. Stajich
+  - Nuttapon Pombubpa
+  - Laura Zucconi
+  - Silvano Onofri
+  - Fabiana Canini
+  - Laura Selbmann
+  publisher: Environmental Microbiology Reports
+  date: '2019-08-26'
+  link: https://doi.org/ghcng3
+  image: https://sfamjournals.onlinelibrary.wiley.com/cms/asset/1933421f-babc-4b27-973d-309c2d817d6a/emi4.v11.5.cover.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Antarctica
+  - Endolithic communities
+  - Amplicon sequencing
+  - McMurdo Dry Valleys
+  - Bacteria
+- id: doi:10.3389/fevo.2019.00344
+  title: Reproduction and Dispersal of Biological Soil Crust Organisms
+  authors:
+  - Steven D. Warren
+  - Larry L. Clair
+  - Lloyd R. Stark
+  - Louise A. Lewis
+  - Nuttapon Pombubpa
+  - Tania Kurbessoian
+  - Jason E. Stajich
+  - Zachary T. Aanderud
+  publisher: Frontiers in Ecology and Evolution
+  date: '2019-10-04'
+  link: https://doi.org/ggdkg6
+  image: https://frontiersinblog.files.wordpress.com/2016/09/ecology_290x290.png
+  extra-links:
+  - type: journal
+  tags:
+  - Biocrust
+  - Fungi
+  - Bacteria
+  - Dispersal
+  - Reproduction
+- id: doi:10.3389/fmicb.2018.01392
+  title: Antarctic Cryptoendolithic Fungal Communities Are Highly Adapted and Dominated
+    by Lecanoromycetes and Dothideomycetes
+  authors:
+  - Claudia Coleine
+  - Jason E. Stajich
+  - Laura Zucconi
+  - Silvano Onofri
+  - Nuttapon Pombubpa
+  - Eleonora Egidi
+  - Ashley Franks
+  - Pietro Buzzini
+  - Laura Selbmann
+  publisher: Frontiers in Microbiology
+  date: '2018-06-29'
+  link: https://doi.org/gdv3bt
+  image: https://www.frontiersin.org/files/Articles/364185/fmicb-09-01392-HTML/image_m/fmicb-09-01392-g002.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Antarctica
+  - Endolithic communities
+  - Amplicon sequencing
+  - Extremophiles
+  - Fungi
+- id: doi:10.3390/life8020019
+  title: Sun Exposure Shapes Functional Grouping of Fungi in Cryptoendolithic Antarctic
+    Communities
+  authors:
+  - Claudia Coleine
+  - Laura Zucconi
+  - Silvano Onofri
+  - Nuttapon Pombubpa
+  - Jason Stajich
+  - Laura Selbmann
+  publisher: Life
+  date: '2018-06-02'
+  link: https://doi.org/ghcng4
+  image: https://www.mdpi.com/life/life-08-00019/article_deploy/html/images/life-08-00019-g001.png
+  extra-links:
+  - type: journal
+  tags:
+  - Antarctica
+  - Endolithic communities
+  - Amplicon sequencing
+  - FUNGuild
+  - Fungi
+- id: doi:10.1111/mec.14694
+  title: Shrub range expansion alters diversity and distribution of soil fungal communities
+    across an alpine elevation gradient
+  authors:
+  - Courtney G. Collins
+  - Jason E. Stajich
+  - "S\xF6ren E. Weber"
+  - Nuttapon Pombubpa
+  - Jeffrey M. Diez
+  publisher: Molecular Ecology
+  date: '2018-05-01'
+  link: https://doi.org/gdp7w7
+  image: https://onlinelibrary.wiley.com/cms/asset/a25c0500-6c32-466b-9f13-73b4e2c0896c/mec14694-fig-0004-m.png
+  extra-links:
+  - type: journal
+  tags:
+  - Shrub range expansion
+  - Soil fungal communities
+  - Amplicon sequencing
+  - Fungi
+- id: doi:10.3897/mycokeys.16.10000
+  title: "Annotating public fungal ITS sequences from the built environment according\
+    \ to the MIxS-Built Environment standard \u2013 a report from a May 23-24, 2016\
+    \ workshop (Gothenburg, Sweden)"
+  authors:
+  - Kessy Abarenkov
+  - Rachel I. Adams
+  - Irinyi Laszlo
+  - Ahto Agan
+  - Elia Ambrosio
+  - Alexandre Antonelli
+  - Mohammad Bahram
+  - Johan Bengtsson-Palme
+  - Gunilla Bok
+  - Patrik Cangren
+  - Victor Coimbra
+  - Claudia Coleine
+  - Claes Gustafsson
+  - Jinhong He
+  - Tobias Hofmann
+  - Erik Kristiansson
+  - Ellen Larsson
+  - Tomas Larsson
+  - Yingkui Liu
+  - Svante Martinsson
+  - Wieland Meyer
+  - Marina Panova
+  - Nuttapon Pombubpa
+  - Camila Ritter
+  - Martin Ryberg
+  - Sten Svantesson
+  - Ruud Scharn
+  - Ola Svensson
+  - "Mats T\xF6pel"
+  - Martin Unterseher
+  - Cobus Visagie
+  - Christian Wurzbacher
+  - Andy F.S. Taylor
+  - "Urmas K\xF5ljalg"
+  - Lynn Schriml
+  - R. Henrik Nilsson
+  publisher: MycoKeys
+  date: '2016-09-26'
+  link: https://doi.org/f3rwqm
+  image: https://bdj.pensoft.net/showimg.php?filename=big_104190.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Built environment
+  - Indoor fungi
+  - ITS
+  - Annotation
+  - Mycobiome

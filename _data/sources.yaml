@@ -1,0 +1,107 @@
+- id: doi:10.1093/femsec/fiaa125
+  image: https://user-images.githubusercontent.com/54328862/94088799-3901e980-fdc6-11ea-9598-8d23b300f725.png
+  extra-links:
+    - type: journal
+  tags:
+    - Biocrust
+    - Fungi-bacteria networks
+    - Desert microbes
+    - Amplicon sequencing
+    - Fungi
+
+- id: doi:10.3390/microorganisms8060942
+  image: https://www.mdpi.com/microorganisms/microorganisms-08-00942/article_deploy/html/images/microorganisms-08-00942-g001.png
+  extra-links:
+    - type: journal
+  tags:
+    - Antarctica
+    - Endolithic communities
+    - Fungi
+    - Amplicon sequencing
+
+- id: doi:10.1007/s00300-020-02625-2
+  image: https://www.biorxiv.org/content/biorxiv/early/2019/06/21/676775/F1.large.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Antarctica
+    - Endolithic communities
+    - Amplicon sequencing
+
+- id: doi:10.3390/life10020013
+  image: https://www.mdpi.com/life/life-10-00013/article_deploy/html/images/life-10-00013-g001.png
+  extra-links:
+    - type: journal
+  tags:
+    - Antarctica
+    - Endolithic communities
+    - Amplicon sequencing
+    - McMurdo Dry Valleys
+    - Fungi
+
+- id: doi:10.1111/1758-2229.12788
+  image: https://sfamjournals.onlinelibrary.wiley.com/cms/asset/1933421f-babc-4b27-973d-309c2d817d6a/emi4.v11.5.cover.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Antarctica
+    - Endolithic communities
+    - Amplicon sequencing
+    - McMurdo Dry Valleys
+    - Bacteria
+
+- id: doi:10.3389/fevo.2019.00344
+  image: https://frontiersinblog.files.wordpress.com/2016/09/ecology_290x290.png
+  extra-links:
+    - type: journal
+  tags:
+    - Biocrust
+    - Fungi
+    - Bacteria
+    - Dispersal
+    - Reproduction
+
+
+- id: doi:10.3389/fmicb.2018.01392
+  image: https://www.frontiersin.org/files/Articles/364185/fmicb-09-01392-HTML/image_m/fmicb-09-01392-g002.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Antarctica
+    - Endolithic communities
+    - Amplicon sequencing
+    - Extremophiles
+    - Fungi
+
+- id: doi:10.3390/life8020019
+  image: https://www.mdpi.com/life/life-08-00019/article_deploy/html/images/life-08-00019-g001.png
+  extra-links:
+    - type: journal
+  tags:
+    - Antarctica
+    - Endolithic communities
+    - Amplicon sequencing
+    - FUNGuild
+    - Fungi
+
+- id: doi:10.1111/mec.14694
+  image: https://onlinelibrary.wiley.com/cms/asset/a25c0500-6c32-466b-9f13-73b4e2c0896c/mec14694-fig-0004-m.png
+  extra-links:
+    - type: journal
+  tags:
+    - Shrub range expansion
+    - Soil fungal communities
+    - Amplicon sequencing
+    - Fungi
+
+
+- id: doi:10.3897/mycokeys.16.10000
+  image: https://bdj.pensoft.net/showimg.php?filename=big_104190.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Built environment
+    - Indoor fungi
+    - ITS
+    - Annotation
+    - Mycobiome
