@@ -6,11 +6,7 @@ nav:
 redirect_from: /publications
 ---
 
-# <i class="fas fa-microscope"></i>Nat Pombubpa Lab Publicattions
-
-See our recent publications below.
-
-สามารถศึกษางานวิจัยของเราได้จากบทความทางวิชาการด้านล่าง
+# <i class="fas fa-microscope"></i>Recent Publications
 
 {% include section.html %}
 
