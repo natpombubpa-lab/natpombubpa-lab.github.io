@@ -1,5 +1,40 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.1111/gcb.15340
+  title: Belowground impacts of alpine woody encroachment are determined by plant
+    traits, local climate, and soil conditions
+  authors:
+  - Courtney G. Collins
+  - Marko J. Spasojevic
+  - "Concepci\xF3n L. Alados"
+  - Emma L. Aronson
+  - Juan C. Benavides
+  - Nicoletta Cannone
+  - Chatrina Caviezel
+  - Oriol Grau
+  - Hui Guo
+  - Gaku Kudo
+  - Nikolas J. Kuhn
+  - "Jana M\xFCllerov\xE1"
+  - Michala L. Phillips
+  - Nuttapon Pombubpa
+  - "Fr\xE9d\xE9rique Reverchon"
+  - Hannah B. Shulman
+  - Jason E. Stajich
+  - Alexia Stokes
+  - "S\xF6ren E. Weber"
+  - Jeffrey M. Diez
+  publisher: Global Change Biology
+  date: '2020-10-08'
+  link: https://doi.org/ghcp9p
+  image: https://user-images.githubusercontent.com/54328862/118241983-ff9dfb80-b4c6-11eb-97ed-6e539f580564.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Alpine woody encroachment
+  - Plant traits
+  - Amplicon sequencing
+  - Fungi
 - id: doi:10.1093/femsec/fiaa125
   title: 'Insights into dryland biocrust microbiome: geography, soil depth and crust
     type affect biocrust microbial communities and networks in Mojave Desert, USA'
