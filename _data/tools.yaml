@@ -16,11 +16,11 @@
   link: https://stajichlab.github.io/SOP_data/Data_and_Code/KBase
   description: KBase is an excellent tool for metagenome analysis especailly for beginners. We have combined tutorials, webinar, and SOPs that we used in the lab.
 
-- name: Department of Microbiology
+- name: Dept. of Microbiology
   group: other
   image: images/tools/Micro_CU_logo.png
   link: http://www.micro.sc.chula.ac.th/index.php/en/
-  description: Department of Microbiology, Faculty of Science, Chulalongkorn University
+  description: Faculty of Science, Chulalongkorn University
 
 - name: Chulalongkorn University
   group: other
