@@ -34,13 +34,13 @@ Let's make sure that you have all data needed for this tutorial.
 
 {:.left}
 ```bash
-# when you type "ls", you should have 5 files and illumina folder
+# when you type "ls", you should have 4 files and 2 folders
 # if you don't have these, something probably went wrong 
 # you will need to re-launch the binder 
 
 [/home/jovyan]$ ls
-apt.txt          illumina   README.md
-environment.yml  postBuild  usearch9.2.64_i86linux32
+apt.txt  bin  environment.yml  illumina  postBuild  README.md
+
 ```
 
 
@@ -54,8 +54,8 @@ Next step is to verify that AMPtk can be used.
 
 [/home/jovyan]$ amptk
 
-Usage:       amptk &lt;command&gt; &lt;arguments&gt;
-version:     1.5.1
+Usage:       amptk <command> <arguments>
+version:     1.4.2
 ```
 
 If everything work perfectly for you, you are almost ready for the actual analysis. There is only one more step.
