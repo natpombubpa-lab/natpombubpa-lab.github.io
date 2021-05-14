@@ -1,13 +1,13 @@
 - name: Basic Unix for Biologists
   group: featured
   image: https://user-images.githubusercontent.com/54328862/99125534-1b2c5600-25b9-11eb-8e47-f3efe718d21e.jpg
-  link: https://natpombubpa.github.io/WEB/resources/Basic_Unix_for_Biologists
+  link: https://natpombubpa-lab.github.io/resources/Basic_Unix_for_Biologists
   description: Introduction to Unix shell for Biologists/Beginner (this tutorial requires web browser but no other installation needed) ความรู้เบื้องต้น Unix shell สำหรับนักชีววิทยาและบุคคลทั่วไป (ผู้เรียนต้องมีเว็บบราวเซอร์ แต่ไม่จำเป็นต้องติดตั้งโปรแกรมอื่นเพิ่มเติม)
 
 - name: Microbiome analysis
   group: featured
   image: images/tools/AMPtk.jpg
-  link: https://natpombubpa.github.io/WEB/resources/Microbiome_Analysis.html
+  link: https://natpombubpa-lab.github.io/resources/Microbiome_Analysis
   description: This is a comprehensive SOP for microbiome analysis using AMPtk pipeline on UCR HPCC. This SOP/tutorial includes setting up working directory for the analysis, processing raw sequence data files, clustering sequences into OTUs, taxonomy assignment, funtional guild assignment, and how to combine all the steps in a single bash script.
 
 - name: KBase Tutorials and SOPs
