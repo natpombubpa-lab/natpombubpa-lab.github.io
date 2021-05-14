@@ -13,7 +13,7 @@ This is a basic microbiome analysis tutorial using AMPtk pipeline. This SOP/tuto
 <style>
 pre {
   font-family: Consolas,"courier new";
-  width: 1000px;
+  width: 1188px;
   color: lightgreen;
   float: left;
   background-color: #0a0101;
