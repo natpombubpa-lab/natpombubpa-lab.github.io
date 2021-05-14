@@ -11,6 +11,7 @@ role: pi
 links:
   orcid: 0000-0003-3385-5331
   home-page: https://natpombubpa-lab.github.io
+  docs: images/team/Nat_CV_22Apr2021.pdf
   email: natpombubpa@gmail.com
   google-scholar: YVzTNlMAAAAJ
   github: NatPombubpa
