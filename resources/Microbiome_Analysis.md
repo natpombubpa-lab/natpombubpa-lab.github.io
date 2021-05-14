@@ -44,6 +44,13 @@ environment.yml  postBuild  usearch9.2.64_i86linux32
 </pre>
 </div>
 
+{% highlight bash %}
+[/home/jovyan]$ ls
+apt.txt          illumina   README.md
+environment.yml  postBuild  usearch9.2.64_i86linux32
+{% endhighlight %}
+
+
 Next step is to verify that AMPtk can be used.
 
 <div style="overflow:auto">
