@@ -5,7 +5,7 @@ image: AMPtk.jpg
 Basic Unix for Biologists is aiming to helps anyone who would like to learn basic unix programming. This introduction/tutorial dose not require installation, you can simply click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Binder_Intro_Unix/master?urlpath=lab) and your browser will bring up everything you need for this tutorial. 
 
 
-* [Basic Unix for Biologists (EP1)](/WEB/resources/Basic_Unix/Basic_Unix_EP1) will show you how this tutorial is setup and also introduce you to unix shell programming
+* [Basic Unix for Biologists (EP1)](/resources/Basic_Unix/Basic_Unix_EP1) will show you how this tutorial is setup and also introduce you to unix shell programming
 * Basic Unix for Biologists (EP2)
 
 
