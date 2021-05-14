@@ -10,11 +10,11 @@ This is a basic microbiome analysis tutorial using AMPtk pipeline. This SOP/tuto
 
 เว็บเพจนี้สอนวิธีการวิเคราะห์ข้อมูลความหลากหลายของจุลินทรีย์(ไมโครไบโอม)เบื้องต้น โดยผู้เรียนไม่ต้องดาวน์โหลดโปรแกรมลงบนคอมพิวเตอร์ส่วนตัว เพียงคลิกที่ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Binder_Amptk_v1.4.2/main?urlpath=lab) ข้อมูลและโปรแกรมจะเปิดขึ้นมาบนหน้าเว็บ และ พร้อมใช้งานได้ทันที (หมายเหตุ: หากมีผู้ใช้งานจำนวนมาก อาจใช้เวลามากกว่า 10 นาทีในการเปิดหน้าเว็บ) การวิเคราะห์ข้อมูลไมโครไบโอมเบื้องต้นที่จะกล่าวถึงนั้น มี 4 ขั้นตอนหลัก คือ 1) processing raw sequence data files, 2) clustering/denoising sequences, 3) filtering, และ 4) taxonomy assignment. หลังจากนั้น เราสามารถวิเคราะห์เพิ่มเติมเกี่ยวกับ Functional guilds และ การรวบรวมทุกขั้นตอนไว้ใน shell script
 
-```bash
+{% highlight bash %}
 [/home/jovyan]$ ls
 apt.txt          illumina   README.md
 environment.yml  postBuild  usearch9.2.64_i86linux32
-```
+{% endhighlight %}
 
 ## Step 1: Open Binder and Launch Terminal
 
