@@ -16,18 +16,6 @@ apt.txt          illumina   README.md
 environment.yml  postBuild  usearch9.2.64_i86linux32
 ```
 
-<style>
-pre {
-  font-family: Consolas,"courier new";
-  width: 1188px;
-  color: lightgreen;
-  float: left;
-  background-color: #0a0101;
-  padding: 18px;
-  font-size: 100%;
-}
-</style>
-
 ## Step 1: Open Binder and Launch Terminal
 
 ![Landing Page](https://user-images.githubusercontent.com/54328862/95927664-3fa3d100-0d74-11eb-9609-c2ca587c86b7.png){:class="img-responsive"}
@@ -38,8 +26,7 @@ Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybin
 
 Let's make sure that you have all data needed for this tutorial.
 
-<div style="overflow:auto">
-<pre>
+```bash
 # when you type "ls", you should have 5 files and illumina folder
 # if you don't have these, something probably went wrong 
 # you will need to re-launch the binder 
@@ -47,14 +34,12 @@ Let's make sure that you have all data needed for this tutorial.
 [/home/jovyan]$ ls
 apt.txt          illumina   README.md
 environment.yml  postBuild  usearch9.2.64_i86linux32
-</pre>
-</div>
+```
 
 
 Next step is to verify that AMPtk can be used.
 
-<div style="overflow:auto">
-<pre>
+```bash
 # simply type "amptk", amptk manual page should show up.
 # amptk manual page is longer than this, 
 # but I only show you the first few lines.
@@ -63,16 +48,14 @@ Next step is to verify that AMPtk can be used.
 
 Usage:       amptk &lt;command&gt; &lt;arguments&gt;
 version:     1.5.1
-</pre>
-</div>
+```
 
 If everything work perfectly for you, you are almost ready for the actual analysis. There is only one more step.
 
 AMPtk requires usearch9 which can be download from [here](https://drive5.com/downloads/usearch9.2.64_i86linux32.gz).  
 
 
-<div style="overflow:auto">
-<pre>
+```bash
 # 1. change directory to "bin" folder
 # 2. once you are in "bin" folder, simply use curl to download usearch9 for your own personal use to follow this tutorial
 # 3. unzip the file 
@@ -86,8 +69,7 @@ AMPtk requires usearch9 which can be download from [here](https://drive5.com/dow
 [/home/jovyan/bin]$ cd ..
 [/home/jovyan]$
 
-</pre>
-</div>
+```
 
 ## Step 2: Analysis set up
 
