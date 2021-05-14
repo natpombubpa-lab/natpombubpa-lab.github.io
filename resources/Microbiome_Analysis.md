@@ -16,6 +16,8 @@ apt.txt          illumina   README.md
 environment.yml  postBuild  usearch9.2.64_i86linux32
 ```
 
+
+
 <style>
 pre {
   font-family: Consolas,"courier new";
@@ -27,6 +29,18 @@ pre {
   font-size: 100%;
 }
 </style>
+
+<div style="overflow:auto">
+<pre>
+# when you type "ls", you should have 5 files and illumina folder
+# if you don't have these, something probably went wrong 
+# you will need to re-launch the binder 
+
+[/home/jovyan]$ ls
+apt.txt          illumina   README.md
+environment.yml  postBuild  usearch9.2.64_i86linux32
+</pre>
+</div>
 
 
 ## Step 1: Open Binder and Launch Terminal
