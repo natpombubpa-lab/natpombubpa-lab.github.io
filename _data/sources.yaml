@@ -1,3 +1,13 @@
+- id: doi.org/10.1111/gcb.15340
+  image: https://user-images.githubusercontent.com/54328862/118241983-ff9dfb80-b4c6-11eb-97ed-6e539f580564.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Alpine woody encroachment
+    - Plant traits
+    - Amplicon sequencing
+    - Fungi
+
 - id: doi:10.1093/femsec/fiaa125
   image: https://user-images.githubusercontent.com/54328862/94088799-3901e980-fdc6-11ea-9598-8d23b300f725.png
   extra-links:
