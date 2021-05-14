@@ -16,21 +16,21 @@
   link: https://stajichlab.github.io/SOP_data/Data_and_Code/KBase
   description: KBase is an excellent tool for metagenome analysis especailly for beginners. We have combined tutorials, webinar, and SOPs that we used in the lab.
 
-- name: Childhood Cancer Data Lab
+- name: Department of Microbiology
   group: other
-  image: images/tools/ccdl.png
-  link: https://www.ccdatalab.org/projects
-  description: Turning researchers who fight childhood cancer into data wizards.
+  image: images/tools/Micro_CU_logo.png
+  link: http://www.micro.sc.chula.ac.th/index.php/en/
+  description: Department of Microbiology, Faculty of Science, Chulalongkorn University
 
-- name: Hetio
+- name: Chulalongkorn University
   group: other
-  image: https://het.io/share-thumbnail.png
-  link: https://github.com/hetio
-  description: Hetnet-related research, tools, and datasets including Hetionet.
+  image: images/tools/CU-logo.png
+  link: https://www.chula.ac.th/
+  description: Chulalongkorn University, Knowledge with Virtue
 
-- name: Manubot
+- name: Stajich Lab
   group: other
-  image: https://manubot.org/share-thumbnail.png
-  link: https://github.com/manubot
-  description: "The next generation of scholarly publishing: open, collaborative, reproducible, free."
+  image: images/tools/Stajichlab.png
+  link: https://stajichlab.github.io/
+  description: Professor Jason E. Stajich Lab at UC Riverside
 
