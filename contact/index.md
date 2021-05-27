@@ -8,9 +8,9 @@ background: images/backgrounds/Cover.jpg
 
 # <i class="fas fa-envelope"></i>Contact
 
-[Nat Pombubpa Lab](http://www.natpombubpa-lab.github.io) is part of the [Department of Microbiology](http://www.micro.sc.chula.ac.th/index.php/en/), [Faculty of Science](https://web.sc.chula.ac.th/), [Chulalongkorn University](https://www.chula.ac.th/), Bangkok, Thailand. We are located at the XX floor of Maha Vajirunhis Building.
+[Nat Pombubpa Lab](http://www.natpombubpa-lab.github.io) is part of the [Department of Microbiology](http://www.micro.sc.chula.ac.th/index.php/en/), [Faculty of Science](https://web.sc.chula.ac.th/), [Chulalongkorn University](https://www.chula.ac.th/), Bangkok, Thailand. We are located at the 20th floor of Maha Vajirunhis Building.
 
-[ห้องปฏิบัติการ NatPombubpa](natpombubpa-lab.github.io) เป็นกลุ่มนักวิจัยใน[ภาควิชาจุลขีววิทยา](http://www.micro.sc.chula.ac.th/index.php/th/) คณะวิทยาศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย กรุงเทพมหานคร ประเทศไทย ซึ่งตั้งอยู่ที่ชั้น XX อาคารมหาวชิรุณหิศ
+[ห้องปฏิบัติการ NatPombubpa](natpombubpa-lab.github.io) เป็นกลุ่มนักวิจัยใน[ภาควิชาจุลขีววิทยา](http://www.micro.sc.chula.ac.th/index.php/th/) คณะวิทยาศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย กรุงเทพมหานคร ประเทศไทย ซึ่งตั้งอยู่ที่ชั้น 20 อาคารมหาวชิรุณหิศ
 
 {%
   include link.html
