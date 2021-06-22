@@ -16,13 +16,13 @@ Welcome to NatPombubpa Lab!!! [Nat Pombubpa Lab](natpombubpa-lab.github.io) is a
 {% capture text %}
 We use high throughput sequencing (HTS) and bioinformatics to answer important questions in environmental microbiology and ecology. <br> เราศึกษาและวิจัยเกี่ยวกับไมโครไบโอมในสิ่งแวดล้อมด้วยวิธีการหาลำดับนิวคลีโอไทด์ที่มีประสิทธิภาพสูงและวิเคราะห์ข้อมูลด้วยชีวสารสนเทศศาสตร์
 
-[See our publications &nbsp;→](research)
+[See our publications &nbsp;→](publication)
 {:.center}
 {% endcapture %}
 {%
   include feature.html
   image="images/home/HTS.jpg"
-  link="research"
+  link="publication"
   headline="HTS + Bioinformatics"
   text=text
 %}
