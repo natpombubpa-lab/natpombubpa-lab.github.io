@@ -1,3 +1,14 @@
+- id: doi:10.1128/MRA.00494-21
+  image: https://user-images.githubusercontent.com/54328862/123938574-6ddc4600-d9c1-11eb-876f-8a2a3441f955.png
+  extra-links:
+    - type: journal
+  tags:
+    - Rock-Inhabiting Microbes
+    - Amplicon sequencing
+    - Fungi
+    - Joshua Tree National Park
+
+
 - id: doi:10.1111/gcb.15340
   image: https://user-images.githubusercontent.com/54328862/118241983-ff9dfb80-b4c6-11eb-97ed-6e539f580564.jpg
   extra-links:
