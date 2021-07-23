@@ -11,8 +11,8 @@ role: pi
 links:
   orcid: 0000-0003-3385-5331
   home-page: https://natpombubpa-lab.github.io
-  CV: images/team/Nat_CV_22Apr2021.pdf
-  email: natpombubpa@gmail.com
+  CV: images/team/Nat_CV_Chula_current.pdf
+  email: Nuttapon.Po@chula.ac.th
   google-scholar: YVzTNlMAAAAJ
   github: NatPombubpa
   twitter: NatPombubpa
