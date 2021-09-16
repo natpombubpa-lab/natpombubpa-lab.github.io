@@ -133,7 +133,8 @@ Note: at Taxonomy Assignment step, we will use clustered sequences file and OTU 
 {:.left}
 ```bash
 
-[/home/jovyan]$ amptk summarize -i DetMyco.cluster.otu_table.taxonomy.txt --graphs -o test --font_size 6 --format pdf
+[/home/jovyan]$ amptk summarize -i DetMyco.cluster.otu_table.taxonomy.txt \
+                --graphs -o test --font_size 6 --format pdf --percent
 
 ```
 
