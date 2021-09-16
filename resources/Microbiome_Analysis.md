@@ -44,6 +44,8 @@ apt.txt  bin  environment.yml  illumina  postBuild  README.md
 ```
 
 
+## Step 2: Analysis set up
+
 Next step is to verify that AMPtk can be used.
 
 {:.left}
@@ -79,7 +81,7 @@ AMPtk requires usearch9 which can be download from [here](https://drive5.com/dow
 
 ```
 
-## Step 2: Analysis set up
+## Step 3: Pre-processing
 
 We will use [AMPtk](https://amptk.readthedocs.io/en/latest/index.html) to process amplicon data.
 
@@ -92,6 +94,48 @@ More detials on Sequencing setup can be found [here](https://journals.plos.org/p
 
 ITS primers for this project contain unique barcode for each sample. We usually submit ~200 samples per illumina miseq run. After sequencing process, the barcodes will be used to split sequences into fastq file for each sample.
 
+{:.left}
+```bash
+#Pre-preocessing steps will use `amptk illumia` command for demultiplexed PE reads
+
+[/home/jovyan]$ amptk illumina -i illumina/ --merge_method vsearch -f AACTTTYRRCAAYGGATCWCT -r AGCCTCCGCTTATTGATATGCTTAART --require_primer off -o DetMyco --usearch usearch9 --rescue_forward on --primer_mismatch 2 -l 250
+
+```
+
+## Step 4: Clustering
+
+This step will cluster sequences into Operational Taxonomy Unit (OTU), then generate representative OTU sequences and OTU table. OTU generation pipelines in AMPtk uses UPARSE clustering with 97% similarity (this can be changed).
+
+Note: at clustering step, we used merged sequence from STEP1 as an input and we will generate clustered sequences file and OTU table.
+
+{:.left}
+```bash
+
+[/home/jovyan]$ amptk cluster -i DetMyco.demux.fq.gz -o DetMyco --usearch usearch9 --map_filtered -e 0.9
+
+```
+
+## Step 5: Taxonomy assignment
+
+This step will assign taxonomy to each OTU sequence and add taxonomy to OTU table. This command will generate taxnomy based on the ITS database.
+
+Note: at Taxonomy Assignment step, we will use clustered sequences file and OTU table for taxonomy assignment from ITS database
+
+{:.left}
+```bash
+
+[/home/jovyan]$ amptk taxonomy -f DetMyco.cluster.otus.fa -i DetMyco.otu_table.txt -d ITS
+
+```
+
+## Step 6: Summarizing our results
+
+{:.left}
+```bash
+
+[/home/jovyan]$ amptk summarize -i DetMyco.cluster.otu_table.taxonomy.txt --graphs -o test --font_size 6 --format pdf
+
+```
 
 ### References
 
