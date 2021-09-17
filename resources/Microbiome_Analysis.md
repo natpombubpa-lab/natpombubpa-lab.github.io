@@ -210,5 +210,5 @@ Let's take a look at our results summary.
 
 ### References
 
--[AMPtk](https://amptk.readthedocs.io/en/latest/index.html)
--[usearch9](https://drive5.com/downloads/usearch9.2.64_i86linux32.gz)
+- [AMPtk](https://amptk.readthedocs.io/en/latest/index.html)
+- [usearch9](https://drive5.com/downloads/usearch9.2.64_i86linux32.gz)
