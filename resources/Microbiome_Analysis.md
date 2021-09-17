@@ -163,15 +163,6 @@ Note: at clustering step, we used merged sequence from STEP1 as an input and we 
 
 ```
 
-Checking OTU table
-
-{:.left}
-```bash
-
-To be added
-
-```
-
 
 ## Step 3: Taxonomy assignment
 
@@ -182,7 +173,8 @@ Note: at Taxonomy Assignment step, we will use clustered sequences file and OTU 
 {:.left}
 ```bash
 
-[/home/jovyan]$ amptk taxonomy -f DetMyco.cluster.otus.fa -i DetMyco.otu_table.txt -d ITS
+[/home/jovyan]$ amptk taxonomy -f DetMyco.cluster.otus.fa\
+                -i DetMyco.otu_table.txt -d ITS --method utax
 
 ```
 
@@ -191,7 +183,19 @@ When the taxonomy assignment is completed, we can check the taxonmy file.
 {:.left}
 ```bash
 
-To be added
+# select Fungi from taxonomy file by using grep command
+
+[/home/jovyan]$ grep Fungi DetMyco.cluster.taxonomy.txt | head -10
+OTU3    UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU16   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU28   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU30   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU31   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU32   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU33   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU40   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU42   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
+OTU43   UTAX;k:Fungi,p:Basidiomycota,c:Agaricomycetes,o:Polyporales
 
 ```
 
@@ -204,9 +208,11 @@ Let's take a look at our results summary.
 ```bash
 
 [/home/jovyan]$ amptk summarize -i DetMyco.cluster.otu_table.taxonomy.txt \
-                --graphs -o test --font_size 6 --format pdf --percent
+                --graphs -o DetMyco --font_size 6 --format pdf --percent
 
 ```
+
+<img width="1100" alt="Taxonomy_summary" src="https://user-images.githubusercontent.com/54328862/133716147-5d3ec766-dc98-4826-a265-d2b6a6a6a052.png">
 
 ### References
 
