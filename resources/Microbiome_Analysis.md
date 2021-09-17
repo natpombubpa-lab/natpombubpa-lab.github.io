@@ -127,7 +127,7 @@ AGCCTCCGCTTATTGATATGCTTAAGTTCAGCGGGTGGTCCTACCTGATTTGAGGTCAGAGTCCAAAAGAGCGCCACAAG
 
 Now, we can begin Pre-processing steps, BUT......!!!
 
-There are several different file format that could be generated from Illumina Miseq sequencing (or sequencing centers). We’ll focus on demultiplexed PE reads in whcih all the sequences were splited into separated fastq files for each samples. The general workflow for Illumina demultiplexed PE reads is:
+There are several different file format that could be generated from Illumina Miseq sequencing (or sequencing centers). We’ll focus on demultiplexed PE reads in which all the sequences were splited into separated fastq files for each samples. The general workflow for Illumina demultiplexed PE reads is:
 - Merge PE reads (use USEARCH or VSEARCH)
 - filter reads that are phiX (USEARCH)
 - find forward and reverse primers (pay attention to –require_primer argument)
