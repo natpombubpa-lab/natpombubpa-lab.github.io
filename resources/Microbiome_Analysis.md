@@ -79,7 +79,7 @@ If everything work perfectly for you, you are almost ready for the actual analys
 
 ```
 
-## Step 1: Pre-processing
+## Step 1: Pre-processing/Demultiplexing
 
 We will use [AMPtk](https://amptk.readthedocs.io/en/latest/index.html) to process amplicon data.
 
