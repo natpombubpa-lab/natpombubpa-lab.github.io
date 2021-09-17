@@ -3,7 +3,7 @@ title: Microbiome Analysis Tutorial
 image: AMPtk.jpg
 ---
 
-
+# Basic Microbiome Analysis Tutorial
 
 This is a basic microbiome analysis tutorial using AMPtk pipeline. This SOP/tutorial includes 1) processing raw sequence data files, 2) clustering/denoising sequences, and 3) taxonomy assignment. This tutorial dose not require installation, you can simply click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Binder_Amptk_v1.4.2/main?urlpath=lab) and your browser will bring up everything you need for this tutorial. 
 
@@ -60,9 +60,7 @@ Usage:       amptk <command> <arguments>
 version:     1.4.2
 ```
 
-If everything work perfectly for you, you are almost ready for the actual analysis. There is only one more step.
-
-AMPtk requires usearch9 which can be download from [here](https://drive5.com/downloads/usearch9.2.64_i86linux32.gz).  
+If everything work perfectly for you, you are almost ready for the actual analysis. There is only one more step. AMPtk requires usearch9 which can be download from [here](https://drive5.com/downloads/usearch9.2.64_i86linux32.gz).  
 
 {:.left}
 ```bash
