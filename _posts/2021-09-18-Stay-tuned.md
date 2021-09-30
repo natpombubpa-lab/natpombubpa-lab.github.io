@@ -10,9 +10,11 @@ tags:
 
 ## COVID-19 field survey at Nonthaburi market by Chulalongkonrn University  
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/54328862/135404075-885f10af-3733-447e-8a33-38af30913ed4.jpg">
-</p>
+{%
+  include figure.html
+  image="https://user-images.githubusercontent.com/54328862/135404075-885f10af-3733-447e-8a33-38af30913ed4.jpg"
+%}
+
 ![18 09 2021_Chula_COVID_survey](https://user-images.githubusercontent.com/54328862/135404075-885f10af-3733-447e-8a33-38af30913ed4.jpg){:class="img-responsive"}
 {:center}[อาจารย์คณะวิทยาศาสตร์ จุฬาฯ ลงพื้นที่ตรวจเชื้อโควิด-19 แก่ประชาชนที่ตลาดนนทบุรี](https://www.chula.ac.th/news/50694/)
 
