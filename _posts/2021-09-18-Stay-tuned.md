@@ -8,13 +8,12 @@ tags:
   - COVID-19
 ---
 
-## [อาจารย์คณะวิทยาศาสตร์ จุฬาฯ ลงพื้นที่ตรวจเชื้อโควิด-19 แก่ประชาชนที่ตลาดนนทบุรี](https://www.chula.ac.th/news/50694/)
 ## COVID-19 field survey at Nonthaburi market by Chulalongkonrn University  
 
-![18 09 2021_Chula_COVID_survey](https://user-images.githubusercontent.com/54328862/135404075-885f10af-3733-447e-8a33-38af30913ed4.jpg){:class="img-responsive"}{:center}
+{:center}![18 09 2021_Chula_COVID_survey](https://user-images.githubusercontent.com/54328862/135404075-885f10af-3733-447e-8a33-38af30913ed4.jpg){:class="img-responsive"}
+[อาจารย์คณะวิทยาศาสตร์ จุฬาฯ ลงพื้นที่ตรวจเชื้อโควิด-19 แก่ประชาชนที่ตลาดนนทบุรี](https://www.chula.ac.th/news/50694/)
 
-
-Nat Pombubpa (in blue shirt) was part of Chulalongkorn University team during COVID-19 field survey at Nonthaburi market.
+Nat Pombubpa (in blue shirt) was part of Chulalongkorn University team during COVID-19 field survey at Nonthaburi market. อ.นัด (เสื้อสีฟ้า) ร่วมเป็นส่วนหนึ่งในการลงพื้นที่ตรวจเชื้อโควิด-19 แก่ประชาชนที่ตลาดนนทบุรี
 
 "ผศ.ดร.ชฎิล กุลสิงห์ ภาควิชาเคมี คณะวิทยาศาสตร์ จุฬาฯ ผู้พัฒนาเครื่องตรวจเชื้อโควิดจากกลิ่นเหงื่อ พร้อมด้วย น.ส.อิศญา ทวีแสงสกุลไทย นิสิตปริญญาโทภาควิชาเคมี ได้ลงพื้นที่นำเครื่องตรวจเชื้อโควิด-19 จากกลิ่นเหงื่อไปให้บริการตรวจคัดกรองโควิด-19 แก่พ่อค้าแม่ค้าและประชาชนบริเวณตลาดเทศบาลนครนนทบุรี เมื่อวันพุธที่ 15 กันยายน 2564 เพื่อตรวจคัดกรองโควิด-19 เบื้องต้น ซึ่งได้รับการตอบรับเป็นอย่างดีจากประชาชนที่ให้ความสนใจเข้ารับการตรวจโควิดด้วยเครื่องดังกล่าว การลงพื้นที่ปฏิบัติงานในครั้งนี้ได้รับความร่วมมืออย่างดียิ่งจากกรมอนามัย กระทรวงสาธารณสุข
 
