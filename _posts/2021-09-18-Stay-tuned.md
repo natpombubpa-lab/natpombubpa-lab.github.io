@@ -10,7 +10,8 @@ tags:
 
 ## COVID-19 field survey at Nonthaburi market by Chulalongkonrn University  
 
-{:center}![18 09 2021_Chula_COVID_survey](https://user-images.githubusercontent.com/54328862/135404075-885f10af-3733-447e-8a33-38af30913ed4.jpg){:class="img-responsive"}
+{:center}
+![18 09 2021_Chula_COVID_survey](https://user-images.githubusercontent.com/54328862/135404075-885f10af-3733-447e-8a33-38af30913ed4.jpg){:class="img-responsive"}
 [อาจารย์คณะวิทยาศาสตร์ จุฬาฯ ลงพื้นที่ตรวจเชื้อโควิด-19 แก่ประชาชนที่ตลาดนนทบุรี](https://www.chula.ac.th/news/50694/)
 
 Nat Pombubpa (in blue shirt) was part of Chulalongkorn University team during COVID-19 field survey at Nonthaburi market. อ.นัด (เสื้อสีฟ้า) ร่วมเป็นส่วนหนึ่งในการลงพื้นที่ตรวจเชื้อโควิด-19 แก่ประชาชนที่ตลาดนนทบุรี
