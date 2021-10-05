@@ -36,7 +36,7 @@ If everything work perfectly for you, you are ready for the actual analysis.
 
 ```bash
 
-[/home/jovyan]$ curl
+[/home/jovyan]$ curl xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ```
 
