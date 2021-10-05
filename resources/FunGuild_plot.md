@@ -34,6 +34,7 @@ If everything work perfectly for you, you are ready for the actual analysis.
 
 ## Step 1: Dowloding example data
 
+{:.left}
 ```bash
 
 [/home/jovyan]$ curl xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
