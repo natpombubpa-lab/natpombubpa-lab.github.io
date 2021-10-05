@@ -30,140 +30,16 @@ Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybin
 
 ![Terminal](https://user-images.githubusercontent.com/54328862/133711667-3be45824-8f87-4163-978a-db4cfd667023.png){:class="img-responsive"}
 
-Let's make sure that you have all data needed for this tutorial.
-
-{:.left}
-```bash
-# when you type "ls", you should have 4 files and 2 folders
-# if you don't have these, something probably went wrong 
-# you will need to re-launch the binder 
-
-[/home/jovyan]$ ls
-apt.txt  bin  environment.yml  illumina  postBuild  README.md
-
-```
-
 If everything work perfectly for you, you are ready for the actual analysis. 
 
-## Step 1: Pre-processing/Demultiplexing
+## Step 1: Dowloding example data
 
-We will use [AMPtk](https://amptk.readthedocs.io/en/latest/index.html) to process amplicon data.
-
-We can get this data from a public dataset stored in NCBI. First let's look at the BioProject page [PRJNA659596](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA659596). This page provides links to the 256 SRA experiments for 16S and ITS amplicon data from ["Belowground Impacts of Alpine Woody Encroachment are determined by Plant Traits, Local Climate and Soil Conditions"](https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.15340?casa_token=F44K1LXM-S8AAAAA%3A7mludBZ8DZfAoJvs3XG_hM_FqV1LcvEj_ZIZbqBjEkgdxgfwOIWn6gqCARK_AcWB8F_5ATcKzDJ6ZDk) project.
-
-Although, this study has both 16S and ITS amplicon data, we will perform data processing only on several samples from ITS data.
-
-<img width="1100" alt="primer_setup" src="https://user-images.githubusercontent.com/54328862/95925094-c86b3e80-0d6d-11eb-964a-1f3b5f30130e.png">
-More detials on Sequencing setup can be found [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090234#)
-
-ITS primers for this project contain unique barcode for each sample. We usually submit ~200 samples per illumina miseq run. After sequencing process, the barcodes will be used to split sequences into fastq file for each sample.
-
-Before we begin Pre-processing data, let's take a look at our data.
-
-{:.left}
 ```bash
-#All data are in illunmina folder 
-#You should have 22 fastq files in this folder
 
-[/home/jovyan]$ ls illumina/
-ITS-cc-121_S26_L001_R1_001.fastq.gz   ITS-cc-21_S123_L001_R2_001.fastq.gz
-ITS-cc-121_S26_L001_R2_001.fastq.gz   ITS-cc-221_S136_L001_R1_001.fastq.gz
-ITS-cc-212_S126_L001_R1_001.fastq.gz  ITS-cc-221_S136_L001_R2_001.fastq.gz
-ITS-cc-212_S126_L001_R2_001.fastq.gz  ITS-cc-27_S156_L001_R1_001.fastq.gz
-ITS-cc-213_S127_L001_R1_001.fastq.gz  ITS-cc-27_S156_L001_R2_001.fastq.gz
-ITS-cc-213_S127_L001_R2_001.fastq.gz  ITS-cc-76_S210_L001_R1_001.fastq.gz
-ITS-cc-216_S130_L001_R1_001.fastq.gz  ITS-cc-76_S210_L001_R2_001.fastq.gz
-ITS-cc-216_S130_L001_R2_001.fastq.gz  ITS-cc-91_S227_L001_R1_001.fastq.gz
-ITS-cc-217_S131_L001_R1_001.fastq.gz  ITS-cc-91_S227_L001_R2_001.fastq.gz
-ITS-cc-217_S131_L001_R2_001.fastq.gz  ITS-cc-98_S234_L001_R1_001.fastq.gz
-ITS-cc-21_S123_L001_R1_001.fastq.gz   ITS-cc-98_S234_L001_R2_001.fastq.gz
+[/home/jovyan]$ curl
 
 ```
 
-What does the sequence file look like?
-
-{:.left}
-```bash
-
-[/home/jovyan]$ zmore illumina/ITS-cc-121_S26_L001_R1_001.fastq.gz | head -2
-@M02457:311:000000000-C6VB2:1:1101:18927:1862 1:N:0:ATGTCCAG+CAGTCGGA
-AGCCTCCGCTTATTGATATGCTTAAGTTCAGCGGGTGGTCCTACCTGATTTGAGGTCAGAGTCCAAAAGAGCGCCACAAGGGGCAGGTTATGAGCGGGCCTCACACCATGCCAGACGAAACTTATCACGTCAGGACGTGGATGCTGGTCCCACTAAGTCATTTGAGGCAAGCCGGCAGACGGCAGACACCCAGGTCCATGTCCACCCCAGGTCAAGGAGACCCGAGGGGATTGAGATTTCATGACACTCAAACAGGCATGCCTTTCGGAATACCAAAAGGCGCAAGGTGCGTTCGAAGATT
-
-```
-
-Now, we can begin Pre-processing steps, BUT......!!!
-
-There are several different file format that could be generated from Illumina Miseq sequencing (or sequencing centers). We’ll focus on demultiplexed PE reads in which all the sequences were splited into separated fastq files for each samples. The general workflow for Illumina demultiplexed PE reads is:
-- Merge PE reads (use USEARCH or VSEARCH)
-- filter reads that are phiX (USEARCH)
-- find forward and reverse primers (pay attention to –require_primer argument)
-- remove (trim) primer sequences
-- if sequence is longer than –trim_len, truncate sequence
-
-<img width="1100" alt="MergedPEreads" src="https://user-images.githubusercontent.com/54328862/133710923-38f4432c-6ff1-4e29-860e-b5b4255308b3.gif">
-
-{:.left}
-```bash
-#Pre-preocessing steps will use `amptk illumia` command for demultiplexed PE reads
-
-[/home/jovyan]$ amptk illumina -i illumina/ --merge_method vsearch\
-                -f AACTTTYRRCAAYGGATCWCT -r AGCCTCCGCTTATTGATATGCTTAART\
-                --require_primer off -o DetMyco --usearch usearch9\
-                --rescue_forward on --primer_mismatch 2 -l 250
-
-```
-
-## Step 2: Clustering
-
-<img width="1100" alt="Clustering" src="https://user-images.githubusercontent.com/54328862/133711204-956c9f50-3e3f-4d94-83a8-3a771ae66216.jpg">
-
-This step will cluster sequences into Operational Taxonomy Unit (OTU), then generate representative OTU sequences and OTU table. OTU generation pipelines in AMPtk uses UPARSE clustering with 97% similarity (this can be changed).
-
-Note: at clustering step, we used merged sequence from STEP1 as an input and we will generate clustered sequences file and OTU table.
-
-{:.left}
-```bash
-
-[/home/jovyan]$ amptk cluster -i DetMyco.demux.fq.gz -o DetMyco\
-                --usearch usearch9 --map_filtered -e 0.9
-
-```
-
-
-## Step 3: Taxonomy assignment
-
-This step will assign taxonomy to each OTU sequence and add taxonomy to OTU table. This command will generate taxnomy based on the ITS database.
-
-Note: at Taxonomy Assignment step, we will use clustered sequences file and OTU table for taxonomy assignment from ITS database
-
-{:.left}
-```bash
-
-[/home/jovyan]$ amptk taxonomy -f DetMyco.cluster.otus.fa\
-                -i DetMyco.otu_table.txt -d ITS --method utax
-
-```
-
-When the taxonomy assignment is completed, we can check the taxonmy file.
-
-{:.left}
-```bash
-
-# select Fungi from taxonomy file by using grep command
-
-[/home/jovyan]$ grep Fungi DetMyco.cluster.taxonomy.txt | head -10
-OTU3    UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU16   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU28   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU30   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU31   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU32   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU33   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU40   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU42   UTAX;k:Fungi,p:Ascomycota,c:Sordariomycetes,o:Hypocreales
-OTU43   UTAX;k:Fungi,p:Basidiomycota,c:Agaricomycetes,o:Polyporales
-
-```
 
 
 ## Step 6: Summarizing our results
@@ -182,5 +58,5 @@ Let's take a look at our results summary.
 
 ### References
 
-- [AMPtk](https://amptk.readthedocs.io/en/latest/index.html)
-- [usearch9](https://drive5.com/downloads/usearch9.2.64_i86linux32.gz)
+- [FUNGuild](https://github.com/UMNFuN/FUNGuild)
+
