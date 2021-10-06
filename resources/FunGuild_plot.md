@@ -154,7 +154,7 @@ Let's take a look at our results summary.
 
 After the run is completed, you should see a PDF file in your current directory. Your result should be similar to the picture shown below.
 
-<img width="1100" alt="Taxonomy_summary" src="https://user-images.githubusercontent.com/54328862/135970393-f337d874-d809-42c6-bfe8-59dc5dfcfb38.jpg">
+<img width="1100" alt="FUNGuild_summary" src="https://user-images.githubusercontent.com/54328862/136133925-3b92dbe7-aae5-48ff-8eb1-74c3d485b429.png">
 
 ### References
 
