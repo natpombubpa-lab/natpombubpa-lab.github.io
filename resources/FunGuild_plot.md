@@ -154,7 +154,7 @@ Let's take a look at our results summary.
 
 After the run is completed, you should see a PDF file in your current directory. Your result should be similar to the picture shown below.
 
-<img width="1100" alt="Taxonomy_summary" src="https://user-images.githubusercontent.com/54328862/133716147-5d3ec766-dc98-4826-a265-d2b6a6a6a052.png">
+<img width="1100" alt="Taxonomy_summary" src="https://user-images.githubusercontent.com/54328862/135970393-f337d874-d809-42c6-bfe8-59dc5dfcfb38.jpg">
 
 ### References
 
