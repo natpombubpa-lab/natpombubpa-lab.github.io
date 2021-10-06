@@ -101,6 +101,7 @@ We will use ```R``` to generate FUNGuild plot, but ```R``` will skip a line that
 
 ## Step 4: Creating Rscript for generating a plot
 
+{:.left}
 ```bash
 
 #Code for Rscript
