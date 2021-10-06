@@ -178,6 +178,16 @@ After the run is completed, you should see a PDF file in your current directory.
 
 <img width="1100" alt="FUNGuild_summary" src="https://user-images.githubusercontent.com/54328862/136133925-3b92dbe7-aae5-48ff-8eb1-74c3d485b429.png">
 
+
+## Practice with bigger dataset
+There are four example files that you try.
+
+1. https://drive.google.com/uc?export=download&id=1m51Tkk7bFwzJ1Hn9AQGjmclYl18SkyJn
+2. https://drive.google.com/uc?export=download&id=16FQT1yYhQn8hQ9CQwVgVr5NtQ-Bziqob
+3. https://drive.google.com/uc?export=download&id=1rOynBTEF18kERbNHgulbbqQhZRQWPHh6
+4. https://drive.google.com/uc?export=download&id=15on34fths6dL87ZoNUckR0cbSmayzs3R
+
+
 ### References
 
 - [FUNGuild](https://github.com/UMNFuN/FUNGuild)
