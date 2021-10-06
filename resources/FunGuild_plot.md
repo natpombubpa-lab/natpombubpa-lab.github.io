@@ -88,6 +88,17 @@ Oftentime, bioinformatic processes begin with preprocessing step or reformatiing
 
 ```
 
+We will use ```R``` to generate FUNGuild plot, but ```R``` will skip a line that begins with ```#```. Our file header begin with ```#OTU```, therefore, we will need to change to ```OTU```. 
+
+{:.left}
+```bash
+
+#Change header of FUNGuild_example_fix.txt
+[/home/jovyan]$ sed '1s/#OTU/OTU/g' FUNGuild_example_fix.txt > FUNGuild_example_fix_header.txt
+
+```
+
+
 ## Step 4: Creating Rscript for generating a plot
 
 ```bash
@@ -130,15 +141,14 @@ Copy codes from above and paste them while you open ```nano```
 
 ```
 
-## Step 6: Summarizing our results
+## Step 5: Run Rscript to generate a plot summarizing our results
 
 Let's take a look at our results summary.
 
 {:.left}
 ```bash
 
-[/home/jovyan]$ amptk summarize -i DetMyco.cluster.otu_table.taxonomy.txt \
-                --graphs -o DetMyco --font_size 6 --format pdf --percent
+[/home/jovyan]$ Rscript FUNGuild_plot.R
 
 ```
 
