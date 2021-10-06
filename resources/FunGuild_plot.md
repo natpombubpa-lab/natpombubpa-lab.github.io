@@ -30,9 +30,13 @@ Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybin
 
 ![Terminal](https://user-images.githubusercontent.com/54328862/133711667-3be45824-8f87-4163-978a-db4cfd667023.png){:class="img-responsive"}
 
-If everything work perfectly for you, you are ready for the actual analysis. 
+If everything work perfectly for you, you are almost ready for the actual analysis. 
 
 ## Step 1: Downloding example data
+
+[FUNGuild](https://www.sciencedirect.com/science/article/pii/S1754504815000847): An open annotation tool for parsing fungal community datasets by ecological guild. 
+
+Once we identify fungal taxonomy/species, the next step that would be crucial for microbial ecology is to learn about fungal ecologyical functions. Our example data were generated using [FUNGuild](https://www.sciencedirect.com/science/article/pii/S1754504815000847) which annotate fungal function to each species in our dataset. Today, we will learn how to go from FUNGuild output to generating composition plot.
 
 {:.left}
 ```bash
@@ -46,6 +50,8 @@ If everything work perfectly for you, you are ready for the actual analysis.
 ```
 
 ## Step 2: Downloding example mapping file
+
+Not only that we need FUNGuild data, we will also need to have mapping file which will have information about our samples.
 
 {:.left}
 ```bash
@@ -105,26 +111,41 @@ We will use ```R``` to generate FUNGuild plot, but ```R``` will skip a line that
 ```bash
 
 #Code for Rscript
+#Load R libraries
 library(ape)
 library(vegan)
 library(dplyr)
 library(phyloseq)
 library(ggplot2)
+
+#Load mapping file into R
 meta <- read.table("mapping_File.txt",header=TRUE,row.names=1,sep="\t",stringsAsFactors=FALSE)
 sampleData <- sample_data(meta)
+
+#Load reformatted FUNGuild data into R
 FG <- read.table("FUNGuild_example_fix_header.txt",header=T,sep="\t",row.names=1)
+
+#Select only the column that we need
 FGotus <- select(FG, -(Taxonomy:Citation.Source))
 FGotumat <- as(as.matrix(FGotus), "matrix")
 FGOTU <- otu_table(FGotumat, taxa_are_rows = TRUE)
 FGtaxmat <- select(FG, Confidence.Ranking, Trophic.Mode, Guild, Growth.Morphology)
 FGtaxmat <- as(as.matrix(FGtaxmat),"matrix")
 FGTAX = tax_table(FGtaxmat)
+
+#Creating phyloseq object
 physeq = phyloseq(FGOTU,FGTAX,sampleData)
 physeq.prune = prune_taxa(taxa_sums(physeq) > 1, physeq)
 physeq.prune.nopossible = subset_taxa(physeq.prune, Confidence.Ranking="Highly Possible")
 physeq.prune.nopossible = subset_taxa(physeq.prune.nopossible, Confidence.Ranking!="-")
+
+#Create color palette
 cbbPalette <- c("#009E73","#999999", "#E69F00", "#56B4E9", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "midnightblue", "lightgreen","saddlebrown", "brown", "aquamarine4","lavenderblush2","snow3", "darkblue", "darkgoldenrod1", "darkseagreen", "darkorchid", "darkolivegreen1", "black","lightskyblue", "darkgreen", "deeppink", "khaki2", "firebrick", "brown1", "darkorange1", "cyan1", "royalblue4", "darksalmon", "darkblue","royalblue4", "dodgerblue3", "steelblue1", "lightskyblue", "darkseagreen", "darkgoldenrod1", "darkseagreen", "darkorchid", "darkolivegreen1", "brown1", "darkorange1", "cyan1", "darkgrey")
+
+#Create a plot
 FUNGuildcom = ggplot(data = psmelt(physeq.prune.nopossible), mapping = aes_string(x = "Sample" ,y = "Abundance", fill = "Trophic.Mode" )) + geom_bar(stat="identity", position="fill") + ggtitle("Fungal Trophic Mode Composition ")+theme(axis.text.x = element_text(angle = 90, hjust = 1)) + scale_fill_manual(values = cbbPalette)
+
+#Save a plot to PDF file
 pdf("./Fungal Trophic Mode Composition.pdf", width = 8, height = 5)
 FUNGuildcom
 dev.off()
