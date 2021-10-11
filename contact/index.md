@@ -25,9 +25,9 @@ background: images/backgrounds/Cover.jpg
   include link.html
   type="phone"
   icon=""
-  text="(XXX) XXX-XXXX"
+  text="(02)-218-7155"
   tooltip=""
-  link="+66-XXX-XXX-XXXX"
+  link="+6622187155"
   style="button"
 %}
 {%
