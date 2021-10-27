@@ -14,3 +14,6 @@ Our lab [research](/research) focuses on agricultural microbiome, environmental 
 
 {% include section.html %}
 
+{% include figure.html image="https://user-images.githubusercontent.com/54328862/138999803-330cc2ae-3b8c-4b67-8abf-e48093b8d527.jpg" %}
+
+{% include figure.html image="https://user-images.githubusercontent.com/54328862/138999865-5e905cb0-64ff-4b51-a2f7-e99a996530fc.jpg" %}
