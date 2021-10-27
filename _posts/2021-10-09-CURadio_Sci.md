@@ -28,11 +28,6 @@ tags:
 📱รับฟังทางวิทยุจุฬาฯ FM 101.5 MHz เวลา 10.00-10.30 น. และ online / on demand ทาง
 [www.curadio.chula.ac.th](www.curadio.chula.ac.th)
 
-{%
-  include figure.html
-  image="https://user-images.githubusercontent.com/54328862/138999126-1b852944-b6ab-44a6-9c85-98b568ab88bf.jpg"
-%}
-
 
 {:.center}
 -- รายการทันโลกวิทยาศาสตร์ -- 
