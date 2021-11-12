@@ -7,5 +7,5 @@ links:
 ---
 
 Maple is the Ngamnithiporn and Pombubpa family's golden retriever.
-She lives in Nonthaburi, Thailand and joined the team in sumeer of 2019.
+She lives in Nonthaburi, Thailand and joined the team in summer of 2019.
 Her interests include playing, eating, sleeping, and interacting with human.
