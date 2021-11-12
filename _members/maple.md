@@ -2,6 +2,8 @@
 name: Maple
 image: images/team/Maple.jpg
 role: mascot
+links:
+  instagram: maple_thegoldenpup
 ---
 
 Maple is the Ngamnithiporn and Pombubpa family's golden retriever.
