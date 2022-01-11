@@ -10,6 +10,11 @@
   link: https://natpombubpa-lab.github.io/resources/Microbiome_Analysis
   description: This is a comprehensive SOP for microbiome analysis using AMPtk pipeline on UCR HPCC. This SOP/tutorial includes setting up working directory for the analysis, processing raw sequence data files, clustering sequences into OTUs, taxonomy assignment, funtional guild assignment, and how to combine all the steps in a single bash script.
 
+- name: FUNGuild analysis tutorial
+  group: featured
+  image: https://user-images.githubusercontent.com/54328862/135970393-f337d874-d809-42c6-bfe8-59dc5dfcfb38.jpg
+  link: https://natpombubpa-lab.github.io/resources/Funguild_Analysis
+  description: This is a basic Fungi functional guild (FUNGuild) analysis tutorial. This tutorial dose not require installation, you can simply click Binder and your browser will bring up everything you need for this tutorial.
 
 - name: FUNGuild plot tutorial
   group: featured
