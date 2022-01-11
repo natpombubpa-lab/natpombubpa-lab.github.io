@@ -34,4 +34,39 @@ If everything work perfectly for you, you are almost ready for the actual analys
 
 ## Step 1: Download FunGuild program
 
+Using ```git clone``` to download FunGuild
+{:.left}
+```bash
+
+#Download FUNGuild 
+[/home/jovyan]$ git clone https://github.com/UMNFuN/FUNGuild
+
+```
+
+Then, press enter to start downloading process
+
+{:.left}
+```bash
+
+#Download FUNGuild 
+[/home/jovyan]$ git clone https://github.com/UMNFuN/FUNGuild
+Cloning into 'FUNGuild'...
+remote: Enumerating objects: 501, done.
+remote: Counting objects: 100% (41/41), done.
+remote: Compressing objects: 100% (31/31), done.
+remote: Total 501 (delta 20), reused 24 (delta 9), pack-reused 460
+Receiving objects: 100% (501/501), 1.05 MiB | 7.15 MiB/s, done.
+Resolving deltas: 100% (290/290), done.
+
+```
+
+When this step completes, FUNGuild folder should appear. Using ```ls``` command to see your folder.
+
+{:.left}
+```bash
+
+[/home/jovyan]$ ls
+apt.txt  bin  environment.yml  FUNGuild  illumina  postBuild  README.md
+
+```
 
