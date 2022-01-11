@@ -32,4 +32,6 @@ Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybin
 
 If everything work perfectly for you, you are almost ready for the actual analysis. 
 
-## Step 1: Installing FunGuild
+## Step 1: Download FunGuild program
+
+
