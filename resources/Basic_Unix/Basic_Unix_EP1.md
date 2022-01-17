@@ -67,7 +67,7 @@ apt.txt  data-shell/  README.md  unix_intro/
 
 ```
 
-Practice 1: What does the command ```ls``` do when using with ```-l``` and ```-h``` flags?
+Practice question 1: What does the command ```ls``` do when using with ```-l``` and ```-h``` flags?
 
 
 Check files in other directory using ```ls Directory_name```, you will see that there are four items in ```unix_intro``` folder.
@@ -131,7 +131,7 @@ Change to home directory in one command, ```cd```
 
 ### Unix concept 2: Working with files
 We know how to navigate files, how can we create, copy, or delete files? 
-Let's make sure we start at ```unix_intro``` folder.
+Let's make sure we start at ```unix_intro``` folder and take a look at what we have in this folder using ```ls -F```.
 
 {:.left}
 ```bash
@@ -139,5 +139,64 @@ Let's make sure we start at ```unix_intro``` folder.
 [/home/jovyan]$ cd unix_intro/
 [/home/jovyan/unix_intro]$ pwd
 /home/jovyan/unix_intro
+[/home/jovyan/unix_intro]$ ls -F
+data/  example.txt  experiment/  six_commands/
 
 ```
+
+Currently, there are three directories/folders, to create a new directory, we will use ```mkdir``` command.
+
+{:.left}
+```bash
+[/home/jovyan/unix_intro]$ mkdir Thesis
+```
+
+Check if you have ```Thesis``` directory, there should be five items in your ```unix_intro``` directory.
+
+{:.left}
+```bash
+[/home/jovyan/unix_intro]$ ls -F
+data/  example.txt  experiment/  six_commands/  Thesis/
+```
+
+Note for naming files and directiries: 1) don't use whitespaces, 2) don't begin with ```-``` (dash), 3) stick with letters, numbers, ```.``` (period or full stop), ```-``` (dash), and ```_``` (underscore). [Referent to swcarpentry](swcarpentry.github.io)
+
+
+Now, change working directory to ```Thesis``` and we will create a file called ```draft.txt``` using ```nano``` command.
+
+{:.left}
+```bash
+
+[/home/jovyan/unix_intro]$ cd Thesis/
+[/home/jovyan/unix_intro/Thesis]$ nano draft.txt
+
+```
+
+Once you open up ```nano``` it will look like a picture below. Let's write a sentence into your file. Press Ctrl+O to save file, then enter to accpet changes you made, To exit from nano, press Ctrl + X
+
+![Nano](https://natpombubpa-lab.github.io/images/tools/Unix/unix_1.3.png){:class="img-responsive"}
+
+Check for ```draft.txt``` in your ```Thesis``` directory
+
+{:.left}
+```bash
+
+[/home/jovyan/unix_intro/Thesis]$ ls -lh
+total 4.0K
+-rw-r--r-- 1 jovyan jovyan 18 Jan 16 20:48 draft.txt
+
+```
+
+Create a file without nano using ```touch``` command, let's try
+
+{:.left}
+```bash
+
+[[/home/jovyan/unix_intro/Thesis]$ touch my_file.txt
+
+```
+
+Practice question 2: What did the touch command do? When you look at your home directory using the GUI file explorer, does the file show up?
+
+Preactice question 3: Try using ```ls -l``` to inpsec the files, do you see any different between ```draft.txt``` and ```my_file.txt```?
+
