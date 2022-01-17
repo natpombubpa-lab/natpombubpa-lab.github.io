@@ -71,3 +71,14 @@ apt.txt  bin  environment.yml  FUNGuild  illumina  postBuild  README.md
 
 ```
 
+We will start with example data in FUNGuild folder. Change directory to FUNGuild folder and check your working directory. It should be ```/home/jovyan/FUNGuild```
+
+{:.left}
+```bash
+
+[/home/jovyan]$ cd FUNGuild/
+[/home/jovyan/FUNGuild]$ pwd
+/home/jovyan/FUNGuild
+
+```
+
