@@ -142,3 +142,23 @@ Search finished.
 FUNGuild results wrote to example/otu_table.taxa.guilds.txt.
 
 ```
+
+Let's take a look at our fungi functional guild results
+
+{:.left}
+```bash
+
+[/home/jovyan/FUNGuild]$ awk '{print $1" "$11}' example/otu_table.taxa.guilds.txt 
+OTU trophicMode
+OTU_100 Pathotroph
+OTU_1002 Symbiotroph
+OTU_1003 na
+OTU_1008 Saprotroph-Symbiotroph
+OTU_1011 Symbiotroph
+OTU_1015 na
+OTU_1018 na
+OTU_1021 Pathotroph-Saprotroph
+OTU_1023 Symbiotroph
+OTU_1024 na
+
+```
