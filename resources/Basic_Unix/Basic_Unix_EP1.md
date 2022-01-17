@@ -66,3 +66,7 @@ If you want to annotate folders when using ```ls``` command, we can use a flag `
 apt.txt  data-shell/  README.md  unix_intro/
 
 ```
+
+Practice 1: What does the command ```ls``` do when using with ```-l``` and ```-h``` flags?
+
+
