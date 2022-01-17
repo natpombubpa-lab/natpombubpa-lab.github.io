@@ -67,7 +67,7 @@ apt.txt  data-shell/  README.md  unix_intro/
 
 ```
 
-Practice question 1: What does the command ```ls``` do when using with ```-l``` and ```-h``` flags?
+**Practice question 1:** What does the command ```ls``` do when using with ```-l``` and ```-h``` flags?
 
 
 Check files in other directory using ```ls Directory_name```, you will see that there are four items in ```unix_intro``` folder.
@@ -196,7 +196,7 @@ Create a file without nano using ```touch``` command, let's try
 
 ```
 
-Practice question 2: What did the touch command do? When you look at your home directory using the GUI file explorer, does the file show up?
+**Practice question 2:** What did the touch command do? When you look at your home directory using the GUI file explorer, does the file show up?
 
-Preactice question 3: Try using ```ls -l``` to inpsec the files, do you see any different between ```draft.txt``` and ```my_file.txt```?
+**Preactice question 3:** Try using ```ls -l``` to inpsec the files, do you see any different between ```draft.txt``` and ```my_file.txt```?
 
