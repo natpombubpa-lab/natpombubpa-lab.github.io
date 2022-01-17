@@ -1,6 +1,6 @@
 ---
 title: Fungi functional guild analysis
-image: AMPtk.jpg
+image: FUNGuild_analysis.jpg
 ---
 
 # Fungi functional guild (FunGuild) analysis
