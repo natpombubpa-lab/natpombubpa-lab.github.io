@@ -82,3 +82,63 @@ We will start with example data in FUNGuild folder. Change directory to FUNGuild
 
 ```
 
+Let's check what we have in FUNGuild folder using ```ls``` command
+
+{:.left}
+```bash
+
+[/home/jovyan/FUNGuild]$ ls
+example  FUNGuild_Manual.pdf  FUNGuild.py  Guilds_v1.0.py  Guilds_v1.1.py  README.md
+
+```
+
+Now, let's perform FUNGuild annotation which requires two steps.
+
+### 1. Using a taxa parser to extract taxonomic information from an OTU table
+
+{:.left}
+```bash
+
+[/home/jovyan/FUNGuild]$ python FUNGuild.py taxa -otu example/otu_table.txt -format tsv -column taxonomy -classifier unite
+
+```
+
+Then, press enter. At the end of this process we will have a taxonomy table for the actual FUNGuild annotation
+
+{:.left}
+```bash
+
+[/home/jovyan/FUNGuild]$ python FUNGuild.py taxa -otu example/otu_table.txt -format tsv -column taxonomy -classifier unite
+Taxa parser initiated.
+Loading OTU table: example/otu_table.txt
+Table format: tsv
+Taxonomic column: taxonomy
+Taxonomic style: unite
+Parsed taxa file: example/otu_table.taxa.txt
+
+```
+
+### 2. Using a guild parser to query the FUNGuild database
+
+{:.left}
+```bash
+
+[/home/jovyan/FUNGuild]$ python FUNGuild.py guild -taxa example/otu_table.taxa.txt
+
+```
+
+Then, press enter. At the end of this process we will have a FUNGuild table.
+
+{:.left}
+```bash
+
+[/home/jovyan/FUNGuild]$ python FUNGuild.py guild -taxa example/otu_table.taxa.txt 
+Guild parser initiated
+Loading taxa file: example/otu_table.taxa.txt
+Connecting with FUNGuild database ...
+Found 11093 records in the db.
+Search initiated.
+Search finished.
+FUNGuild results wrote to example/otu_table.taxa.guilds.txt.
+
+```
