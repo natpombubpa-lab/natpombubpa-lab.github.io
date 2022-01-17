@@ -119,6 +119,7 @@ Parsed taxa file: example/otu_table.taxa.txt
 ```
 
 ### 2.2 Using a guild parser to query the FUNGuild database
+Currently (as of Jan 17, 2022), code in ```FUNGuild.py``` needs to be updated to solve FUNGuild database connection issue. You can fix the code by adding ```www.``` before ```mycoportal.org``` on line 148 in ```FUNGuild.py``` If you are using nano, ```nano -c FUNGuild.py``` can help identifying line 148.
 
 {:.left}
 ```bash
