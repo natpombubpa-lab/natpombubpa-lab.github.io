@@ -200,3 +200,84 @@ Create a file without nano using ```touch``` command, let's try
 
 **Preactice question 3:** Try using ```ls -l``` to inpsec the files, do you see any different between ```draft.txt``` and ```my_file.txt```?
 
+
+We know how to create a file, how do we delete/remove file?
+We cab use ```rm``` command, however, there is no trash bin. Removing/deleting is FOREVER!!! Be Careful!!!
+
+{:.left}
+```bash
+[/home/jovyan/unix_intro/Thesis]$ rm draft.txt
+```
+
+What about removing directory? Let's move up/back to ```unix_intro``` and try removing ```Thesis``` directory
+
+{:.left}
+```bash
+[/home/jovyan/unix_intro/Thesis]$ cd ..
+[/home/jovyan/unix_intro]$ rm Thesis
+rm: cannot remove 'Thesis': Is a directory
+```
+
+You will get an error. To remove directory, we can use ```rm -r Thesis``` and your ```Thesis``` will be removed.
+
+{:.left}
+```bash
+[/home/jovyan/unix_intro]$ rm -r Thesis/
+```
+
+How do we change file name? We can use ```mv``` command.
+
+{:.left}
+```bash
+#lisitng files and folder
+[/home/jovyan/unix_intro]$ ls
+data  example.txt  experiment  six_commands
+
+#change file name using mv command
+[/home/jovyan/unix_intro]$ mv example.txt example_1.txt 
+
+#listing files and folder, you should see that example.txt becomes example_1.txt
+[/home/jovyan/unix_intro]$ ls
+data  example_1.txt  experiment  six_commands
+```
+
+We can also use ```mv``` command to move file.
+
+{:.left}
+```bash
+# move a file
+[/home/jovyan/unix_intro]$ mv example_1.txt data/
+
+# now a file has been moved to data folder
+[/home/jovyan/unix_intro]$ ls data/
+all_samples  example_1.txt
+
+```
+
+How about copy file instead if moving file?
+
+{:.left}
+```bash
+#copy file to current directory
+[/home/jovyan/unix_intro]$ cp data/example_1.txt .
+
+#listing files and folders, example_1.txt should be present in your current working directory
+[/home/jovyan/unix_intro]$ ls
+data  example_1.txt  experiment  six_commands
+```
+
+**Practice question 4:** Suppose that you created a ```.txt``` file in your current directory to contain a list of the statistical tests you will need to analyze your data, and named it: ```statstics.txt```
+After creating and saving this file you realize you misspelled the filename! You want to correct the mistake, which of the following commands could you use to do so? Please explain why?
+1. ```cp statstics.txt statistics.txt```
+2. ```mv statstics.txt statistics.txt```
+3. ```mv statstics.txt .```
+4. ```cp statstics.txt .```
+
+
+Lastly, there are many useful commands that were not covered in this tutorial, but I hope that this tutorial and system will make you feel more comfortable using CLI. 
+
+
+References
+- [The Unix Shell Introduction](https://swcarpentry.github.io/shell-novice/)
+- [Computational Analysis of High Throughput Biological Data](https://biodataprog.github.io/programming-intro/)
+- [Happy Belly Bioinformatics](https://astrobiomike.github.io/)
