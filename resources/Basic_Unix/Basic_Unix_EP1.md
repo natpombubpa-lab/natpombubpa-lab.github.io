@@ -19,10 +19,50 @@ pre {
 }
 </style>
 
-## Step A: Open Binder and Launch Terminal
+## Open Binder and Launch Terminal
 
 ![Landing Page](https://natpombubpa-lab.github.io/images/tools/Unix/unix_1.1.png){:class="img-responsive"}
 
 Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Binder_Intro_Unix/master?urlpath=lab), your web browser should bring up a similar window as the picture shown above. The next step is to click "Terminal" which should look like a picture below after you click on it.
 
 ![Terminal](https://natpombubpa-lab.github.io/images/tools/Unix/unix_1.2.png){:class="img-responsive"}
+
+If everything work perfectly for you, you are ready for the tutorial. 
+
+## What can a computer do simple term?
+Naigate files, run programs/applications, store data, interact with users etc.
+- Graphical user interface (GUI): users can see files, folders, etc. graphically (on the left of your binder)
+- Command-line interdaces (CLI): users interact with computer via command line (Terminal on the right of your binder)
+
+If we are using GUI with too many clicks, we can use CLI to help us. 
+
+### Unix concept 1: Navigating files
+To find out where we are, we can use ```pwd``` to print out current working directory.
+
+{:.left}
+```bash
+
+[/home/jovyan]$ pwd
+/home/jovyan
+
+```
+
+Check files in the current directory (current folder) using ```ls``` command (listing). You should have four items in your current directory as shown below. 
+
+{:.left}
+```bash
+
+[/home/jovyan]$ ls
+apt.txt  data-shell  README.md  unix_intro
+
+```
+
+If you want to annotate folders when using ```ls``` command, we can use a flag ```ls -F``` is listing with flag-F to indicate directory/folder.
+
+{:.left}
+```bash
+
+[/home/jovyan]$ ls -F
+apt.txt  data-shell/  README.md  unix_intro/
+
+```
