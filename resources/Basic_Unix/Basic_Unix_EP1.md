@@ -70,3 +70,74 @@ apt.txt  data-shell/  README.md  unix_intro/
 Practice 1: What does the command ```ls``` do when using with ```-l``` and ```-h``` flags?
 
 
+Check files in other directory using ```ls Directory_name```, you will see that there are four items in ```unix_intro``` folder.
+
+{:.left}
+```bash
+
+[/home/jovyan]$ ls unix_intro/
+data  example.txt  experiment  six_commands
+
+```
+
+Now, we know which directory we want to work with, let's change working directory using ```cd``` command.
+
+{:.left}
+```bash
+
+[/home/jovyan]$ cd unix_intro/
+[/home/jovyan/unix_intro]$ 
+
+```
+
+Now we know how to go down directory, how do we go up/back?
+
+{:.left}
+```bash
+
+[/home/jovyan/unix_intro]$ cd jovyan
+bash: cd: jovyan: No such file or directory
+
+```
+To take us back to parent directory, we do ```cd ..```, let's try
+
+{:.left}
+```bash
+
+[/home/jovyan/unix_intro]$ cd ..
+[/home/jovyan]$ 
+
+```
+
+We can also use a path to change directory.
+
+{:.left}
+```bash
+
+[/home/jovyan]$ cd unix_intro/experiment/
+[/home/jovyan/unix_intro/experiment]$
+
+```
+
+Change to home directory in one command, ```cd```
+
+{:.left}
+```bash
+
+[/home/jovyan/unix_intro/experiment]$ cd
+[/home/jovyan]$ 
+
+```
+
+### Unix concept 2: Working with files
+We know how to navigate files, how can we create, copy, or delete files? 
+Let's make sure we start at ```unix_intro``` folder.
+
+{:.left}
+```bash
+
+[/home/jovyan]$ cd unix_intro/
+[/home/jovyan/unix_intro]$ pwd
+/home/jovyan/unix_intro
+
+```
