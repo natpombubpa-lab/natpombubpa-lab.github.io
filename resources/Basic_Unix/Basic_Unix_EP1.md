@@ -21,7 +21,7 @@ pre {
 
 ## Step A: Open Binder and Launch Terminal
 
-![Landing Page](https://user-images.githubusercontent.com/54328862/133711607-79fb884e-1804-4cb3-b4cc-be0a7ecf7a5c.png){:class="img-responsive"}
+![Landing Page](images/tools/AMPtk.jpg){:class="img-responsive"}
 
 Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Binder_Intro_Unix/master?urlpath=lab), your web browser should bring up a similar window as the picture shown above. The next step is to click "Terminal" which should look like a picture below after you click on it.
 
