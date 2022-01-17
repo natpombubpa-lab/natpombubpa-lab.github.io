@@ -92,9 +92,9 @@ example  FUNGuild_Manual.pdf  FUNGuild.py  Guilds_v1.0.py  Guilds_v1.1.py  READM
 
 ```
 
-Now, let's perform FUNGuild annotation which requires two steps.
+## Step 2: Now, let's perform FUNGuild annotation which requires two steps.
 
-### 1. Using a taxa parser to extract taxonomic information from an OTU table
+### 2.1 Using a taxa parser to extract taxonomic information from an OTU table
 
 {:.left}
 ```bash
@@ -118,7 +118,7 @@ Parsed taxa file: example/otu_table.taxa.txt
 
 ```
 
-### 2. Using a guild parser to query the FUNGuild database
+### 2.2 Using a guild parser to query the FUNGuild database
 
 {:.left}
 ```bash
@@ -143,7 +143,7 @@ FUNGuild results wrote to example/otu_table.taxa.guilds.txt.
 
 ```
 
-Let's take a look at our fungi functional guild results
+### 2.3 Let's take a look at our fungi functional guild results
 
 {:.left}
 ```bash
