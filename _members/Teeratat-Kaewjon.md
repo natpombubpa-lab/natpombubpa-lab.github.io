@@ -9,4 +9,6 @@ role: undergrad
 
 ---
 
-Teeratat Kaewjon is an undergraduate student in the Department of Microbiology, Chulalongkorn University. 
+My name is Teeratat Kaewjon(Bas). I am an undergraduate student in the Department of Microbiology, Chulalongkorn University. I would love to research microbiome and bioinformatics, especially including fungal diversity and the community of microbes in plants. I can not stop my excitement about learning something new.
+
+ธีรธัช แก้วจ้อน(บาส) นิสิตชั้นปีที่ 3 ภาควิชาจุลชีววิทยา จุฬาลงกรณ์มหาวิทยาลัย มีความสนใจศึกษาเกี่ยวกับไมโครไบโอมและชีวสนเทศ โดยเฉพาะความหลากหลากของกลุ่มฟังไจและความหลากหลายของจุลชีพในพืช
