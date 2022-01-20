@@ -9,4 +9,4 @@ role: undergrad
 
 ---
 
-Pudit Palasak is an undergraduate student in the Department of Microbiology, Chulalongkorn University. 
+My name's Pudit Palasak people call me Parm,and Im a third year undergratduate student with interested in data science bioinformatics. I'm an undergraduate student in the Department of Microbiology, Chulalongkorn University.
