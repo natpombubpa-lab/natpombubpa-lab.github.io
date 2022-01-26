@@ -9,4 +9,7 @@ role: undergrad
 
 ---
 
-My name's Pudit Palasak people call me Parm,and Im a third year undergratduate student with interested in data science bioinformatics. I'm an undergraduate student in the Department of Microbiology, Chulalongkorn University.
+My name's Pudit Palasak people call me Parm,and Im a third year undergratduate  student in the Department of Microbiology, Chulalongkorn University.
+. I'm an undergraduate student in the Department of Microbiology, Chulalongkorn University.
+
+ภูดิศ พลศักดิ์ ชื่อเล่น ปราม เป็นนักศึกษาชั้นปีที่ 3 ภาคจจุลชีววิทยา คณะวิทยาศาสตร์ จุุฬาลงกรณ์มหาวิทยาลั้ย มีความสนใจในด้าน  data science bioinformatics
