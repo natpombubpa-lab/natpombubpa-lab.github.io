@@ -12,7 +12,7 @@ tags:
 
 {%
   include figure.html
-  image=/team/NatPombubpaLab_2022.jpeg
+  image="images/team/NatPombubpaLab_2022.jpeg"
 %}
 
 Although COVID-19 is still here, we manage to have our first ever on-site lab meeting on Tuesday, February, 15, 2022. Our first on-site lab meeting focuses on building basic Unix understanding for lab members and learning how Unix can be used for basic bioinformatics. Welcome everyone to NatPombubpa Lab 😁
