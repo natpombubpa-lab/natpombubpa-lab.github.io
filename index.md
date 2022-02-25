@@ -50,7 +50,7 @@ We are a team of enthusiastic researchers who committed to improve our understan
 {% endcapture %}
 {%
   include feature.html
-  image="images/home/scientists.jpg"
+  image="images/team/NatPombubpaLab_2022.jpeg"
   link="team"
   headline="Next Generation of Scientists"
   text=text
