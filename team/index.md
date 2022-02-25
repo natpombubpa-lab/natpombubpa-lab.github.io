@@ -60,8 +60,8 @@ Our work is made possible by funding from several organizations.
 
 {%
   include figure.html
-  image="images/home/scientists.jpg"
-  description="Nat Pombubpa Lab in action is COMING SOON!!!"
+  image="images/team/NatPombubpaLab_2022.jpeg"
+  description="Nat Pombubpa Lab first meeting On-Site!!!"
   width="100%"
 %}
 
