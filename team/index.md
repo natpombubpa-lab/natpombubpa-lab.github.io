@@ -56,7 +56,7 @@ Our work is made possible by funding from several organizations.
 {% include section.html %}
 
  {:.center}
- Nat Pombubpa Lab in action is COMING SOON!!!
+ Nat Pombubpa Lab first meeting On-Site!!!
 
 {%
   include figure.html
