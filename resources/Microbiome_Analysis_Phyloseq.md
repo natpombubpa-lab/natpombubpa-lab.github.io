@@ -147,6 +147,7 @@ Generate rarefaction curve, rarefaction curve could be used to determined whethe
 ```
 
 Rarefaction curve will show up in Plots window. 
+
 ![Rarefaction_curve](https://natpombubpa-lab.github.io/images/tools/Phyloseq_3.png){:class="img-responsive"}
 
 # STEP 2: Plot Alpha Diversity 
@@ -270,14 +271,14 @@ Calculate ordinate and distance: current methods are "DCA", "CCA", "RDA", "CAP",
 Plot ordination with default setting
 
 {:.left}
-```{r}
+```R
 > plot_ordination(GlobalPatterns.prune, GlobalPatterns.prune.ord)
 ```
 
 Adding more details by specifying different SampleType using differnt colors. If you have other catagory, you can add different shape to your graph. The shape palette can deal with a maximum of 6 discrete values because more than 6 becomes difficult to discriminate; our data have 9, we won't add shape to the plot.
 
 {:.left}
-```{r}
+```R
 > plot_ordination(GlobalPatterns.prune, GlobalPatterns.prune.ord, type = "samples", 
                 color = "SampleType") + theme_bw()
 ```
