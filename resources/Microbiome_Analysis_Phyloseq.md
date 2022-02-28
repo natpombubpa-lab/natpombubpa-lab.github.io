@@ -1,6 +1,6 @@
 ---
-title: Phyloseq: Microbiome Analysis Tutorial
-image: AMPtk.jpg
+title: Phyloseq Microbiome Analysis Tutorial
+image: Phyloseq.png
 ---
 
 # Phyloseq: Basic Microbiome Analysis Tutorial
@@ -24,6 +24,6 @@ pre {
 
 ## Step A: Open Binder to launch RStudio
 
-![Landing Page](images/tools/Phyloseq_1.jpg){:class="img-responsive"}
+![Landing Page](../images/tools/Phyloseq_1.jpg){:class="img-responsive"}
 
 Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/natpombubpa-lab/Rbinder-phyloseq/v5?urlpath=rstudio), your web browser should bring up a similar RStudio as the picture shown above.
