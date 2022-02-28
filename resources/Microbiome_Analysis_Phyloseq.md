@@ -89,3 +89,57 @@ phy_tree()    Phylogenetic Tree: [ 16854 tips and 16853 internal nodes ]
 ```
 
 ```GlobalPatterns``` contains 19216 taxa while ```GlobalPatterns.prune``` has 16854 taxa. Therefore, we removes singletons in our dataset.
+
+Check read counts: any samples that have very low reads should be removed.
+[Ref](http://evomics.org/wp-content/uploads/2016/01/phyloseq-Lab-01-Answers.html)
+
+```R
+# load ggplot2 and data.table package which will be use for generating plots
+> library(ggplot2)
+> library(data.table)
+
+# Check read count
+> readcount = data.table(as(sample_data(GlobalPatterns.prune), "data.frame"),
+                 TotalReads = sample_sums(GlobalPatterns.prune), 
+                 keep.rownames = TRUE)
+> setnames(readcount, "rn", "SampleID")
+> ggplot(readcount, aes(TotalReads)) + geom_histogram() + ggtitle("Sequencing Depth")
+
+```
+
+Plot will show up in plot window and we will see the distribution of our samples readcounts.
+
+![Readcounts](https://natpombubpa-lab.github.io/images/tools/Phyloseq_2.png){:class="img-responsive"}
+
+In order to check samples with low number of reads, "order()" can be used to sort "TotalReads" column.
+
+```R
+
+> head(readcount[order(readcount$TotalReads), c("SampleID", "TotalReads")])
+   SampleID TotalReads
+1:  TRRsed1      58637
+2:  M11Tong     100180
+3:  F21Plmr     186260
+4:  TRRsed3     279573
+5:  M11Plmr     433825
+6:  TRRsed2     492957
+
+# readcounts in all samples look okay, no need to remove any samples.
+```
+
+Generate rarefaction curve, rarefaction curve could be used to determined whether the sequencing depth cover microbial diversity of the sample.
+
+```R
+
+> otu.rare = otu_table(GlobalPatterns.prune)
+> otu.rare = as.data.frame(t(otu.rare))
+> sample_names = rownames(otu.rare)
+
+# we will use vegan rarecurve 
+> library(vegan)
+> otu.rarecurve = rarecurve(otu.rare, step = 10000, label = T)
+
+```
+
+Rarefaction curve will show up in Plots window. 
+![Rarefaction_curve](https://natpombubpa-lab.github.io/images/tools/Phyloseq_3.png){:class="img-responsive"}
