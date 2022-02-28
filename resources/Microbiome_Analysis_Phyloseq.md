@@ -149,7 +149,7 @@ Generate rarefaction curve, rarefaction curve could be used to determined whethe
 Rarefaction curve will show up in Plots window. 
 ![Rarefaction_curve](https://natpombubpa-lab.github.io/images/tools/Phyloseq_3.png){:class="img-responsive"}
 
-# STEP 2: Plot Alpha Diversity using default setting
+# STEP 2: Plot Alpha Diversity 
 Alpha diversity measure can be Observed, Chao1, ACE, Shannon, Simpson, InvSimpson, and Fisher
 
 You can simply plot richness for all of your data using "plot_richness(your_phyloseq_object)" with all possible alpha diversity measure.
@@ -194,3 +194,69 @@ Prepare your plot for publication by adding more details such as color and title
 ```
 
 ![Publication_alpha_div_boxplot](https://natpombubpa-lab.github.io/images/tools/Phyloseq_7.png){:class="img-responsive"}
+
+
+# STEP 3: Generating taxnomic barplot
+To show how to get barplot, we will use only the top 100 OTUs. To get the top 100 OTUs, we would sort the taxa and add to "psTopNOTUs"
+*For you data, you should skip this step if you doesn't want to get only the top 100 OTUs.
+
+{:.left}
+```R
+> psTopNOTUs = names(sort(taxa_sums(GlobalPatterns.prune), TRUE)[1:100])
+```
+
+Once we have the top 100 OTUs names, we can prune/filter them using prune_taxa command.
+
+{:.left}
+```R
+> pstop.prune = prune_taxa(psTopNOTUs, GlobalPatterns.prune)
+```
+
+Barplot using default setting from Phyloseq for all samples
+
+{:.left}
+```R
+> plot_bar(pstop.prune)
+```
+![Taxa_plot](https://natpombubpa-lab.github.io/images/tools/Phyloseq_8.png){:class="img-responsive"}
+
+Specify details for the barplot using fill = "taxnomic_rank". "fill" is used to specify taxonmic rank that will be plotted. For example, this plot uses "Phylum" for taxnomic composition.
+
+{:.left}
+```R
+> plot_bar(pstop.prune, x = "Sample", y = "Abundance", fill ="Phylum")
+```
+
+![Taxa_plot_color](https://natpombubpa-lab.github.io/images/tools/Phyloseq_9.png){:class="img-responsive"}
+
+Remove black containers that were used to separated Phylums by adding "geom_bar(aes(color=Phylum, fill=Phylum), stat="identity", position="stack")"
+
+{:.left}
+```R
+> plot_bar(pstop.prune, x = "Sample", y = "Abundance", fill ="Phylum") + geom_bar(aes(color=Phylum, fill=Phylum), stat="identity", position="stack")
+```
+
+![Taxa_plot_color_no_black_line](https://natpombubpa-lab.github.io/images/tools/Phyloseq_10.png){:class="img-responsive"}
+
+Plotting in groups instead of individual samples: If we want to group the samples by specific category, you can use "merge_samples" to combine your samples. In this case, we will use "SampleType", but you can use any column in your metadata file (such as description, disturbance, species, etc.) Then, we mearge sample data as well using "factor(sample_names())". Lastly, we will transform the data to see barplot in 100% abundance.
+
+{:.left}
+```R
+> pstop.prune.merge.SampleType = merge_samples(pstop.prune, "SampleType")
+> sample_data(pstop.prune.merge.SampleType)$SampleType = factor(sample_names(pstop.prune.merge.SampleType))
+> pstop.prune.transform.SampleType = transform_sample_counts(pstop.prune.merge.SampleType, 
+                                                      function(x) 100 * x/sum(x))
+```
+
+Barplot taxonmic composition using transform data and also merged samples by SampleType
+
+{:.left}
+```R
+> plot_bar(pstop.prune.transform.SampleType, x = "Sample", y = "Abundance", fill ="Phylum") + 
+  geom_bar(aes(color=Phylum, fill=Phylum), stat="identity", position="stack") +
+  ggtitle("Add Your Title Here") + theme_bw()
+```
+![Taxa_plot_color_100percent](https://natpombubpa-lab.github.io/images/tools/Phyloseq_11.png){:class="img-responsive"}
+
+# STEP 4: Beta diversity and ordination plot
+
