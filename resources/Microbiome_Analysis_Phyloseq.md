@@ -24,6 +24,6 @@ pre {
 
 ## Step A: Open Binder to launch RStudio
 
-![Landing Page](https://user-images.githubusercontent.com/54328862/133711607-79fb884e-1804-4cb3-b4cc-be0a7ecf7a5c.png){:class="img-responsive"}
+![Landing Page](images/tools/Phyloseq_1.jpg){:class="img-responsive"}
 
 Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/natpombubpa-lab/Rbinder-phyloseq/v5?urlpath=rstudio), your web browser should bring up a similar RStudio as the picture shown above.
