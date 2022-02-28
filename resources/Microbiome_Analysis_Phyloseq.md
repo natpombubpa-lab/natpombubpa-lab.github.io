@@ -63,6 +63,7 @@ phy_tree()    Phylogenetic Tree: [ 19216 tips and 19215 internal nodes ]
 
 The first step of data processing is to remove any OTUs that present only one time (singletons).
 
+{:.left}
 ```R
 
 > GlobalPatterns.prune = prune_taxa(taxa_sums(GlobalPatterns) > 1, GlobalPatterns)
@@ -71,6 +72,7 @@ The first step of data processing is to remove any OTUs that present only one ti
 
 Let's check whether our data are pruned or not.
 
+{:.left}
 ```R
 
 > GlobalPatterns
@@ -93,6 +95,7 @@ phy_tree()    Phylogenetic Tree: [ 16854 tips and 16853 internal nodes ]
 Check read counts: any samples that have very low reads should be removed.
 [Ref](http://evomics.org/wp-content/uploads/2016/01/phyloseq-Lab-01-Answers.html)
 
+{:.left}
 ```R
 # load ggplot2 and data.table package which will be use for generating plots
 > library(ggplot2)
@@ -113,6 +116,7 @@ Plot will show up in plot window and we will see the distribution of our samples
 
 In order to check samples with low number of reads, "order()" can be used to sort "TotalReads" column.
 
+{:.left}
 ```R
 
 > head(readcount[order(readcount$TotalReads), c("SampleID", "TotalReads")])
@@ -129,6 +133,7 @@ In order to check samples with low number of reads, "order()" can be used to sor
 
 Generate rarefaction curve, rarefaction curve could be used to determined whether the sequencing depth cover microbial diversity of the sample.
 
+{:.left}
 ```R
 
 > otu.rare = otu_table(GlobalPatterns.prune)
@@ -150,6 +155,7 @@ Alpha diversity measure can be Observed, Chao1, ACE, Shannon, Simpson, InvSimpso
 You can simply plot richness for all of your data using "plot_richness(your_phyloseq_object)" with all possible alpha diversity measure.
 This plot will show if your data can be plotted with all of the alpha diversity measure. However, you should select one index to represent your data.
 
+{:.left}
 ```R
 
 > plot_richness(GlobalPatterns.prune)
@@ -161,6 +167,7 @@ This plot will show if your data can be plotted with all of the alpha diversity 
 You can add more details to your graph and select only the alpha diversity measurement that you would like to use.
 In the following command, x = "SampleType" indicate that x-axis will be plotted/grouped by SampleType and measures = c("Chao1") for selecting only Chao1 index.
 
+{:.left}
 ```R
 > plot_richness(GlobalPatterns.prune, x="SampleType", measures=c("Chao1"))
 ```
@@ -169,6 +176,7 @@ In the following command, x = "SampleType" indicate that x-axis will be plotted/
 
 Adding boxplot to your graph to show group trend
 
+{:.left}
 ```R
 > plot_richness(GlobalPatterns.prune, x="SampleType", measures=c("Chao1")) + geom_boxplot()
 ```
@@ -177,6 +185,7 @@ Adding boxplot to your graph to show group trend
 
 Prepare your plot for publication by adding more details such as color and title
 
+{:.left}
 ```R
 > plot_richness(GlobalPatterns.prune, x = "SampleType", color = "SampleType", measures = c("Chao1")) + 
   geom_boxplot() + theme_bw() + ggtitle("Add Your Title Here") + 
