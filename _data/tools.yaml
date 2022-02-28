@@ -10,7 +10,7 @@
   link: https://natpombubpa-lab.github.io/resources/Microbiome_Analysis
   description: This is a comprehensive SOP for microbiome analysis using AMPtk pipeline on UCR HPCC. This SOP/tutorial includes setting up working directory for the analysis, processing raw sequence data files, clustering sequences into OTUs, taxonomy assignment, funtional guild assignment, and how to combine all the steps in a single bash script.
   
-- name: Phyloseq: microbiome analysis
+- name: Phyloseq microbiome analysis
   group: featured
   image: images/tools/Phyloseq.png
   link: https://natpombubpa-lab.github.io/resources/Microbiome_Analysis_Phyloseq
