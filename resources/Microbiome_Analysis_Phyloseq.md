@@ -143,3 +143,45 @@ Generate rarefaction curve, rarefaction curve could be used to determined whethe
 
 Rarefaction curve will show up in Plots window. 
 ![Rarefaction_curve](https://natpombubpa-lab.github.io/images/tools/Phyloseq_3.png){:class="img-responsive"}
+
+# STEP 2: Plot Alpha Diversity using default setting
+Alpha diversity measure can be Observed, Chao1, ACE, Shannon, Simpson, InvSimpson, and Fisher
+
+You can simply plot richness for all of your data using "plot_richness(your_phyloseq_object)" with all possible alpha diversity measure.
+This plot will show if your data can be plotted with all of the alpha diversity measure. However, you should select one index to represent your data.
+
+```R
+
+> plot_richness(GlobalPatterns.prune)
+
+```
+![All_alpha_div](https://natpombubpa-lab.github.io/images/tools/Phyloseq_4.png){:class="img-responsive"}
+
+
+You can add more details to your graph and select only the alpha diversity measurement that you would like to use.
+In the following command, x = "SampleType" indicate that x-axis will be plotted/grouped by SampleType and measures = c("Chao1") for selecting only Chao1 index.
+
+```R
+> plot_richness(GlobalPatterns.prune, x="SampleType", measures=c("Chao1"))
+```
+
+![Chao1_alpha_div](https://natpombubpa-lab.github.io/images/tools/Phyloseq_5.png){:class="img-responsive"}
+
+Adding boxplot to your graph to show group trend
+
+```R
+> plot_richness(GlobalPatterns.prune, x="SampleType", measures=c("Chao1")) + geom_boxplot()
+```
+
+![Chao1_alpha_div_boxplot](https://natpombubpa-lab.github.io/images/tools/Phyloseq_6.png){:class="img-responsive"}
+
+Prepare your plot for publication by adding more details such as color and title
+
+```R
+> plot_richness(GlobalPatterns.prune, x = "SampleType", color = "SampleType", measures = c("Chao1")) + 
+  geom_boxplot() + theme_bw() + ggtitle("Add Your Title Here") + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+![Publication_alpha_div_boxplot](https://natpombubpa-lab.github.io/images/tools/Phyloseq_7.png){:class="img-responsive"}
