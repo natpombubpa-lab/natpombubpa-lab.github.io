@@ -27,3 +27,20 @@ pre {
 ![Landing Page](https://natpombubpa-lab.github.io/images/tools/Phyloseq_1.png){:class="img-responsive"}
 
 Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/natpombubpa-lab/Rbinder-phyloseq/v5?urlpath=rstudio), your web browser should bring up a similar RStudio as the picture shown above.
+
+
+Let's check several things before we begin.
+
+{:.left}
+```R
+# Check that you can load 'Phyloseq' package
+# Check 'Phyloseq' version => should be ‘1.30.0’
+# if you don't get the same results, something probably went wrong 
+# you will need to re-launch the binder 
+
+> library(phyloseq)
+> packageVersion("phyloseq")
+[1] ‘1.30.0’
+
+```
+
