@@ -12,7 +12,7 @@
   
 - name: Phyloseq: microbiome analysis
   group: featured
-  image: images/tools/Phylose.png
+  image: images/tools/Phyloseq.png
   link: https://natpombubpa-lab.github.io/resources/Microbiome_Analysis_Phyloseq
   description: This tutorial will go over Phyloseq which further analyse data generated from a basic microbiome analysis tutorial using AMPtk pipeline. This SOP/tutorial includes 1) Alpha diversity analysis, 2) Taxonomy barplot, and 3) Beta Diversity analysis
 
