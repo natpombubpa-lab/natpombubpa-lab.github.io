@@ -260,3 +260,26 @@ Barplot taxonmic composition using transform data and also merged samples by Sam
 
 # STEP 4: Beta diversity and ordination plot
 
+Calculate ordinate and distance: current methods are "DCA", "CCA", "RDA", "CAP", "DPCoA", "NMDS", "MDS", and "PCoA". [Distance](https://www.rdocumentation.org/packages/phyloseq/versions/1.16.2/topics/distance) can be selected based on the method used.
+
+{:.left}
+```R
+> GlobalPatterns.prune.ord <- ordinate(GlobalPatterns.prune, "PCoA", "unifrac")
+```
+
+Plot ordination with default setting
+
+{:.left}
+```{r}
+> plot_ordination(GlobalPatterns.prune, GlobalPatterns.prune.ord)
+```
+
+Adding more details by specifying different SampleType using differnt colors. If you have other catagory, you can add different shape to your graph. The shape palette can deal with a maximum of 6 discrete values because more than 6 becomes difficult to discriminate; our data have 9, we won't add shape to the plot.
+
+{:.left}
+```{r}
+> plot_ordination(GlobalPatterns.prune, GlobalPatterns.prune.ord, type = "samples", 
+                color = "SampleType") + theme_bw()
+```
+
+![Beta_div](https://natpombubpa-lab.github.io/images/tools/Phyloseq_12_1.png){:class="img-responsive"}
