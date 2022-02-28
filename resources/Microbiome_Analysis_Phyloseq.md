@@ -44,3 +44,48 @@ Let's check several things before we begin.
 
 ```
 
+## Step 1: Load and process data 
+
+Load example data using command ```data("GlobalPatterns")```, then check that the phyloseq object is constructed by typing ```GlobalPatterns```. Phyloseq results should show up indicating that the object contains 1) otu table, 2) sample data, 3) taxonomy table, and 4) phylogenetic tree. 
+
+{:.left}
+```R
+
+> data("GlobalPatterns")
+> GlobalPatterns
+phyloseq-class experiment-level object
+otu_table()   OTU Table:         [ 19216 taxa and 26 samples ]
+sample_data() Sample Data:       [ 26 samples by 7 sample variables ]
+tax_table()   Taxonomy Table:    [ 19216 taxa by 7 taxonomic ranks ]
+phy_tree()    Phylogenetic Tree: [ 19216 tips and 19215 internal nodes ]
+
+```
+
+The first step of data processing is to remove any OTUs that present only one time (singletons).
+
+```R
+
+> GlobalPatterns.prune = prune_taxa(taxa_sums(GlobalPatterns) > 1, GlobalPatterns)
+
+```
+
+Let's check whether our data are pruned or not.
+
+```R
+
+> GlobalPatterns
+phyloseq-class experiment-level object
+otu_table()   OTU Table:         [ 19216 taxa and 26 samples ]
+sample_data() Sample Data:       [ 26 samples by 7 sample variables ]
+tax_table()   Taxonomy Table:    [ 19216 taxa by 7 taxonomic ranks ]
+phy_tree()    Phylogenetic Tree: [ 19216 tips and 19215 internal nodes ]
+> GlobalPatterns.prune
+phyloseq-class experiment-level object
+otu_table()   OTU Table:         [ 16854 taxa and 26 samples ]
+sample_data() Sample Data:       [ 26 samples by 7 sample variables ]
+tax_table()   Taxonomy Table:    [ 16854 taxa by 7 taxonomic ranks ]
+phy_tree()    Phylogenetic Tree: [ 16854 tips and 16853 internal nodes ]
+
+```
+
+```GlobalPatterns``` contains 19216 taxa while ```GlobalPatterns.prune``` has 16854 taxa. Therefore, we removes singletons in our dataset.
