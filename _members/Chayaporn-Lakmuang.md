@@ -16,4 +16,7 @@ Chayaporn Lakmuang (Bell). I am a DPST student and currently a Master student in
 
 Bell is the first student in NatPombubpa lab and recently joined our lab in December 2021.
 
-เดี๋ยวมาเขียนภาษาไทยค่ะ 
+ชยาภรณ์ หลักเมือง (เบลล์) นิสิตทุนพสวท. ปัจจุบันกำลังศึกษาปริญญาโท สาขาชีวสารสนเทศศาสตร์และชีววิทยาเชิงคอมพิวเตอร์ จุฬาลงกรณ์มหาวิทยาลัย 
+จบปริญญาตรีมาจาก คณะวิทยาศาสตร์ ภาควิชาพฤกษศาสตร์ มหาวิทยาลัยเกษตรศาสตร์ งานวิจัยที่ผ่านมาเกี่ยวกับ DNA barcoding ของลิเวอร์เวิร์ตสกุล Leptolejeunea ในประเทศไทย 
+มีความสนใจเกี่ยวกับ ความหลากหลายทางระบบนิเวศ
+
