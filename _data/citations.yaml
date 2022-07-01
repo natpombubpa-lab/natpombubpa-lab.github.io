@@ -1,5 +1,33 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.3389/fmicb.2022.856454
+  title: Landscape Topography and Regional Drought Alters Dust Microbiomes in the
+    Sierra Nevada of California
+  authors:
+  - Mia R. Maltz
+  - Chelsea J. Carey
+  - Hannah L. Freund
+  - Jon K. Botthoff
+  - Stephen C. Hart
+  - Jason E. Stajich
+  - Sarah M. Aarons
+  - Sarah M. Aciego
+  - Molly Blakowski
+  - Nicholas C. Dove
+  - Morgan E. Barnes
+  - Nuttapon Pombubpa
+  - Emma L. Aronson
+  publisher: Frontiers in Microbiology
+  date: '2022-06-28'
+  link: https://doi.org/gqfk78
+  image: https://www.frontiersin.org/files/Articles/856454/fmicb-13-856454-HTML/image_m/fmicb-13-856454-g001.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Dust Microbiome
+  - Amplicon sequencing
+  - Fungi
+  - Sierra Nevada
 - id: doi:10.1128/MRA.00494-21
   title: Amplicon Sequencing of Rock-Inhabiting Microbial Communities from Joshua
     Tree National Park, USA
