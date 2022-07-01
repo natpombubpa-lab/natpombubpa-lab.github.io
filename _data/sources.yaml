@@ -1,3 +1,13 @@
+- id: doi:10.3389/fmicb.2022.856454
+  image: https://www.frontiersin.org/files/Articles/856454/fmicb-13-856454-HTML/image_m/fmicb-13-856454-g001.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Dust Microbiome
+    - Amplicon sequencing
+    - Fungi
+    - Sierra Nevada
+
 - id: doi:10.1128/MRA.00494-21
   image: https://user-images.githubusercontent.com/54328862/123938574-6ddc4600-d9c1-11eb-876f-8a2a3441f955.png
   extra-links:
