@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/Pornnapat_Tiwong.jpg
 role: undergrad
+group: alum
 
 ---
 
