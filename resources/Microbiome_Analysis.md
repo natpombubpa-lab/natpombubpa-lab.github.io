@@ -92,6 +92,14 @@ More detials on Sequencing setup can be found [here](https://journals.plos.org/p
 
 ITS primers for this project contain unique barcode for each sample. We usually submit ~200 samples per illumina miseq run. After sequencing process, the barcodes will be used to split sequences into fastq file for each sample.
 
+
+Download tutorial data 
+
+{:.left}
+```bash
+svn export https://github.com/NatPombubpa/Binder_Amptk_v1.4.2/trunk/illumina
+```
+
 Before we begin Pre-processing data, let's take a look at our data.
 
 {:.left}
