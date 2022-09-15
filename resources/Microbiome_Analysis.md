@@ -5,10 +5,10 @@ image: AMPtk.jpg
 
 # Basic Microbiome Analysis Tutorial
 
-This is a basic microbiome analysis tutorial using AMPtk pipeline. This SOP/tutorial includes 1) processing raw sequence data files, 2) clustering/denoising sequences, and 3) taxonomy assignment. This tutorial dose not require installation, you can simply click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Binder_Amptk_v1.4.2/main?urlpath=lab) and your browser will bring up everything you need for this tutorial. 
+This is a basic microbiome analysis tutorial using AMPtk pipeline. This SOP/tutorial includes 1) processing raw sequence data files, 2) clustering/denoising sequences, and 3) taxonomy assignment. This tutorial dose not require installation, you can simply click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Amptk_1.4.2_2022_binder/master) and your browser will bring up everything you need for this tutorial. 
 
 
-เว็บเพจนี้สอนวิธีการวิเคราะห์ข้อมูลความหลากหลายของจุลินทรีย์(ไมโครไบโอม)เบื้องต้น โดยผู้เรียนไม่ต้องดาวน์โหลดโปรแกรมลงบนคอมพิวเตอร์ส่วนตัว เพียงคลิกที่ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Binder_Amptk_v1.4.2/main?urlpath=lab) ข้อมูลและโปรแกรมจะเปิดขึ้นมาบนหน้าเว็บ และ พร้อมใช้งานได้ทันที (หมายเหตุ: หากมีผู้ใช้งานจำนวนมาก อาจใช้เวลามากกว่า 10 นาทีในการเปิดหน้าเว็บ) การวิเคราะห์ข้อมูลไมโครไบโอมเบื้องต้นที่จะกล่าวถึงนั้น มี 3 ขั้นตอนหลัก คือ 1) processing raw sequence data files, 2) clustering/denoising sequences, และ 3) taxonomy assignment.
+เว็บเพจนี้สอนวิธีการวิเคราะห์ข้อมูลความหลากหลายของจุลินทรีย์(ไมโครไบโอม)เบื้องต้น โดยผู้เรียนไม่ต้องดาวน์โหลดโปรแกรมลงบนคอมพิวเตอร์ส่วนตัว เพียงคลิกที่ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Amptk_1.4.2_2022_binder/master) ข้อมูลและโปรแกรมจะเปิดขึ้นมาบนหน้าเว็บ และ พร้อมใช้งานได้ทันที (หมายเหตุ: หากมีผู้ใช้งานจำนวนมาก อาจใช้เวลามากกว่า 10 นาทีในการเปิดหน้าเว็บ) การวิเคราะห์ข้อมูลไมโครไบโอมเบื้องต้นที่จะกล่าวถึงนั้น มี 3 ขั้นตอนหลัก คือ 1) processing raw sequence data files, 2) clustering/denoising sequences, และ 3) taxonomy assignment.
 
 <style>
 pre {
