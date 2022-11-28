@@ -1,5 +1,23 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.1016/j.jbiotec.2022.11.008
+  title: Advancement on mixed microalgal-bacterial cultivation systems for nitrogen
+    and phosphorus recoveries from wastewater to promote sustainable bioeconomy
+  authors:
+  - Chalampol Janpum
+  - Nuttapon Pombubpa
+  - Tanakarn Monshupanee
+  - Aran Incharoensakdi
+  - Pichaya In-na
+  publisher: Journal of Biotechnology
+  date: '2022-12-01'
+  link: https://doi.org/grb69z
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S0168165622002711-ga1_lrg.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Mixed Microalgal and Bacterial (MMB)
+  - nitrogen and phosphorus recoveries
 - id: doi:10.3389/fmicb.2022.856454
   title: Landscape Topography and Regional Drought Alters Dust Microbiomes in the
     Sierra Nevada of California
