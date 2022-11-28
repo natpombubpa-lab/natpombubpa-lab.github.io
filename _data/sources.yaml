@@ -1,3 +1,11 @@
+- id: doi:10.1016/j.jbiotec.2022.11.008
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S0168165622002711-ga1_lrg.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Mixed Microalgal and Bacterial (MMB)
+    - nitrogen and phosphorus recoveries
+
 - id: doi:10.3389/fmicb.2022.856454
   image: https://www.frontiersin.org/files/Articles/856454/fmicb-13-856454-HTML/image_m/fmicb-13-856454-g001.jpg
   extra-links:
