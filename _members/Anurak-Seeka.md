@@ -5,7 +5,7 @@ aliases:
   - Sotus Seeka
   - A. Seeka
 
-image: images/team/Anurak-Seeka.jpg
+image: images/team/Anurak_Seeka.jpg
 role: master
 links:
   email: sotus13597@gmail.com
