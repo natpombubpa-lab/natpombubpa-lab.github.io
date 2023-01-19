@@ -23,6 +23,43 @@ pre {
 
 ## Set timezone
 
+{:.left}
 ```
 export TZ='Europe/London'
+```
+
+
+## Download data
+
+```
+mkdir qiime2-moving-pictures-tutorial
+cd qiime2-moving-pictures-tutorial
+```
+
+```
+wget \
+  -O "sample-metadata.tsv" \
+  "https://data.qiime2.org/2022.11/tutorials/moving-pictures/sample_metadata.tsv"
+```
+
+```
+mkdir emp-single-end-sequences
+```
+
+```
+wget \
+  -O "emp-single-end-sequences/barcodes.fastq.gz" \
+  "https://data.qiime2.org/2022.11/tutorials/moving-pictures/emp-single-end-sequences/barcodes.fastq.gz"
+```
+
+```
+wget \
+  -O "emp-single-end-sequences/sequences.fastq.gz" \
+  "https://data.qiime2.org/2022.11/tutorials/moving-pictures/emp-single-end-sequences/sequences.fastq.gz"
+```
+
+```
+wget \
+  -O "gg-13-8-99-515-806-nb-classifier.qza" \
+  "https://data.qiime2.org/2022.11/common/gg-13-8-99-515-806-nb-classifier.qza"
 ```
