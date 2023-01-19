@@ -31,33 +31,39 @@ export TZ='Europe/London'
 
 ## Download data
 
+{:.left}
 ```
 mkdir qiime2-moving-pictures-tutorial
 cd qiime2-moving-pictures-tutorial
 ```
 
+{:.left}
 ```
 wget \
   -O "sample-metadata.tsv" \
   "https://data.qiime2.org/2022.11/tutorials/moving-pictures/sample_metadata.tsv"
 ```
 
+{:.left}
 ```
 mkdir emp-single-end-sequences
 ```
 
+{:.left}
 ```
 wget \
   -O "emp-single-end-sequences/barcodes.fastq.gz" \
   "https://data.qiime2.org/2022.11/tutorials/moving-pictures/emp-single-end-sequences/barcodes.fastq.gz"
 ```
 
+{:.left}
 ```
 wget \
   -O "emp-single-end-sequences/sequences.fastq.gz" \
   "https://data.qiime2.org/2022.11/tutorials/moving-pictures/emp-single-end-sequences/sequences.fastq.gz"
 ```
 
+{:.left}
 ```
 wget \
   -O "gg-13-8-99-515-806-nb-classifier.qza" \
