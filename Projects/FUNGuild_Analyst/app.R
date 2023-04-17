@@ -14,6 +14,8 @@ library(ggplot2)
 library(ggpubr)
 library(BiocManager)
 library(Biobase)
+library(devtools)
+library(otuSummary)
 options(repos = BiocManager::repositories())
 #UI
 options(shiny.maxRequestSize=150*1024^2)
@@ -27,7 +29,7 @@ shinyApp(
                  fileInput("file1", "FunGuilds table:"),
                  fileInput("file2", "Mapping File:"),
                  uiOutput("text"),
-                 img(src = "https://lh3.googleusercontent.com/EqddQu6ajHCvOLy5Dr_r1AaWJfJCO2ONGHBx-2rGorBX-FU4QehX3s5H7yvPi4rFPN-blb5H6HDkRfaDUkARmLAMmJZdmQyscLUp1eY31w", height = 'auto', width = '100%'),
+                 img(src = "https://lh3.googleusercontent.com/0UGFuAC5rPP58Isam7WUfHtpzGep9XVHptbDbJPvCFsz_EVZm6waQxl2aSya0g-AYNVl7ahg_VEOcdUuPpbIkKCd8UFPbMHxmLxDG19GixB5mzHW8FS44G2tIUcPT5n4Zuy_xHoviBydqRFEuC812OgisxrTp-AGHLojwW8xdrfG97UW6iIAhUY8uz644DWZmr1i7EqcXhKllm3wVrGsjOmxDOMyouxC9AKi58eIGeY34rlonVCiiNhCBMGbrAdWEuWddW5Qfj1y2wxWIVIeZgRO0cblht4FJhJr0psfTaftz2RetVW7MWl-pTyB2NN1xHf3_LqcY2iAvdts1zMliQvcMta6Fdxgoi2Dui203Yf9H_NjXYzL3TZy8MQ_9xzjhAq9eNrc1eFV7Rm97xYur39Z5XkSjiQPJEW5aLpltBeUkduZq_DOx7yOM_YnFGrYsjs37xlZrTx6CiGLEiEtz-beLeKWlleIg5RejBGT2r9yb5knFmMKPdTnRQvMX1KhckgENJWaxXG5rVwo-nx19G5BtWMdsk-z4tLB3IMb3kFGzrijiEmNu4fttZKrp0O6zW9Za3IBbvgJ0g8N0ALFNpy_5aSZZosg78BhqUKHc2JzDp0BPWO7xIseoCUn4nwLdZKH409Dkzjc21vquyhDNbUd2dqlX1gBuAm8tpHuzHw_ZYks3CxBFC0UG4vIExq2FfPTx0E_nS9SqEhCT8yJg-euTfgKHkNfI2-e5cFFwGfdjs1Cm-RVD2quE1pgVAayaFPSaSz9cygNF49AIEwF-xREbyfIP87vhCKUOO85RjORObQj2zG0tlspmzDfypmi9ro-NoyK0-fRvSTClpMNKMmyADQfIBAPlayaYpGAaYyFVQng6YQWqsgtGrroQnwsRqr-cAS_gpwmdvyMHTmcCUbSl2H_HEJ8Hx6Aur2FrzGCbROhNO1DEYHvb13gnM-d9yfyEUc98wF1NfJdtRs2lZHJSyjjrN0puZWZ9x8d_1n8rGml_nylT70=w584-h871-s-no?authuser=0", height = 'auto', width = '100%'),
                 
                  mainPanel(uiOutput("Example")
                           ))
@@ -73,14 +75,13 @@ shinyApp(
                                 downloadButton('dwdod','Download graph')),
                               mainPanel(plotOutput("od",height = "720px", width = "720px"))
                               
-                     ),    
-                     tabPanel("Heatmap plot",
-                              sidebarPanel(
-                                radioButtons("htype", "Select the file type", c("pdf", "png", "jpeg")),
-                                downloadButton('dwdhm','Download graph')),
-                              mainPanel(plotOutput("hm",height = "720px", width = "720px"))
-
-                     ))
+                     )
+                     #,tabPanel("Heatmap plot",
+                              #sidebarPanel(
+                                #radioButtons("htype", "Select the file type", c("pdf", "png", "jpeg")),
+                                #downloadButton('dwdhm','Download graph')),
+                              #mainPanel(plotOutput("hm",height = "720px", width = "720px")))
+                     )
                    
                  ))) ,tabPanel("About",
                                mainPanel(h1("Background")),
@@ -200,7 +201,9 @@ shinyApp(
                                    "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7","#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#00FFFF",
                                    "#FF00FF", "#800000", "#008000", "#000080", "#808000","#008080", "#800080", "#FFA500", "#00FF7F", "#7B68EE",
                                    "#FF69B4", "#6495ED", "#DC143C", "#00FA9A", "#9400D3")) +
-        ggtitle("Bar plot") +  
+        
+        ggtitle("Bar plot") + 
+        theme_minimal() +
         theme(plot.title = element_text(hjust = 0.5)) +
         theme(axis.text.x = element_text(angle = 90, hjust = 1))
         
