@@ -5,7 +5,7 @@ aliases:
   - T. Kaewjon
 
 image: images/team/Teeratat_Kaewjon.jpg
-role: undergrad
+role: master
 
 ---
 
