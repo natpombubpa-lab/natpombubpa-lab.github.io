@@ -5,7 +5,8 @@ aliases:
   - P. Palasak
 
 image: images/team/Pudit_Palasak.jpg
-role: alum
+role: undergrad
+group: alum
 
 ---
 
