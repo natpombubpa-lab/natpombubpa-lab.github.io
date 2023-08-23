@@ -31,6 +31,7 @@ Once you log in to Rstudio cloud, your web browser should bring up a similar win
 ![Terminal](https://user-images.githubusercontent.com/54328862/133711667-3be45824-8f87-4163-978a-db4cfd667023.png){:class="img-responsive"}
 
 ## Step 1: Miniconda set up
+
 {:.left}
 ```bash
 # download and install miniconda3 to Rstudio cloud
@@ -76,7 +77,9 @@ Next step is to verify that AMPtk can be used.
 # amptk manual page is longer than this, 
 # but I only show you the first few lines.
 
-(base) /cloud/project$ amptk
+(base) /cloud/project$ conda activate amptk
+ 
+(amptk) /cloud/project$ amptk
 
 Usage:       amptk <command> <arguments>
 version:     1.5.5
@@ -88,11 +91,12 @@ Next step is to install database
 {:.left}
 ```bash
 
-(base) /cloud/project$ aamptk install -i ITS
+(amptk) /cloud/project$ aamptk install -i ITS
 
 ```
 
 Check database installed
+
 {:.left}
 ```bash
 
@@ -127,7 +131,7 @@ Download tutorial data
 
 {:.left}
 ```bash
-(base) /cloud/project$ svn export https://github.com/NatPombubpa/Binder_Amptk_v1.4.2/trunk/illumina
+(amptk) /cloud/project$ svn export https://github.com/NatPombubpa/Binder_Amptk_v1.4.2/trunk/illumina
 ```
 
 Before we begin Pre-processing data, let's take a look at our data.
@@ -157,7 +161,7 @@ What does the sequence file look like?
 {:.left}
 ```bash
 
-(base) /cloud/project$ zmore illumina/ITS-cc-121_S26_L001_R1_001.fastq.gz | head -2
+(amptk) /cloud/project$ zmore illumina/ITS-cc-121_S26_L001_R1_001.fastq.gz | head -2
 @M02457:311:000000000-C6VB2:1:1101:18927:1862 1:N:0:ATGTCCAG+CAGTCGGA
 AGCCTCCGCTTATTGATATGCTTAAGTTCAGCGGGTGGTCCTACCTGATTTGAGGTCAGAGTCCAAAAGAGCGCCACAAGGGGCAGGTTATGAGCGGGCCTCACACCATGCCAGACGAAACTTATCACGTCAGGACGTGGATGCTGGTCCCACTAAGTCATTTGAGGCAAGCCGGCAGACGGCAGACACCCAGGTCCATGTCCACCCCAGGTCAAGGAGACCCGAGGGGATTGAGATTTCATGACACTCAAACAGGCATGCCTTTCGGAATACCAAAAGGCGCAAGGTGCGTTCGAAGATT
 
@@ -178,7 +182,7 @@ There are several different file format that could be generated from Illumina Mi
 ```bash
 #Pre-preocessing steps will use `amptk illumia` command for demultiplexed PE reads
 
-(base) /cloud/project$ amptk illumina -i illumina/ -f AACTTTYRRCAAYGGATCWCT -r AGCCTCCGCTTATTGATATGCTTAART --require_primer off -o MicroEco --rescue_forward on --primer_mismatch 2 -l 250
+(amptk) /cloud/project$ amptk illumina -i illumina/ -f AACTTTYRRCAAYGGATCWCT -r AGCCTCCGCTTATTGATATGCTTAART --require_primer off -o MicroEco --rescue_forward on --primer_mismatch 2 -l 250
 
 ```
 
@@ -193,7 +197,7 @@ Note: at clustering step, we used merged sequence from STEP1 as an input and we 
 {:.left}
 ```bash
 
-(base) /cloud/project$ amptk cluster -i MicroEco.demux.fq.gz -o MicroEco
+(amptk) /cloud/project$ amptk cluster -i MicroEco.demux.fq.gz -o MicroEco
 
 ```
 
@@ -218,7 +222,7 @@ When the taxonomy assignment is completed, we can check the taxonmy file.
 
 # select Fungi from taxonomy file by using grep command
 
-(base) /cloud/project$ grep Basidiomycota MicroEco.cluster.taxonomy.txt | head -10
+(amptk) /cloud/project$ grep Basidiomycota MicroEco.cluster.taxonomy.txt | head -10
 OTU34   SINTAX;k:Fungi,p:Basidiomycota,c:Microbotryomycetes,f:Chrysozymaceae,g:Slooffia
 OTU37   SINTAX;k:Fungi,p:Basidiomycota,c:Microbotryomycetes,f:Chrysozymaceae,g:Slooffia
 OTU236  SINTAX;k:Fungi,p:Basidiomycota,c:Agaricomycetes,o:Agaricales,f:Inocybaceae,g:Inocybe
