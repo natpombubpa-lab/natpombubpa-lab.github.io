@@ -24,13 +24,11 @@ pre {
 
 ## Step A: Open Rstudio cloud and Launch Terminal
 
-![Landing Page](https://user-images.githubusercontent.com/54328862/133711607-79fb884e-1804-4cb3-b4cc-be0a7ecf7a5c.png){:class="img-responsive"}
-
 ![Landing Page](TutorialFigs/1_Microbiome.png){:class="img-responsive"}
 
-Once you log in to Rstudio cloud, your web browser should bring up a similar window as the picture shown above. The next step is to click "Terminal" which should look like a picture below after you click on it.
+Once you log in to Rstudio cloud, your web browser should bring up a similar window as the picture shown above. Click the button on the top right corner to create a new Rstudio project. Then, the next step is to click "Terminal" which should look like a picture below after you click on it.
 
-![Terminal](https://user-images.githubusercontent.com/54328862/133711667-3be45824-8f87-4163-978a-db4cfd667023.png){:class="img-responsive"}
+![Terminal](TutorialFigs/2_Microbiome.png){:class="img-responsive"}
 
 ## Step 1: Miniconda set up
 
