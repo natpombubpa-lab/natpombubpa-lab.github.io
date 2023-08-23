@@ -91,7 +91,7 @@ Next step is to install database
 {:.left}
 ```bash
 
-(amptk) /cloud/project$ aamptk install -i ITS
+(amptk) /cloud/project$ amptk install -i ITS
 
 ```
 
