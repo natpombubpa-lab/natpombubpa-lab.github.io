@@ -23,11 +23,11 @@ pre {
 
 ## Step A: Open Rstudio cloud and Launch Terminal
 
-![Landing Page](TutorialFigs/1_Microbiome.png){:class="img-responsive"}
+![Landing Page](../TutorialFigs/1_Microbiome.png){:class="img-responsive"}
 
 Once you log in to Rstudio cloud, your web browser should bring up a similar window as the picture shown above. Click the button on the top right corner to create a new Rstudio project. Then, the next step is to click "Terminal" which should look like a picture below after you click on it.
 
-![Terminal](TutorialFigs/2_Microbiome.png){:class="img-responsive"}
+![Terminal](../TutorialFigs/2_Microbiome.png){:class="img-responsive"}
 
 
 Download example files 
