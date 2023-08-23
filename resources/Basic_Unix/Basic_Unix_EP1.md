@@ -117,8 +117,8 @@ To take us back to parent directory, we do ```cd ..```, let's try
 {:.left}
 ```bash
 
-[/home/jovyan/unix_intro]$ cd ..
-[/home/jovyan]$ 
+/cloud/project/unix_intro$ cd ..
+/cloud/project$ 
 
 ```
 
@@ -127,8 +127,8 @@ We can also use a path to change directory.
 {:.left}
 ```bash
 
-[/home/jovyan]$ cd unix_intro/experiment/
-[/home/jovyan/unix_intro/experiment]$
+/cloud/project$ cd unix_intro/experiment/
+/cloud/project/unix_intro/experiment$
 
 ```
 
@@ -137,8 +137,8 @@ Change to home directory in one command, ```cd```
 {:.left}
 ```bash
 
-[/home/jovyan/unix_intro/experiment]$ cd
-[/home/jovyan]$ 
+/cloud/project/unix_intro/experiment$ cd
+/cloud/project$
 
 ```
 
@@ -149,10 +149,10 @@ Let's make sure we start at ```unix_intro``` folder and take a look at what we h
 {:.left}
 ```bash
 
-[/home/jovyan]$ cd unix_intro/
-[/home/jovyan/unix_intro]$ pwd
-/home/jovyan/unix_intro
-[/home/jovyan/unix_intro]$ ls -F
+/cloud/project$ cd unix_intro/
+/cloud/project/unix_intro$ pwd
+/cloud/project/unix_intro
+/cloud/project/unix_intro$ ls -F
 data/  example.txt  experiment/  six_commands/
 
 ```
@@ -161,14 +161,14 @@ Currently, there are three directories/folders, to create a new directory, we wi
 
 {:.left}
 ```bash
-[/home/jovyan/unix_intro]$ mkdir Thesis
+/cloud/project/unix_intro$ mkdir Thesis
 ```
 
 Check if you have ```Thesis``` directory, there should be five items in your ```unix_intro``` directory.
 
 {:.left}
 ```bash
-[/home/jovyan/unix_intro]$ ls -F
+/cloud/project/unix_intro$ ls -F
 data/  example.txt  experiment/  six_commands/  Thesis/
 ```
 
@@ -180,8 +180,8 @@ Now, change working directory to ```Thesis``` and we will create a file called `
 {:.left}
 ```bash
 
-[/home/jovyan/unix_intro]$ cd Thesis/
-[/home/jovyan/unix_intro/Thesis]$ nano draft.txt
+/cloud/project/unix_intro$ cd Thesis/
+/cloud/project/unix_intro/Thesis$ nano draft.txt
 
 ```
 
@@ -194,7 +194,7 @@ Check for ```draft.txt``` in your ```Thesis``` directory
 {:.left}
 ```bash
 
-[/home/jovyan/unix_intro/Thesis]$ ls -lh
+/cloud/project/unix_intro/Thesis$ ls -lh
 total 4.0K
 -rw-r--r-- 1 jovyan jovyan 18 Jan 16 20:48 draft.txt
 
@@ -205,7 +205,7 @@ Create a file without nano using ```touch``` command, let's try
 {:.left}
 ```bash
 
-[[/home/jovyan/unix_intro/Thesis]$ touch my_file.txt
+/cloud/project/unix_intro/Thesis$ touch my_file.txt
 
 ```
 
@@ -219,15 +219,15 @@ We cab use ```rm``` command, however, there is no trash bin. Removing/deleting i
 
 {:.left}
 ```bash
-[/home/jovyan/unix_intro/Thesis]$ rm draft.txt
+/cloud/project/unix_intro/Thesis$ rm draft.txt
 ```
 
 What about removing directory? Let's move up/back to ```unix_intro``` and try removing ```Thesis``` directory
 
 {:.left}
 ```bash
-[/home/jovyan/unix_intro/Thesis]$ cd ..
-[/home/jovyan/unix_intro]$ rm Thesis
+/cloud/project/unix_intro/Thesis$ cd ..
+/cloud/project/unix_intro$ rm Thesis
 rm: cannot remove 'Thesis': Is a directory
 ```
 
@@ -235,7 +235,7 @@ You will get an error. To remove directory, we can use ```rm -r Thesis``` and yo
 
 {:.left}
 ```bash
-[/home/jovyan/unix_intro]$ rm -r Thesis/
+/cloud/project/unix_intro$ rm -r Thesis/
 ```
 
 How do we change file name? We can use ```mv``` command.
@@ -243,14 +243,14 @@ How do we change file name? We can use ```mv``` command.
 {:.left}
 ```bash
 #lisitng files and folder
-[/home/jovyan/unix_intro]$ ls
+/cloud/project/unix_intro$ ls
 data  example.txt  experiment  six_commands
 
 #change file name using mv command
-[/home/jovyan/unix_intro]$ mv example.txt example_1.txt 
+/cloud/project/unix_intro$ mv example.txt example_1.txt 
 
 #listing files and folder, you should see that example.txt becomes example_1.txt
-[/home/jovyan/unix_intro]$ ls
+/cloud/project/unix_intro$ ls
 data  example_1.txt  experiment  six_commands
 ```
 
@@ -259,10 +259,10 @@ We can also use ```mv``` command to move file.
 {:.left}
 ```bash
 # move a file
-[/home/jovyan/unix_intro]$ mv example_1.txt data/
+/cloud/project/unix_intro$ mv example_1.txt data/
 
 # now a file has been moved to data folder
-[/home/jovyan/unix_intro]$ ls data/
+/cloud/project/unix_intro$ ls data/
 all_samples  example_1.txt
 
 ```
@@ -272,10 +272,10 @@ How about copy file instead if moving file?
 {:.left}
 ```bash
 #copy file to current directory
-[/home/jovyan/unix_intro]$ cp data/example_1.txt .
+/cloud/project/unix_intro$ cp data/example_1.txt .
 
 #listing files and folders, example_1.txt should be present in your current working directory
-[/home/jovyan/unix_intro]$ ls
+/cloud/project/unix_intro$ ls
 data  example_1.txt  experiment  six_commands
 ```
 
