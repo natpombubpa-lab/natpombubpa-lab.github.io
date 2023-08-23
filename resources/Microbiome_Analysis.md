@@ -41,6 +41,7 @@ Once you log in to Rstudio cloud, your web browser should bring up a similar win
 ```
 
 Check conda installation 
+
 {:.left}
 ```bash
 /cloud/project$ conda env list
@@ -49,9 +50,10 @@ Check conda installation
 
 {:.left}
 ```bash
-If there's any issue, try this
+# If there's any issue, try this
 
-source ~/.bashrc 
+/cloud/project$ source ~/.bashrc
+
 ```
 
 ## Step 2: Install AMPtk
