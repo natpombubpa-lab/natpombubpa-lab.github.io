@@ -175,19 +175,19 @@ data/  example.txt  experiment/  six_commands/  Thesis/
 Note for naming files and directiries: 1) don't use whitespaces, 2) don't begin with ```-``` (dash), 3) stick with letters, numbers, ```.``` (period or full stop), ```-``` (dash), and ```_``` (underscore). [Referent to swcarpentry](swcarpentry.github.io)
 
 
-Now, change working directory to ```Thesis``` and we will create a file called ```draft.txt``` using ```nano``` command.
+Now, change working directory to ```Thesis``` and we will create a file called ```draft.txt``` using ```vim``` command.
 
 {:.left}
 ```bash
 
 /cloud/project/unix_intro$ cd Thesis/
-/cloud/project/unix_intro/Thesis$ nano draft.txt
+/cloud/project/unix_intro/Thesis$ vim draft.txt
 
 ```
 
-Once you open up ```nano``` it will look like a picture below. Let's write a sentence into your file. Press Ctrl+O to save file, then enter to accpet changes you made, To exit from nano, press Ctrl + X
+Once you open up ```vim``` it will look like a picture below. Let's write a sentence into your file. Press ```i``` to activate insert mode, then press ```esc``` to exit after you're done writing. To save file, type ```:w``` and press enter. To exit from ```vim```, type ```:q``` and press enter.
 
-![Nano](https://natpombubpa-lab.github.io/images/tools/Unix/unix_1.3.png){:class="img-responsive"}
+![Vim](../TutorialFigs/3_Microbiome.png){:class="img-responsive"}
 
 Check for ```draft.txt``` in your ```Thesis``` directory
 
@@ -196,7 +196,7 @@ Check for ```draft.txt``` in your ```Thesis``` directory
 
 /cloud/project/unix_intro/Thesis$ ls -lh
 total 4.0K
--rw-r--r-- 1 jovyan jovyan 18 Jan 16 20:48 draft.txt
+-rw-rw---- 1 r1200493 rstudio-user 19 Aug 23 10:39 draft.txt
 
 ```
 
