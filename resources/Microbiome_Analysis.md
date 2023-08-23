@@ -35,10 +35,23 @@ Once you log in to Rstudio cloud, your web browser should bring up a similar win
 ```bash
 # download and install miniconda3 to Rstudio cloud
 
-(base) /cloud/project$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-(base) /cloud/project$ bash Miniconda3-latest-Linux-x86_64.sh
+/cloud/project$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+/cloud/project$ bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
+Check conda installation 
+{:.left}
+```bash
+/cloud/project$ conda env list
+
+```
+
+{:.left}
+```bash
+If there's any issue, try this
+
+source ~/.bashrc 
+```
 
 ## Step 2: Install AMPtk
 
