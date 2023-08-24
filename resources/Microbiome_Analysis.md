@@ -213,7 +213,7 @@ Note: at Taxonomy Assignment step, we will use clustered sequences file and OTU 
 {:.left}
 ```bash
 
-(base) /cloud/project$ amptk taxonomy -f MicroEco.cluster.otus.fa -i MicroEco.otu_table.txt -d ITS
+(base) /cloud/project$ amptk taxonomy -f MicroEco.cluster.otus.fa -i MicroEco.otu_table.txt -d ITS --method sintax
 
 ```
 
