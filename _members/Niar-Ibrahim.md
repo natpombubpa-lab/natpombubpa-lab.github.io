@@ -8,6 +8,8 @@ image: images/team/Niar.jpg
 role: phd
 links:
   email: syahriarmicro@gmail.com
+  orcid: 0000-0003-2468-7276
+  google-scholar: 0XpEMdUAAAAJ
 
 ---
 
