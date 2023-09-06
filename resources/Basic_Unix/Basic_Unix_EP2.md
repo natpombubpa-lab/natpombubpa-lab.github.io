@@ -48,7 +48,7 @@ We will learn some useful commands that are used ofetn in Bioinformatics.
 {:.left}
 ```bash
 
-/cloud/project$ cd ~/unix_intro/six_commands/
+/cloud/project$ cd unix_intro/six_commands/
 
 ```
 
@@ -59,7 +59,17 @@ Let's checkout the file
 {:.left}
 ```bash
 
-/cloud/project$ head gene_annotations.tsv
+/cloud/project/unix_intro/six_commands$ head gene_annotations.tsv 
+gene_ID genome  KO_ID   KO_annotation
+1       CC9311  K02338  DPO3B; DNA polymerase III subunit beta [EC:2.7.7.7]
+2       CC9311  NA      NA
+3       CC9311  K01952  purL; phosphoribosylformylglycinamidine synthase [EC:6.3.5.3]
+4       CC9311  K00764  purF; amidophosphoribosyltransferase [EC:2.4.2.14]
+5       CC9311  K02469  gyrA; DNA gyrase subunit A [EC:5.99.1.3]
+6       CC9311  NA      NA
+7       CC9311  K18979  queG; epoxyqueuosine reductase [EC:1.17.99.6]
+8       CC9311  NA      NA
+9       CC9311  NA      NA
 
 ```
 
@@ -68,7 +78,10 @@ Let's take a look at the first few lines
 {:.left}
 ```bash
 
-/cloud/project$ head -n 3 gene_annotations.tsv
+/cloud/project/unix_intro/six_commands$ head -n 3 gene_annotations.tsv
+gene_ID genome  KO_ID   KO_annotation
+1       CC9311  K02338  DPO3B; DNA polymerase III subunit beta [EC:2.7.7.7]
+2       CC9311  NA      NA
 
 ```
 
@@ -77,7 +90,8 @@ We can also count number of rows in the file
 {:.left}
 ```bash
 
-/cloud/project$ wc -l gene_annotations.tsv
+/cloud/project/unix_intro/six_commands$ wc -l gene_annotations.tsv
+101 gene_annotations.tsv
 
 ```
 
@@ -88,7 +102,7 @@ using cut to extract column from tab delimted file
 {:.left}
 ```bash
 
-/cloud/project$ cut -f 1 gene_annotations.tsv
+/cloud/project/unix_intro/six_commands$ cut -f 1 gene_annotations.tsv
 
 ```
 
@@ -97,21 +111,21 @@ cut and print out just few lines
 {:.left}
 ```bash
 
-/cloud/project$ cut -f 1 gene_annotations.tsv | head
+/cloud/project/unix_intro/six_commands$ cut -f 1 gene_annotations.tsv | head
 
 ```
 
 {:.left}
 ```bash
 
-/cloud/project$ cut -f 1,3 gene_annotations.tsv | head
+/cloud/project/unix_intro/six_commands$ cut -f 1,3 gene_annotations.tsv | head
 
 ```
 
 {:.left}
 ```bash
 
-/cloud/project$ cut -f 1-3 gene_annotations.tsv | head
+/cloud/project/unix_intro/six_commands$ cut -f 1-3 gene_annotations.tsv | head
 
 ```
 
@@ -120,7 +134,7 @@ However, it we use other types of file, we might have to add a delimiter.
 {:.left}
 ```bash
 
-/cloud/project$ cut -d "," -f 1-3 example_gene_annotations.csv | head
+/cloud/project/unix_intro/six_commands$ cut -d "," -f 1-3 example_gene_annotations.csv | head
 
 ```
 
@@ -134,7 +148,7 @@ grep can be used to search through a text file and print out the match.
 {:.left}
 ```bash
 
-/cloud/project$ grep re colors.txt
+/cloud/project/unix_intro/six_commands$ grep re colors.txt
 
 ```
 
@@ -143,14 +157,14 @@ let's imagine we're looking for genes that are predicted to encode the enzyme ep
 {:.left}
 ```bash
 
-/cloud/project$ grep K09765 gene_annotations.tsv
+/cloud/project/unix_intro/six_commands$ grep K09765 gene_annotations.tsv
 
 ```
 
 {:.left}
 ```bash
 
-/cloud/project$ grep K18979 gene_annotations.tsv
+/cloud/project/unix_intro/six_commands$ grep K18979 gene_annotations.tsv
 
 ```
 
@@ -159,7 +173,7 @@ To report how mant lines match the pattern, we can add ```-c``` flag
 {:.left}
 ```bash
 
-/cloud/project$ grep -c K18979 gene_annotations.tsv
+/cloud/project/unix_intro/six_commands$ grep -c K18979 gene_annotations.tsv
 
 ```
 
