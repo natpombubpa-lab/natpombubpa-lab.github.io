@@ -18,6 +18,10 @@ undergrad:
   icon: fas fa-user-graduate
   text: Undergraduate Student
 
+exchange:
+  icon: fas fa-user-graduate
+  text: Exchange Student
+
 programmer:
   icon: fas fa-code
   text: Programmer
