@@ -24,6 +24,7 @@ Our lab is recently established in 2021 and we are recruiting both graduate and 
 {% include list.html data="members" component="portrait" filters="role: master, group: " %}
 {% include list.html data="members" component="portrait" filters="role: undergrad, group: " %}
 {% include list.html data="members" component="portrait" filters="role: programmer, group: " %}
+{% include list.html data="members" component="portrait" filters="role: exchange, group: " %}
 {% include list.html data="members" component="portrait" filters="role: mascot, group: " %}
 
 {% include section.html dark=true %}
@@ -51,6 +52,7 @@ These are past lab members who have moved on to the next chapter of thier lives.
 {% include list.html data="members" component="portrait" filters="role: phd, group: alum" style="small" %}
 {% include list.html data="members" component="portrait" filters="role: undergrad, group: alum" style="small" %}
 {% include list.html data="members" component="portrait" filters="role: programmer, group: alum" style="small" %}
+{% include list.html data="members" component="portrait" filters="role: exchange, group: alum" style="small" %}
 {% include list.html data="members" component="portrait" filters="role: mascot, group: alum" style="small" %}
 
 
