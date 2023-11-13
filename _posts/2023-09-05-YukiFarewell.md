@@ -1,7 +1,7 @@
 ---
 title: "Yuki Hayashi Farewell"
-author: Nuttapon Pombubpa
-member: nat-pombubpa
+author: Niar Ibrahim
+member: Niar Ibrahim
 tags:
   - news
   - update
