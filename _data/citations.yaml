@@ -1,5 +1,29 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.3389/fmicb.2023.1135800
+  title: Landscape characteristics shape surface soil microbiomes in the Chihuahuan
+    Desert
+  authors:
+  - Frederick A. Hansen
+  - Darren K. James
+  - John P. Anderson
+  - Christy S. Meredith
+  - Andrew J. Dominguez
+  - Nuttapon Pombubpa
+  - Jason E. Stajich
+  - Adriana L. Romero-Olivares
+  - Shawn W. Salley
+  - Nicole Pietrasiak
+  publisher: Frontiers in Microbiology
+  date: '2023-06-07'
+  link: https://doi.org/gsbvtn
+  image: https://www.frontiersin.org/files/Articles/1135800/fmicb-14-1135800-HTML/image_m/fmicb-14-1135800-g001.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Chihuahuan Desert
+  - Surface soil microbiomes
+  - Amplicon sequencing
 - id: doi:10.1007/s11104-023-05896-w
   title: Legacy effects post removal of a range-expanding shrub influence soil fungal
     communities and create negative plant-soil feedbacks for conspecific seedlings
