@@ -1,3 +1,12 @@
+- id: doi:10.3389/fmicb.2023.1135800
+  image: https://www.frontiersin.org/files/Articles/1135800/fmicb-14-1135800-HTML/image_m/fmicb-14-1135800-g001.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Chihuahuan Desert
+    - Surface soil microbiomes
+    - Amplicon sequencing
+    
 - id: doi:10.1007/s11104-023-05896-w
   image: https://github.com/natpombubpa-lab/natpombubpa-lab.github.io/assets/54328862/c43c831f-26a9-43b3-9cf1-3092166abbe2
   extra-links:
