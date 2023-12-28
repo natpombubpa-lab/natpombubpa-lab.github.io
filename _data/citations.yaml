@@ -1,5 +1,23 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.3390/life14010011
+  title: Streptomyces Diversity Maps Reveal Distinct High-Specificity Biogeographical
+    and Environmental Patterns Compared to the Overall Bacterial Diversity
+  authors:
+  - Nuttapon Pombubpa
+  - Chayaporn Lakmuang
+  - Pornnapat Tiwong
+  - Chompoonik Kanchanabanca
+  publisher: Life
+  date: '2023-12-20'
+  link: https://doi.org/gtbf2q
+  image: https://www.mdpi.com/life/life-14-00011/article_deploy/html/images/life-14-00011-g004.png
+  extra-links:
+  - type: journal
+  tags:
+  - Streptomyces
+  - Microbial biogeography
+  - Biodiversity
 - id: doi:10.3389/fmicb.2023.1135800
   title: Landscape characteristics shape surface soil microbiomes in the Chihuahuan
     Desert
