@@ -1,3 +1,12 @@
+- id: doi:10.3390/life14010011
+  image: https://www.mdpi.com/life/life-14-00011/article_deploy/html/images/life-14-00011-g004.png
+  extra-links:
+    - type: journal
+  tags:
+    - Streptomyces
+    - Microbial biogeography
+    - Biodiversity
+
 - id: doi:10.3389/fmicb.2023.1135800
   image: https://www.frontiersin.org/files/Articles/1135800/fmicb-14-1135800-HTML/image_m/fmicb-14-1135800-g001.jpg
   extra-links:
