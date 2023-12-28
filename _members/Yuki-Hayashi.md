@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/Yuki.jpg
 role: exchange
+group: alum
 
 ---
 
