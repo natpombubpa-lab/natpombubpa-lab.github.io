@@ -22,15 +22,11 @@ pre {
 }
 </style>
 
-## Step A: Open Binder and Launch Terminal
+## Step A: Open Rstudio cloud and Launch Console
 
-![Landing Page](https://user-images.githubusercontent.com/54328862/133711607-79fb884e-1804-4cb3-b4cc-be0a7ecf7a5c.png){:class="img-responsive"}
+![Landing Page](TutorialFigs/1_Microbiome.png){:class="img-responsive"}
 
-Once you click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NatPombubpa/Binder_Amptk_v1.4.2/main?urlpath=lab), your web browser should bring up a similar window as the picture shown above. The next step is to click "Terminal" which should look like a picture below after you click on it.
-
-![Terminal](https://user-images.githubusercontent.com/54328862/133711667-3be45824-8f87-4163-978a-db4cfd667023.png){:class="img-responsive"}
-
-If everything work perfectly for you, you are almost ready for the actual analysis. 
+Once you log in to Rstudio cloud, your web browser should bring up a similar window as the picture shown above. Click the button on the top right corner to create a new Rstudio project. Then, the next step is to click "Terminal" which should look like a picture below after you click on it.
 
 ## Step 1: Downloding example data
 
@@ -42,10 +38,10 @@ Once we identify fungal taxonomy/species, the next step that would be crucial fo
 ```bash
 
 #Download FUNGuild example data
-[/home/jovyan]$ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1o7RRnZdm_dn27HGAIgT6tLUq0QqD8Cw2'
+/cloud/project$ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1o7RRnZdm_dn27HGAIgT6tLUq0QqD8Cw2'
 
 #Rename example data filename
-[/home/jovyan]$ mv uc\?export\=download\&id\=1o7RRnZdm_dn27HGAIgT6tLUq0QqD8Cw2 FUNGuild_example.txt
+/cloud/project$ mv uc\?export\=download\&id\=1o7RRnZdm_dn27HGAIgT6tLUq0QqD8Cw2 FUNGuild_example.txt
 
 ```
 
@@ -57,7 +53,7 @@ Not only that we need FUNGuild data, we will also need to have mapping file whic
 ```bash
 
 #Download example mapping file
-[/home/jovyan]$ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=10_t6JJBozHvfCG445Z-PyCQYaC5ZWj2R'
+/cloud/project$ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=10_t6JJBozHvfCG445Z-PyCQYaC5ZWj2R'
 
 #Rename example mapping file filename
 [/home/jovyan]$ mv uc\?export\=download\&id\=10_t6JJBozHvfCG445Z-PyCQYaC5ZWj2R mapping_File.txt
@@ -69,9 +65,8 @@ Now, you should have ```mapping_File.txt``` and ```FUNGuild_example.txt``` in yo
 ```bash
 
 #Check your files
-[/home/jovyan]$ ls
-apt.txt  environment.yml       illumina          postBuild
-bin      FUNGuild_example.txt  mapping_File.txt  README.md
+/cloud/project$ ls
+FUNGuild_example.txt  mapping_File.txt  
 
 ```
 
@@ -82,14 +77,14 @@ Oftentime, bioinformatic processes begin with preprocessing step or reformatiing
 ```bash
 
 #Check original sample names in FUNGuild_example.txt
-[/home/jovyan]$ head -1 FUNGuild_example.txt 
+/cloud/project$ head -1 FUNGuild_example.txt 
 #OTU ID GMT-CLC GMT-CLC-SUB     GMT-GLC GMT-GLC-SUB     TaxonomyTaxon    Taxon Level     Trophic Mode    Guild   Confidence Ranking
 
 #Change sample names in file
-[/home/jovyan]$ sed '1s/-/\./g' FUNGuild_example.txt > FUNGuild_example_fix.txt
+/cloud/project$ sed '1s/-/\./g' FUNGuild_example.txt > FUNGuild_example_fix.txt
 
 #Check new sample names in FUNGuild_example.txt
-[/home/jovyan]$ head -1 FUNGuild_example_fix.txt 
+/cloud/project$ head -1 FUNGuild_example_fix.txt 
 #OTU ID GMT.CLC GMT.CLC.SUB     GMT.GLC GMT.GLC.SUB     TaxonomyTaxon    Taxon Level     Trophic Mode    Guild   Confidence Ranking    Growth Morphology       Trait   Notes   Citation/Source
 
 ```
@@ -100,12 +95,49 @@ We will use ```R``` to generate FUNGuild plot, but ```R``` will skip a line that
 ```bash
 
 #Change header of FUNGuild_example_fix.txt
-[/home/jovyan]$ sed '1s/#OTU/OTU/g' FUNGuild_example_fix.txt > FUNGuild_example_fix_header.txt
+/cloud/project$ sed '1s/#OTU/OTU/g' FUNGuild_example_fix.txt > FUNGuild_example_fix_header.txt
 
 ```
 
 
-## Step 4: Creating Rscript for generating a plot
+## Step 4: Generating a plot in R
+
+Open ```R``` by clicking on "Console"
+
+First, install packages in ```R```
+
+{:.left}
+```bash
+
+install.packages("ape", "ggplot2")
+
+```
+
+{:.left}
+```bash
+
+install.packages("vegan")
+
+```
+
+{:.left}
+```bash
+
+install.packages("dplyr")
+
+```
+
+{:.left}
+```bash
+
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("phyloseq")
+
+```
+
+After installation is completed, we can begin the analysis.
 
 {:.left}
 ```bash
@@ -145,32 +177,19 @@ cbbPalette <- c("#009E73","#999999", "#E69F00", "#56B4E9", "#F0E442", "#0072B2",
 #Create a plot
 FUNGuildcom = ggplot(data = psmelt(physeq.prune.nopossible), mapping = aes_string(x = "Sample" ,y = "Abundance", fill = "Trophic.Mode" )) + geom_bar(stat="identity", position="fill") + ggtitle("Fungal Trophic Mode Composition ")+theme(axis.text.x = element_text(angle = 90, hjust = 1)) + scale_fill_manual(values = cbbPalette)
 
+#Take a look at our plot
+FUNGuildcom
+
+```
+
+{:.left}
+```bash
+
 #Save a plot to PDF file
 pdf("./Fungal Trophic Mode Composition.pdf", width = 8, height = 5)
 FUNGuildcom
 dev.off()
 pdf  
-
-```
-
-Copy codes from above and paste them while you open ```nano```
-
-{:.left}
-```bash
-
-#Creating Rscript
-[/home/jovyan]$ nano FUNGuild_plot.R 
-
-```
-
-## Step 5: Run Rscript to generate a plot summarizing our results
-
-Let's take a look at our results summary.
-
-{:.left}
-```bash
-
-[/home/jovyan]$ Rscript FUNGuild_plot.R
 
 ```
 
@@ -180,7 +199,7 @@ After the run is completed, you should see a PDF file in your current directory.
 
 
 ## Practice with bigger dataset
-There are four example files that you try.
+There are four example files that you can try.
 
 1. https://drive.google.com/uc?export=download&id=1m51Tkk7bFwzJ1Hn9AQGjmclYl18SkyJn
 2. https://drive.google.com/uc?export=download&id=16FQT1yYhQn8hQ9CQwVgVr5NtQ-Bziqob
