@@ -1,3 +1,23 @@
+- id: doi:10.1016/j.biortech.2024.130509
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S0960852424002128-ga1.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Circular bioeconomy
+    - Soil amendment
+    - Sustainable agriculture
+    - Biomass
+    - Biocomposites
+
+- id: doi:10.1128/mra.00980-23
+  image: https://en.wikipedia.org/wiki/American_Society_for_Microbiology#/media/File:American_Society_for_Microbiology_logo.png
+  extra-links:
+    - type: journal
+  tags:
+    - Metagenomes
+    - Biocrust
+    - Desert microbes
+    
 - id: doi:10.1128/mra.01080-23
   image: https://en.wikipedia.org/wiki/American_Society_for_Microbiology#/media/File:American_Society_for_Microbiology_logo.png
   extra-links:
