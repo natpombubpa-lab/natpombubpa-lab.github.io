@@ -1,5 +1,63 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.1016/j.biortech.2024.130509
+  title: Microalgal-bacterial immobilized co-culture as living biofilters for nutrient
+    recovery from synthetic wastewater and their potential as biofertilizers
+  authors:
+  - Augustine Odibo
+  - Chalampol Janpum
+  - Nuttapon Pombubpa
+  - Tanakarn Monshupanee
+  - Aran Incharoensakdi
+  - Zia Ur Rehman
+  - Pichaya In-na
+  publisher: Bioresource Technology
+  date: '2024-04-01'
+  link: https://doi.org/gtw4fm
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S0960852424002128-ga1.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Circular bioeconomy
+  - Soil amendment
+  - Sustainable agriculture
+  - Biomass
+  - Biocomposites
+- id: doi:10.1128/mra.00980-23
+  title: Whole community shotgun metagenomes of two biological soil crust types from
+    the Mojave Desert
+  authors:
+  - Thuy M. Nguyen
+  - Nuttapon Pombubpa
+  - Marcel Huntemann
+  - Alicia Clum
+  - Brian Foster
+  - Bryce Foster
+  - Simon Roux
+  - Krishnaveni Palaniappan
+  - Neha Varghese
+  - Supratim Mukherjee
+  - T. B. K. Reddy
+  - Chris Daum
+  - Alex Copeland
+  - I-Min A. Chen
+  - Natalia N. Ivanova
+  - Nikos C. Kyrpides
+  - Miranda Harmon-Smith
+  - Emiley A. Eloe-Fadrosh
+  - Nicole Pietrasiak
+  - Jason E. Stajich
+  - Erik F. Y. Hom
+  publisher: Microbiology Resource Announcements
+  date: '2024-03-12'
+  link: https://doi.org/gtw4fn
+  image: https://en.wikipedia.org/wiki/American_Society_for_Microbiology#/media/File:American_Society_for_Microbiology_logo.png
+  extra-links:
+  - type: journal
+  tags:
+  - Metagenomes
+  - Biocrust
+  - Desert microbes
 - id: doi:10.1128/mra.01080-23
   title: Metatranscriptomes of two biological soil crust types from the Mojave desert
     in response to wetting
