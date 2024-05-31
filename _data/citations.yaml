@@ -1,5 +1,40 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.1128/mra.01080-23
+  title: Metatranscriptomes of two biological soil crust types from the Mojave desert
+    in response to wetting
+  authors:
+  - Thuy M. Nguyen
+  - Nuttapon Pombubpa
+  - Marcel Huntemann
+  - Alicia Clum
+  - Brian Foster
+  - Bryce Foster
+  - Simon Roux
+  - Krishnaveni Palaniappan
+  - Neha Varghese
+  - Supratim Mukherjee
+  - T. B. K. Reddy
+  - Chris Daum
+  - Alex Copeland
+  - I-Min A. Chen
+  - Natalia N. Ivanova
+  - Nikos C. Kyrpides
+  - Miranda Harmon-Smith
+  - Emiley A. Eloe-Fadrosh
+  - Nicole Pietrasiak
+  - Jason E. Stajich
+  - Erik F. Y. Hom
+  publisher: Microbiology Resource Announcements
+  date: '2024-02-15'
+  link: https://doi.org/gtcwqt
+  image: https://en.wikipedia.org/wiki/American_Society_for_Microbiology#/media/File:American_Society_for_Microbiology_logo.png
+  extra-links:
+  - type: journal
+  tags:
+  - Metatranscriptomes
+  - Biocrust
+  - Desert microbes
 - id: doi:10.3390/life14010011
   title: Streptomyces Diversity Maps Reveal Distinct High-Specificity Biogeographical
     and Environmental Patterns Compared to the Overall Bacterial Diversity
