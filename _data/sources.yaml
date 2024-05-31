@@ -10,7 +10,7 @@
     - Biocomposites
 
 - id: doi:10.1128/mra.00980-23
-  image: https://en.wikipedia.org/wiki/American_Society_for_Microbiology#/media/File:American_Society_for_Microbiology_logo.png
+  image: https://user-images.githubusercontent.com/54328862/123938574-6ddc4600-d9c1-11eb-876f-8a2a3441f955.png
   extra-links:
     - type: journal
   tags:
@@ -19,7 +19,7 @@
     - Desert microbes
     
 - id: doi:10.1128/mra.01080-23
-  image: https://en.wikipedia.org/wiki/American_Society_for_Microbiology#/media/File:American_Society_for_Microbiology_logo.png
+  image: https://user-images.githubusercontent.com/54328862/123938574-6ddc4600-d9c1-11eb-876f-8a2a3441f955.png
   extra-links:
     - type: journal
   tags:
