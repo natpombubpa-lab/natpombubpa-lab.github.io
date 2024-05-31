@@ -1,3 +1,12 @@
+- id: doi:10.1128/mra.01080-23
+  image: https://en.wikipedia.org/wiki/American_Society_for_Microbiology#/media/File:American_Society_for_Microbiology_logo.png
+  extra-links:
+    - type: journal
+  tags:
+    - Metatranscriptomes
+    - Biocrust
+    - Desert microbes
+
 - id: doi:10.3390/life14010011
   image: https://www.mdpi.com/life/life-14-00011/article_deploy/html/images/life-14-00011-g004.png
   extra-links:
