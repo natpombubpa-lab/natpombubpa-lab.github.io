@@ -145,7 +145,7 @@ Version control is essential for tracking changes to your code and collaborating
   - Go to GitHub and create a new repository.
   - we'll demonstrate this on github.
 
-## Additional Topics - need to update
+## Additional Topics 
 
 ### Working with FASTQ Files
 FASTQ is a common file format used to store sequences and their corresponding quality scores in bioinformatics. Understanding how to work with FASTQ files is essential for tasks like analyzing high-throughput sequencing data.
