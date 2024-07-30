@@ -62,7 +62,7 @@ Downloading a Sample Dataset
   
 {:.left}
 ```bash
-wget -O SRR21388484.fasta.gz https://trace.ncbi.nlm.nih.gov/Traces/sra-reads-be/fasta?acc=SRR21388484
+/cloud/project$ wget -O SRR21388484.fasta.gz https://trace.ncbi.nlm.nih.gov/Traces/sra-reads-be/fasta?acc=SRR21388484
 ```
 
 Processing the Data
@@ -70,35 +70,36 @@ Processing the Data
 
 {:.left}
 ```bash
-gunzip SRR21388484.fasta.gz
+/cloud/project$ gunzip SRR21388484.fasta.gz
 ```
 
 {:.left}
 ```bash
-cat SRR21388484.fasta | head
+/cloud/project$ cat SRR21388484.fasta | head
 ```
 
 {:.left}
 ```bash
-less SRR21388484.fasta
+/cloud/project$ less SRR21388484.fasta
 ```
-
 note: type ```q``` to quit less
 
 
 {:.left}
 ```bash
-head SRR21388484.fasta
+/cloud/project$ head SRR21388484.fasta
 ```
 
 - Count the number of sequences in the file using `grep` and `wc`.
 
+{:.left}
 ```bash
-grep -c ">" SRR21388484.fasta
+/cloud/project$ grep -c ">" SRR21388484.fasta
 ```
 
+{:.left}
 ```bash
-grep ">" SRR21388484.fasta | wc -l
+/cloud/project$ grep ">" SRR21388484.fasta | wc -l
 ```
 
 ### Creating Bash Scripts and Version Control (60 minutes)
@@ -108,12 +109,14 @@ A bash script is a file containing a series of commands that you can execute tog
 
 - Create a new file called `script.sh`:
 
+{:.left}
 ```bash
-vim script.sh
+/cloud/project$ vim script.sh
 ```
 
 - Add the following lines to the script:
 
+{:.left}
 ```bash
 #!/bin/bash
 # This script prints the current date and lists files in the directory
@@ -128,8 +131,9 @@ save and exit by type ```:wq``` and hit ```Enter```
 
 - Execute the script:
 
+{:.left}
 ```bash
-bash script.sh
+/cloud/project$ bash script.sh
 ```
 
 #### Version Control with GitHub
@@ -159,19 +163,27 @@ Here’s an example FASTQ record:
 
 {:.left}
 ```bash
-wget -O SRR21388484.fastq.gz https://trace.ncbi.nlm.nih.gov/Traces/sra-reads-be/fastq?acc=SRR21388484
+/cloud/project$ wget -O SRR21388484.fastq.gz https://trace.ncbi.nlm.nih.gov/Traces/sra-reads-be/fastq?acc=SRR21388484
 ```
 
 {:.left}
 ```bash
-gunzip SRR21388484.fastq.gz
+/cloud/project$ gunzip SRR21388484.fastq.gz
 ```
 
+{:.left}
 ```bash
-@SEQ_ID
-GATCGGAAGAGCACACGTCTGAACTCCAGTCACAGTGATCTCGTATGC
-+
-!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF****
+/cloud/project$ head SRR21388484.fastq 
+@SRR21388484.1 1 length=301
+TACGTAGGGGGCGAGCGTTGTCCGGAATTATTGGGCGTAAAGAGCGTGTAGGCGGTTTGGTAAGTCTGCC
+GTGAAAACCCGGGGCTCAACCCCGGTCGTGCGGTGGATACTGCCAGGCTAGAGGATGGTAGAGGCGAGTG
+GAATTCCCGGTGTAGCGGTGAAATGCGCAGATATCGGGAGGAACACCAGTAGCGAAGGCGGCTCGCTGGG
+CCATTCCTGACGCTGAGACGCGAAAGCTAGGGGAGCGAACAGGATTAGATACCCTGGTAGTCCGGCTGAC
+TGACTATCTCGTATTCCGTCT
++SRR21388484.1 1 length=301
+??????????????????????????????????????????????????????????????????????
+??????????????????????????????????????????????????????????????????????
+??????????????????????????????????????????????????????????????????????
 ```
 
 Quality score refrence [https://help.basespace.illumina.com/files-used-by-basespace/quality-scores](https://help.basespace.illumina.com/files-used-by-basespace/quality-scores)
@@ -180,56 +192,77 @@ Viewing FASTQ Files:
 
 - Use `cat` to display the entire file on the terminal (suitable for small files).
 
+{:.left}
 ```bash
-cat file.fastq 
+/cloud/project$ cat SRR21388484.fastq | head -5
 ```
 
 - Use `less` for interactive viewing of large FASTQ files.
 
+{:.left}
 ```bash
-less file.fastq
+/cloud/project$ less SRR21388484.fastq
 ```
 
 - Use `more` for interactive viewing similar to `less`.
 
+{:.left}
 ```bash
-more file.fastq
+/cloud/project$ more SRR21388484.fastq
 ```
 
 Combining, Splitting, and Converting File Formats:
 
-- Combine multiple FASTQ files into one:
-
-```bash
-cat file1.fastq file2.fastq > combined.fastq
-```
-
 - Split a large FASTQ file into smaller files based on the number of records:
 
+{:.left}
 ```bash
-split -l 10000 input.fastq output_prefix
+/cloud/project$ split -l 600006 SRR21388484.fastq 600kSRR
 ```
 
-- Convert FASTQ to FASTA format using `awk`:
+- Combine multiple FASTQ files into one:
 
+{:.left}
 ```bash
-awk 'NR%4==1 {print ">"$1} NR%4==2 {print}' input.fastq > output.fasta
+/cloud/project$ cat 600kSRRaa 600kSRRab > combined.fastq
 ```
 
 Extracting Sequences from FASTQ Files Based on IDs:
 
 - Use `grep` to extract sequences based on their sequence identifiers:
 
+{:.left}
 ```bash
-grep -A 3 -f sequence_ids.txt input.fastq > extracted_sequences.fastq
+/cloud/project$ vim sequence_ids.txt 
+```
+- `sequence_ids.txt` should contain one sequence ID per line:, try adding ```SRR21388484.1``` and ```SRR21388484.2```
+
+{:.left}
+```bash
+/cloud/project$ grep -A 3 -f sequence_ids.txt combined.fastq > extracted_sequences.fastq
 ```
 
-- `sequence_ids.txt` should contain one sequence ID per line:
-
+Example
+{:.left}
 ```plaintext
 @seq_id_1
 @seq_id_2
 ...
+```
+
+{:.left}
+```bash
+/cloud/project$ head extracted_sequences.fastq 
+@SRR21388484.1 1 length=301
+TACGTAGGGGGCGAGCGTTGTCCGGAATTATTGGGCGTAAAGAGCGTGTAGGCGGTTTGGTAAGTCTGCC
+GTGAAAACCCGGGGCTCAACCCCGGTCGTGCGGTGGATACTGCCAGGCTAGAGGATGGTAGAGGCGAGTG
+GAATTCCCGGTGTAGCGGTGAAATGCGCAGATATCGGGAGGAACACCAGTAGCGAAGGCGGCTCGCTGGG
+--
++SRR21388484.1 1 length=301
+??????????????????????????????????????????????????????????????????????
+??????????????????????????????????????????????????????????????????????
+??????????????????????????????????????????????????????????????????????
+--
 ```
 
 ### Summary and Q&A (30 minutes)
