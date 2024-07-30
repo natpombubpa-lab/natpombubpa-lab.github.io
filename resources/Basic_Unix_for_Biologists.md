@@ -7,7 +7,7 @@ Basic Unix for Biologists is aiming to helps anyone who would like to learn basi
 
 * [Basic Unix for Biologists (EP1)](/resources/Basic_Unix/Basic_Unix_EP1) will show you how this tutorial is setup and also introduce you to unix shell programming
 * [Basic Unix for Biologists (EP2)](/resources/Basic_Unix/Basic_Unix_EP2) 
-
+* [Basic Unix for Biologists (EP3)](/resources/Basic_Unix/Basic_Unix_EP3) 
 
 เว็บเพจนี้สอน Unix Shell เบื้องต้น โดยผู้เรียนไม่ต้องดาวน์โหลดโปรแกรมลงบนคอมพิวเตอร์ส่วนตัว เพียงใช้ [Rstudio Cloud](https://login.rstudio.cloud/) บนหน้าเว็บ 
 
