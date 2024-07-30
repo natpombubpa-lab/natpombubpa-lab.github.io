@@ -244,7 +244,7 @@ Extracting Sequences from FASTQ Files Based on IDs:
 
 Example
 {:.left}
-```plaintext
+```bash
 @seq_id_1
 @seq_id_2
 ...
@@ -265,7 +265,7 @@ GAATTCCCGGTGTAGCGGTGAAATGCGCAGATATCGGGAGGAACACCAGTAGCGAAGGCGGCTCGCTGGG
 --
 ```
 
-### Summary and Q&A (30 minutes)
+### Summary and Q&A (45 minutes)
 - Recap the key UNIX commands covered.
 - Discuss how these commands are applied in real-world bioinformatics.
 - Open the floor for questions and further discussion.
