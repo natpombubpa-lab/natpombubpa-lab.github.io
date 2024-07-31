@@ -28,8 +28,6 @@ Once you log in to Rstudio cloud, your web browser should bring up a similar win
 
 ![Terminal](../TutorialFigs/2_Microbiome.png){:class="img-responsive"}
 
-Here's the revised lesson formatted for GitHub Markdown and including examples of how to create bash scripts and use version control with GitHub.
-
 
 ## Hands-On Exercise (45 minutes)
 - Downloading a Sample Dataset
