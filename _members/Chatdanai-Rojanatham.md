@@ -7,6 +7,7 @@ aliases:
 
 image: images/team/Chatdanai_Rojanatham.jpg
 role: undergrad
+group: alum
 links:
   email: 6338012023@student.chula.ac.th
 
