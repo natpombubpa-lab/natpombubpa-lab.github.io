@@ -7,6 +7,7 @@ aliases:
 
 image: images/team/Ekapol_Duangdara.jpg
 role: undergrad
+group: alum
 links:
   email: 6338112023@student.chula.ac.th
 
