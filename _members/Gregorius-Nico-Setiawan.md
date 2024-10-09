@@ -5,7 +5,6 @@ aliases:
   - Nico
 
 image: images/team/Nico.png
-group: alum
 role: master
 links:
   email: gnicosetiawan@gmail.com
