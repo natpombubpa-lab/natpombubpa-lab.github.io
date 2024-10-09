@@ -6,6 +6,8 @@ aliases:
 
 image: images/team/Phetcharin_Hinmo.jpg
 role: undergrad
+group: alum
+
 ---
 My name is Phetcharin Hinmo (Kream). I am a third year
 undergraduate student in the Department of Microbiology, Faculty of Science, Chulalongkorn University. I am interested in applying knowledge of microbiology to the
