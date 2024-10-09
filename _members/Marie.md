@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/Marie.jpg
 role: exchange
+group: alum
 
 ---
 
