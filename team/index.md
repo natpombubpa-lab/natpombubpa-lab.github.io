@@ -50,6 +50,7 @@ These are past lab members who have moved on to the next chapter of thier lives.
 {% include list.html data="members" component="portrait" filters="role: pi, group: alum" style="small" %}
 {% include list.html data="members" component="portrait" filters="role: postdoc, group: alum" style="small" %}
 {% include list.html data="members" component="portrait" filters="role: phd, group: alum" style="small" %}
+{% include list.html data="members" component="portrait" filters="role: master, group: alum" style="small" %}
 {% include list.html data="members" component="portrait" filters="role: undergrad, group: alum" style="small" %}
 {% include list.html data="members" component="portrait" filters="role: programmer, group: alum" style="small" %}
 {% include list.html data="members" component="portrait" filters="role: exchange, group: alum" style="small" %}
