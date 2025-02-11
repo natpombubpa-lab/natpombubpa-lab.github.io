@@ -38,10 +38,10 @@ Once we identify fungal taxonomy/species, the next step that would be crucial fo
 ```bash
 
 #Download FUNGuild example data
-/cloud/project$ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1o7RRnZdm_dn27HGAIgT6tLUq0QqD8Cw2'
+/cloud/project$ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1rNnaGHxRp-qR78I0YaDwC02HBabLs-6I'
 
 #Rename example data filename
-/cloud/project$ mv uc\?export\=download\&id\=1o7RRnZdm_dn27HGAIgT6tLUq0QqD8Cw2 FUNGuild_example.txt
+/cloud/project$ mv uc\?export\=download\&id\=1rNnaGHxRp-qR78I0YaDwC02HBabLs-6I FUNGuild_example.txt
 
 ```
 
@@ -53,10 +53,10 @@ Not only that we need FUNGuild data, we will also need to have mapping file whic
 ```bash
 
 #Download example mapping file
-/cloud/project$ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=10_t6JJBozHvfCG445Z-PyCQYaC5ZWj2R'
+/cloud/project$ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1xNUfmeD63t4j7E4MKTmJuoYwSsZNRRpU'
 
 #Rename example mapping file filename
-[/home/jovyan]$ mv uc\?export\=download\&id\=10_t6JJBozHvfCG445Z-PyCQYaC5ZWj2R mapping_File.txt
+[/home/jovyan]$ mv uc\?export\=download\&id\=1xNUfmeD63t4j7E4MKTmJuoYwSsZNRRpU mapping_File.txt
 
 ```
 Now, you should have ```mapping_File.txt``` and ```FUNGuild_example.txt``` in your folder
@@ -201,10 +201,10 @@ After the run is completed, you should see a PDF file in your current directory.
 ## Practice with bigger dataset
 There are four example files that you can try.
 
-1. https://drive.google.com/uc?export=download&id=1m51Tkk7bFwzJ1Hn9AQGjmclYl18SkyJn
-2. https://drive.google.com/uc?export=download&id=16FQT1yYhQn8hQ9CQwVgVr5NtQ-Bziqob
-3. https://drive.google.com/uc?export=download&id=1rOynBTEF18kERbNHgulbbqQhZRQWPHh6
-4. https://drive.google.com/uc?export=download&id=15on34fths6dL87ZoNUckR0cbSmayzs3R
+1. https://drive.google.com/uc?export=download&id=1Gme74xcEtzf4uWUsW85JcU_RHaZMHthk
+2. https://drive.google.com/uc?export=download&id=1SsenarC3xDhWiG24FX1JsWS7QZeL0KGi
+3. https://drive.google.com/uc?export=download&id=158oEC_-ULEfuck3gokTF-rP2KcnfJHYP
+
 
 
 ### References
