@@ -30,7 +30,7 @@ redirect_from: /publications
   include link.html
   icon="fab fa-google"
   text="More on Google Scholar"
-  link="http://scholar.google.com/citations?hl=en&user=YVzTNlMAAAAJ&hl"
+  link="http://scholar.google.com/citations?hl=en&user=4N7wPXsAAAAJ&view_op=list_works&sortby=pubdate"
 %}
 {:.center}
 
