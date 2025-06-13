@@ -16,13 +16,11 @@ tags:
   image="images/blog/F1_main.png"
   width=400px
 %}
-<br>
 {%
   include figure.html
   image="images/blog/F2_main.jpg"
-  width=400px
+  width=500px
 %}
-<br>
 {%
   include gallery.html
   image1="images/blog/F1.PNG"
@@ -41,6 +39,6 @@ This project is funding by Seedcorn Grant of [FAILSAFE – Fungal AMR Innovation
   width=400px
 %}
 
-The FAILSAFE project from Chulalongkorn University is led by **Asst. Prof. Dr. Nuttapon Pombubpa**, with **Prof. Neil A.R. Gow** (University of Exeter), **Assoc. Prof. Dr. Ariya Chindamporn** (Faculty of Medicine, Chulalongkorn University), and **Dr. Nattapol Kraisitudomsook** (Faculty of Science, Mahidol University) serving as co-principal investigators. The project is also supported by Ph.D. researchers, **Niar Ibrahim Rose** (Microbiology) and **Fikran Aranda Fahrudin** (Bioinformatics).
+The FAILSAFE project from Chulalongkorn University is led by **Asst. Prof. Dr. Nuttapon Pombubpa**, with **Prof. Neil A.R. Gow** (University of Exeter), **Assoc. Prof. Dr. Ariya Chindamporn** (Faculty of Medicine, Chulalongkorn University), and **Dr. Nattapol Kraisitudomsook** (Faculty of Science, Mahidol University) serving as co-principal investigators. The project is also supported by Ph.D. researchers, **Niar Ibrahim Rose** (Microbiology) and **Fikran Aranda Fahrudin** (Bioinformatics). <br>
 In collaboration with five ASEAN countries, our lab has initiated the establishment of a consortium called **SEA-ARMi (Southeast Asia Antifungal Resistance Monitoring Initiative)**. This partnership includes Indonesia, Malaysia, the Philippines, and Vietnam. <br>
 Please feel free to explore our project website! [SEA-ARMi](https://sea-armi.github.io/)
