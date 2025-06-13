@@ -1,5 +1,5 @@
 ---
-title: Lab Workshop - HPCC Introduction
+title: 1st Lab Workshop - HPCC Introduction
 image: images/blog/2023_miniworkshop.png
 author: Niar Ibrahim
 member: Niar Ibrahim
