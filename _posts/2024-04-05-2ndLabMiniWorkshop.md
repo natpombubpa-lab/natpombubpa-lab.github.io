@@ -1,5 +1,5 @@
 ---
-title: LabWorkshop
+title: 2nd Lab Workshop - AMPtk Pipeline
 image: images/blog/2024_miniworkshop.png
 author: Niar Ibrahim
 member: Niar Ibrahim
@@ -9,7 +9,7 @@ tags:
 ---
 
 ## Second Mini Workshop Workshop for Lab Members 
-### "Processing of metabarcoding amplicon by using AmpTK (Amplicon Tool Kit) pipeline"
+### "Processing of metabarcoding amplicon by using AMPtk (Amplicon Tool Kit) pipeline"
 
 {%
   include figure.html
