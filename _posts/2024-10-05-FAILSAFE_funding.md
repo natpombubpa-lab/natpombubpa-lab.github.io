@@ -16,15 +16,13 @@ tags:
   image="images/blog/F1_main.png"
   width=400px
 %}
-<br>
-<br>
+
 {%
   include figure.html
   image="images/blog/F2_main.png"
   width=400px
 %}
-<br>
-<br>
+
 {%
   include gallery.html
   image1="images/blog/F1.png"
@@ -35,7 +33,6 @@ tags:
 
 ### _” Southeast Asia Unites to Combat Soil-Borne Fungal Threats and Drug Resistance”_
 #### Soil is home to diverse fungi that are essential for the environment but can also pose serious health risks to humans, plants, and animals. In Thailand, pathogenic fungi like Fusarium group, Mucorales and Eumycetoma agents are commonly found in agricultural soils and have been linked to human infections. However, there are still significant gaps in understanding their reservoirs, genetic traits, and antifungal resistance, especially in Southeast Asia. With rising resistance to key antifungal drugs, experts are launching a regional collaboration to study fungal genomes, build a biobank, and develop a comprehensive database to improve detection and response. This initiative will not only strengthen public health and agricultural biosecurity in Southeast Asia but also offer valuable insights for tackling similar challenges worldwide.
-<br>
 <br>
 This project is funding by Seedcorn Grant of [FAILSAFE – Fungal AMR Innovations for LMICS: Solutions and Access For Everyone, The MRC Centre for Medical Mycology (MRC CMM), University of Exeter](https://cmm-failsafe.com/strengthening-agricultural-biosecurity-in-southeast-asia-a-multinational-biobank-initiative-for-who-filamentous-fungal-pathogens-to-enhance-pathogen-monitoring-and-resistance-detection-chulalongkor/)
 {%
