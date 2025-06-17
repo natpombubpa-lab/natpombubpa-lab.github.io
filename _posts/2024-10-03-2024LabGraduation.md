@@ -7,7 +7,7 @@ tags:
   - update
 ---
 
-## 2024 NatPombubpa Lab Dinner and Farewell
+## 2024 NatPombubpa Lab Member Graduation
 {%
   include figure.html
   image="images/blog/G2024_1.jpg"
