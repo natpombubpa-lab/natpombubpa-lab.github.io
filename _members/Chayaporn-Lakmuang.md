@@ -7,6 +7,7 @@ aliases:
 
 image: images/team/Chayaporn.JPG
 role: master
+group: alum
 links:
   email: Chayaporn.la@ku.th
 
