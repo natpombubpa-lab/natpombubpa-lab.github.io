@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/Patty.jpg
 role: undergrad
+group: alum
 
 ---
 
