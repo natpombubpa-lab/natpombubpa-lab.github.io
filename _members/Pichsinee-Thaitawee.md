@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/Pich.png
 role: undergrad
+group: alum
 
 ---
 
