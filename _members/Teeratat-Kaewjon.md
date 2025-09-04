@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/Teeratat_Kaewjon.jpg
 role: master
+group: alum
 
 ---
 
