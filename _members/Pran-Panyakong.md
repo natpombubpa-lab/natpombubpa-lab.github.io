@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/pran.jpg
 role: undergrad
+group: alum
 
 ---
 
