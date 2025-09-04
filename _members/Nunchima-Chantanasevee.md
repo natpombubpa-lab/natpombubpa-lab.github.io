@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/Lukmai.jpg
 role: undergrad
+group: alum
 
 ---
 
