@@ -6,6 +6,7 @@ aliases:
 
 image: images/team/Fai.jpg
 role: undergrad
+group: alum
 
 ---
 
