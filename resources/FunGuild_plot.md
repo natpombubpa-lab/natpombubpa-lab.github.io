@@ -70,8 +70,10 @@ FUNGuild_example.txt  mapping_File.txt
 
 ```
 
-## Step 3: Preprocessing step
+## Step 3 : Preprocessing step
 Oftentime, bioinformatic processes begin with preprocessing step or reformatiing your files. In this example, our sample name in ```mapping_File.txt``` and ```FUNGuild_example.txt``` do not match. Therefore, we will change sample names in ```FUNGuild_example.txt``` to match sample names in our ```mapping_File.txt```.
+
+Note: Don't do these steps if your file samples name doesn't use ```-```: skip to step 4
 
 {:.left}
 ```bash
@@ -127,6 +129,18 @@ install.packages("dplyr")
 
 ```
 
+
+If run into this error ```Error: package or namespace load failed for ‘dplyr’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘pillar’```, you can fix it by 
+
+ {:.left}
+```bash
+
+install.packages("pillar", dependencies = TRUE)
+
+```
+Then, try installing ```dplyr``` again.
+
 {:.left}
 ```bash
 
@@ -139,6 +153,21 @@ BiocManager::install("phyloseq")
 
 After installation is completed, we can begin the analysis.
 
+First: check working directory
+
+{:.left}
+```bash
+getwd()
+```
+
+If it's not where your data located, you will need to ```setwd```
+
+{:.left}
+```bash
+setwd("/cloud/project/FUNGuild/")
+```
+
+Then, you can start the analysis.
 {:.left}
 ```bash
 
@@ -155,7 +184,7 @@ meta <- read.table("mapping_File.txt",header=TRUE,row.names=1,sep="\t",stringsAs
 sampleData <- sample_data(meta)
 
 #Load reformatted FUNGuild data into R
-FG <- read.table("FUNGuild_example_fix_header.txt",header=T,sep="\t",row.names=1)
+FG <- read.table("FUNGuild_example.txt",header=T,sep="\t",row.names=1)
 
 #Select only the column that we need
 FGotus <- select(FG, -(Taxonomy:Citation.Source))
