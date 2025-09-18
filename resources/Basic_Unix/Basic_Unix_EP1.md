@@ -19,7 +19,6 @@ pre {
 }
 </style>
 
-## Open Binder and Launch Terminal
 
 ## Step A: Open Rstudio cloud and Launch Terminal
 
@@ -35,8 +34,7 @@ Download example files
 {:.left}
 ```bash
 
-/cloud/project$ svn export https://github.com/NatPombubpa/Binder_Intro_Unix/trunk/unix_intro
-/cloud/project$ svn export https://github.com/NatPombubpa/Binder_Intro_Unix/trunk/data-shell
+/cloud/project$ git clone https://github.com/NatPombubpa/Binder_Intro_Unix.git
 
 ```
 
@@ -66,7 +64,7 @@ Check files in the current directory (current folder) using ```ls``` command (li
 ```bash
 
 /cloud/project$ ls
-data-shell  unix_intro
+Binder_Intro_Unix  project.Rproj
 
 ```
 
@@ -76,20 +74,20 @@ If you want to annotate folders when using ```ls``` command, we can use a flag `
 ```bash
 
 /cloud/project$ ls -F
-data-shell/  unix_intro/
+Binder_Intro_Unix/  project.Rproj
 
 ```
 
 **Practice question 1:** What does the command ```ls``` do when using with ```-l``` and ```-h``` flags?
 
 
-Check files in other directory using ```ls Directory_name```, you will see that there are four items in ```unix_intro``` folder.
+Check files in other directory using ```ls Directory_name```, you will see that there are four items in ```Binder_Intro_Unix``` folder.
 
 {:.left}
 ```bash
 
-/cloud/project$ ls unix_intro/
-data  example.txt  experiment  six_commands
+/cloud/project$ ls Binder_Intro_Unix/
+README.md  apt.txt  data-shell  unix_intro
 
 ```
 
@@ -98,8 +96,8 @@ Now, we know which directory we want to work with, let's change working director
 {:.left}
 ```bash
 
-/cloud/project$ cd unix_intro/
-/cloud/project/unix_intro$ 
+/cloud/project$ cd Binder_Intro_Unix/
+/cloud/project/Binder_Intro_Unix$ 
 
 ```
 
@@ -108,7 +106,7 @@ Now we know how to go down directory, how do we go up/back?
 {:.left}
 ```bash
 
-/cloud/project/unix_intro$ cd project
+/cloud/project/Binder_Intro_Unix$ cd project
 bash: cd: project: No such file or directory
 
 ```
@@ -117,7 +115,7 @@ To take us back to parent directory, we do ```cd ..```, let's try
 {:.left}
 ```bash
 
-/cloud/project/unix_intro$ cd ..
+/cloud/project/Binder_Intro_Unix$ cd ..
 /cloud/project$ 
 
 ```
@@ -127,20 +125,11 @@ We can also use a path to change directory.
 {:.left}
 ```bash
 
-/cloud/project$ cd unix_intro/experiment/
-/cloud/project/unix_intro/experiment$
+/cloud/project$ cd Binder_Intro_Unix/unix_intro/experiment/
+/cloud/project/Binder_Intro_Unix/unix_intro/experiment$ 
 
 ```
 
-Change to home directory in one command, ```cd```
-
-{:.left}
-```bash
-
-/cloud/project/unix_intro/experiment$ cd
-/cloud/project$
-
-```
 
 ### Unix concept 2: Working with files
 We know how to navigate files, how can we create, copy, or delete files? 
@@ -149,10 +138,10 @@ Let's make sure we start at ```unix_intro``` folder and take a look at what we h
 {:.left}
 ```bash
 
-/cloud/project$ cd unix_intro/
-/cloud/project/unix_intro$ pwd
-/cloud/project/unix_intro
-/cloud/project/unix_intro$ ls -F
+/cloud/project$ cd Binder_Intro_Unix/unix_intro/
+/cloud/project/Binder_Intro_Unix/unix_intro$ pwd
+/cloud/project/Binder_Intro_Unix/unix_intro
+/cloud/project/Binder_Intro_Unix/unix_intro$ ls -F
 data/  example.txt  experiment/  six_commands/
 
 ```
@@ -161,14 +150,14 @@ Currently, there are three directories/folders, to create a new directory, we wi
 
 {:.left}
 ```bash
-/cloud/project/unix_intro$ mkdir Thesis
+/cloud/project/Binder_Intro_Unix/unix_intro$ mkdir Thesis
 ```
 
 Check if you have ```Thesis``` directory, there should be five items in your ```unix_intro``` directory.
 
 {:.left}
 ```bash
-/cloud/project/unix_intro$ ls -F
+/cloud/project/Binder_Intro_Unix/unix_intro$ ls -F
 data/  example.txt  experiment/  six_commands/  Thesis/
 ```
 
@@ -180,8 +169,8 @@ Now, change working directory to ```Thesis``` and we will create a file called `
 {:.left}
 ```bash
 
-/cloud/project/unix_intro$ cd Thesis/
-/cloud/project/unix_intro/Thesis$ vim draft.txt
+/cloud/project/Binder_Intro_Unix/unix_intro$ cd Thesis/
+/cloud/project/Binder_Intro_Unix/unix_intro/Thesis$ vim draft.txt
 
 ```
 
@@ -194,18 +183,18 @@ Check for ```draft.txt``` in your ```Thesis``` directory
 {:.left}
 ```bash
 
-/cloud/project/unix_intro/Thesis$ ls -lh
+/cloud/project/Binder_Intro_Unix/unix_intro/Thesis$ ls -lh
 total 4.0K
--rw-rw---- 1 r1200493 rstudio-user 19 Aug 23 10:39 draft.txt
+-rw-rw---- 1 r2039697 rstudio-user 17 Sep 18 02:28 draft.txt
 
 ```
 
-Create a file without nano using ```touch``` command, let's try
+Create a file without text editor using ```touch``` command, let's try
 
 {:.left}
 ```bash
 
-/cloud/project/unix_intro/Thesis$ touch my_file.txt
+/cloud/project/Binder_Intro_Unix/unix_intro/Thesis$ touch my_file.txt
 
 ```
 
@@ -219,23 +208,23 @@ We cab use ```rm``` command, however, there is no trash bin. Removing/deleting i
 
 {:.left}
 ```bash
-/cloud/project/unix_intro/Thesis$ rm draft.txt
+/cloud/project/Binder_Intro_Unix/unix_intro/Thesis$ rm draft.txt 
 ```
 
 What about removing directory? Let's move up/back to ```unix_intro``` and try removing ```Thesis``` directory
 
 {:.left}
 ```bash
-/cloud/project/unix_intro/Thesis$ cd ..
-/cloud/project/unix_intro$ rm Thesis
-rm: cannot remove 'Thesis': Is a directory
+/cloud/project/Binder_Intro_Unix/unix_intro/Thesis$ cd ..
+/cloud/project/Binder_Intro_Unix/unix_intro$ rm Thesis/
+rm: cannot remove 'Thesis/': Is a directory
 ```
 
 You will get an error. To remove directory, we can use ```rm -r Thesis``` and your ```Thesis``` will be removed.
 
 {:.left}
 ```bash
-/cloud/project/unix_intro$ rm -r Thesis/
+/cloud/project/Binder_Intro_Unix/unix_intro$ rm -r Thesis/
 ```
 
 How do we change file name? We can use ```mv``` command.
@@ -243,14 +232,14 @@ How do we change file name? We can use ```mv``` command.
 {:.left}
 ```bash
 #lisitng files and folder
-/cloud/project/unix_intro$ ls
+/cloud/project/Binder_Intro_Unix/unix_intro$ ls
 data  example.txt  experiment  six_commands
 
 #change file name using mv command
-/cloud/project/unix_intro$ mv example.txt example_1.txt 
+/cloud/project/Binder_Intro_Unix/unix_intro$ mv example.txt example_1.txt 
 
 #listing files and folder, you should see that example.txt becomes example_1.txt
-/cloud/project/unix_intro$ ls
+/cloud/project/Binder_Intro_Unix/unix_intro$ ls
 data  example_1.txt  experiment  six_commands
 ```
 
@@ -259,10 +248,10 @@ We can also use ```mv``` command to move file.
 {:.left}
 ```bash
 # move a file
-/cloud/project/unix_intro$ mv example_1.txt data/
+/cloud/project/Binder_Intro_Unix/unix_intro$ mv example_1.txt data/
 
 # now a file has been moved to data folder
-/cloud/project/unix_intro$ ls data/
+/cloud/project/Binder_Intro_Unix/unix_intro$ ls data/
 all_samples  example_1.txt
 
 ```
@@ -272,10 +261,10 @@ How about copy file instead if moving file?
 {:.left}
 ```bash
 #copy file to current directory
-/cloud/project/unix_intro$ cp data/example_1.txt .
+/cloud/project/Binder_Intro_Unix/unix_intro$ cp data/example_1.txt .
 
 #listing files and folders, example_1.txt should be present in your current working directory
-/cloud/project/unix_intro$ ls
+/cloud/project/Binder_Intro_Unix/unix_intro$ ls
 data  example_1.txt  experiment  six_commands
 ```
 
