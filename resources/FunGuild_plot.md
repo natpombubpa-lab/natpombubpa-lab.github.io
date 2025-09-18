@@ -168,6 +168,7 @@ setwd("/cloud/project/FUNGuild/")
 ```
 
 Then, you can start the analysis.
+
 {:.left}
 ```bash
 
