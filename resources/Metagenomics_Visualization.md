@@ -30,8 +30,7 @@ Prerequisites
 Ensure you have the following R packages installed and loaded. These libraries are essential.
 
 {:.left}
-```{r warning=FALSE, message=FALSE}
-
+```R
 library(tidyr)
 library(tidyverse)
 library(stringr)
@@ -43,7 +42,7 @@ Put all txt file of kraken result into one folder
 Adjust the folder & pattern to your files (e.g., RK1.txt, RB1.txt, …)
 
 {:.left}
-```{r}
+```R
 ## 1. Path to folder containing all report files
 folder <- "C:/Users/ASUS/Downloads/TrainingFAILSAFE/Training data/sequence"
 
@@ -53,7 +52,7 @@ files <- list.files(folder, pattern = "\\.txt$", full.names = TRUE)
 ```
 
 {:.left}
-```{r}
+```R
 ## 3. Derive sample IDs from file names (strip path and extension)
 sample_ids <- tools::file_path_sans_ext(basename(files))
 
@@ -61,7 +60,7 @@ sample_ids <- tools::file_path_sans_ext(basename(files))
 
 
 {:.left}
-```{r}
+```R
 # 4. Function to read one kraken report (all ranks)
 read_kraken_report <- function(file, sid){
   df <- read.table(file,
@@ -85,7 +84,7 @@ read_kraken_report <- function(file, sid){
 ```
 
 {:.left}
-```{r}
+```R
 ## 5. Read and combine all files into one table
 counts <- Reduce(function(x, y) full_join(x, y,
                                           by = c("Percentage","Reads_direct","Rank_code","NCBI_taxid","Taxon")),
@@ -94,13 +93,13 @@ counts <- Reduce(function(x, y) full_join(x, y,
 ```
 
 {:.left}
-```{r}
+```R
 ## 6. Replace NAs with zeros
 counts[is.na(counts)] <- 0
 ```
 
 {:.left}
-```{r}
+```R
 counts_long <- counts %>%
   tidyr::pivot_longer(
     cols = -c(Percentage, Reads_direct, Rank_code, NCBI_taxid, Taxon),
@@ -110,7 +109,7 @@ counts_long <- counts %>%
 ```
 
 {:.left}
-```{r}
+```R
 ## save taxa as csv
 readr::write_csv(counts_long, "HPCC_training.csv")
 ```
@@ -120,13 +119,13 @@ readr::write_csv(counts_long, "HPCC_training.csv")
 ## Step 2 Combining sequence & mapping file
 
 {:.left}
-```{r}
+```R
 ## 1. read mapping file (.txt, tab-delimited)
 map <- readr::read_tsv("C:/Users/ASUS/Downloads/TrainingFAILSAFE/Training data/training.mapping_file.txt")
 ```
 
 {:.left}
-```{r}
+```R
 ## 2. merge mapping file with sample data (.txt, tab-delimited)
 merged_data <- counts_long %>%
   left_join(map, by = "SampleID")
@@ -136,7 +135,7 @@ merged_data <- counts_long %>%
 quick checks
 
 {:.left}
-```{r}
+```R
 unique(merged_data$SampleID)     # should be RK1..SS3
 head(merged_data)                # Taxon should be scientific names now
 ```
@@ -145,7 +144,7 @@ head(merged_data)                # Taxon should be scientific names now
 Save metadata
 
 {:.left}
-```{r}
+```R
 ## save metadata as csv
 write.csv(merged_data, "training.metadata.csv", row.names=FALSE)
 ```
@@ -155,7 +154,7 @@ write.csv(merged_data, "training.metadata.csv", row.names=FALSE)
 Load the package
 
 {:.left}
-```{r}
+```R
 library(dplyr)
 library(tidyr)
 library(stringr)
@@ -173,20 +172,20 @@ library(colorspace)
 ## Step 1 Load the data from combining kraken + mapping file
 
 {:.left}
-```{r}
+```R
 ## load metadata
 metadata <- read.csv("C:/Users/ASUS/Downloads/TrainingFAILSAFE/training.metadata.csv", stringsAsFactors = FALSE)
 ```
 
 {:.left}
-```{r}
+```R
 metadata %>%
   count(SampleID) %>%
   filter(n > 1)
 ```
 
 {:.left}
-```{r}
+```R
 metadata %>% select(SampleID, crop) %>% distinct() %>% count(SampleID)
 ```
 
@@ -195,13 +194,13 @@ metadata %>% select(SampleID, crop) %>% distinct() %>% count(SampleID)
 ## Step2 Merge Taxa and Select Only FPPL
 
 {:.left}
-```{r}
+```R
 ## 1. load taxa
 taxa_long <- read.csv("C:/Users/ASUS/Downloads/TrainingFAILSAFE/HPCC_training.csv", stringsAsFactors = FALSE)
 ```
 
 {:.left}
-```{r}
+```R
 ## 2. Merge counts with metadata (only SampleID & crop needed)
 counts_meta <- taxa_long %>%
   left_join(
@@ -211,7 +210,7 @@ counts_meta <- taxa_long %>%
 ```
 
 {:.left}
-```{r}
+```R
 ## 3. Replace any marks in the taxa
 counts_meta <- counts_meta %>%
   mutate(Taxon = str_replace_all(Taxon, "\\[|\\]", ""))
@@ -220,7 +219,7 @@ counts_meta <- counts_meta %>%
 
 
 {:.left}
-```{r}
+```R
 ## 4. Select only WHO FPPL (case-insensitive, matches full names or genera)
 FPPL <- c(
         #Critical group
@@ -318,7 +317,7 @@ FPPL <- c(
 ```
 
 {:.left}
-```{r}
+```R
 ## 5. Detect and filter FPPL taxa
 pattern <- paste0("\\b(", paste(gsub(" ", "\\\\s+", FPPL), collapse="|"), ")\\b")
 fppl_meta <- counts_meta %>%
@@ -329,7 +328,7 @@ fppl_meta <- counts_meta %>%
 
 Choosing only species - you can adjust to genus
 {:.left}
-```{r}
+```R
 ## 6. Create Genus and Species columns + rename counts
 fppl_meta <- fppl_meta %>%
   mutate(Genus = word(Taxon, 1),
@@ -347,7 +346,7 @@ fppl_meta <- fppl_meta %>%
 # Step 3.1 Visualization 1 - Shows crop aggregate
 
 {:.left}
-```{r}
+```R
 ## 1. Add a Genus column (first word of the taxon)
 fppl_meta <- fppl_meta %>%
   mutate(Genus = word(Taxon, 1),
@@ -355,7 +354,7 @@ fppl_meta <- fppl_meta %>%
 ```
 
 {:.left}
-```{r}
+```R
 ## 2. Summarize total counts per crop × sample × species
 
 per_crop <- fppl_meta %>%
@@ -384,7 +383,7 @@ per_crop <- fppl_meta %>%
 optional based on condition:
 
 {:.left}
-```{r}
+```R
 > 1. Threshold <0.5%
   mutate(
     Prop     = Count / sum(Count, na.rm = TRUE),
@@ -423,7 +422,7 @@ optional based on condition:
 ```
 
 {:.left}
-```{r}
+```R
 ## 4. Replace missing species names
 per_crop <- per_crop %>%
   mutate(Species2 = ifelse(is.na(Species2), "Unidentified species", Species2))
@@ -431,7 +430,7 @@ per_crop <- per_crop %>%
 ```
 
 {:.left}
-```{r}
+```R
 ## 5. Grouping & Data Normalization. 
 per_crop_avg <- per_crop %>%
   group_by(crop, Species2) %>%
@@ -441,12 +440,12 @@ per_crop_avg <- per_crop %>%
 ```
 
 {:.left}
-```{r}
+```R
 unique(per_crop_avg$Species2)
 ```
 
 {:.left}
-```{r}
+```R
 ## 6. Define custom colors by species (grouped by genus)
 species_colors <- c(
   # ===== Abundance category =====
@@ -489,7 +488,7 @@ species_colors <- c(
 ```
 
 {:.left}
-```{r}
+```R
 ## 7. Apply in ggplot
 ggplot(per_crop_avg, aes(x = crop, y = Prop, fill = Species2)) +
   geom_col(width = 0.8) +
@@ -502,7 +501,7 @@ ggplot(per_crop_avg, aes(x = crop, y = Prop, fill = Species2)) +
 ```
 
 {:.left}
-```{r}
+```R
 jpeg ("C:/Users/ASUS/Downloads/TrainingFAILSAFE/Result/TrainingAgregate.jpg", units="in", width = 8.8, height = 8.5, res = 1000)
 ggplot(per_crop_avg, aes(x = crop, y = Prop, fill = Species2)) +
   geom_col(width = 0.8) +
@@ -519,7 +518,7 @@ dev.off()
 Extract percentage data
 
 {:.left}
-```{r}
+```R
 per_crop_avg <- per_crop %>%
   group_by(crop, Species2) %>%
   summarise(Prop = mean(Prop, na.rm = TRUE), .groups="drop") %>%
@@ -531,7 +530,7 @@ per_crop_avg <- per_crop %>%
 View the percentage data
 
 {:.left}
-```{r}
+```R
 # Save as CSV
 write.csv(per_crop_avg, "Training-Agregate_percentage.csv", row.names = FALSE)
 ```
@@ -548,7 +547,7 @@ write.csv(per_crop_avg, "Training-Agregate_percentage.csv", row.names = FALSE)
 # Step 3.2 Visualization 2 - Shows sample replication
 
 {:.left}
-```{r}
+```R
 ## 1. Add a Genus column (first word of the taxon)
 fppl_meta <- fppl_meta %>%
   mutate(Genus = word(Taxon, 1),
@@ -556,7 +555,7 @@ fppl_meta <- fppl_meta %>%
 ```
 
 {:.left}
-```{r}
+```R
 ## 2. Summarize total counts per crop × sample × species
 per_sample <- fppl_meta %>%
   group_by(SampleID, crop, Species, Genus) %>%
@@ -573,7 +572,7 @@ per_sample <- fppl_meta %>%
 ```
 
 {:.left}
-```{r}
+```R
 ## 4. Replace missing species names
 per_sample <- per_sample %>%
   mutate(Species2 = ifelse(is.na(Species2), "Unidentified species", Species2))
@@ -583,7 +582,7 @@ per_sample <- per_sample %>%
 ## 5. Grouping & Data Normalization. 
 
 {:.left}
-```{r}
+```R
 per_sample_avg <- per_sample %>%
   group_by(SampleID, crop, Species2) %>%
   summarise(Prop = mean(Prop, na.rm = TRUE), .groups="drop") %>%
@@ -593,12 +592,12 @@ per_sample_avg <- per_sample %>%
 ```
 
 {:.left}
-```{r}
+```R
 unique(per_sample$Species2)
 ```
 
 {:.left}
-```{r}
+```R
 ## 5. remove "Unidentified species"
 per_sample <- per_sample %>%
   filter(Species2 != "Unidentified species")
@@ -606,7 +605,7 @@ per_sample <- per_sample %>%
 
 
 {:.left}
-```{r}
+```R
 ## 6. Define custom colors by species (grouped by genus)
 species_colors <- c(
   "<0.5% abund."               = "#d9d9d9",
@@ -638,7 +637,7 @@ species_colors <- c(
   
 
 {:.left}
-```{r}
+```R
 ## 7. Priority group mapping
 priority_map <- c(
   "<0.5% abund."               = "Unidentified",
@@ -671,7 +670,7 @@ priority_map <- c(
 
 
 {:.left}
-```{r}
+```R
 ## 8. Grouping & Data Normalization.
 per_sample_avg_fppl <- per_sample %>%
   filter(Species2 %in% names(priority_map)) %>%
@@ -685,13 +684,13 @@ per_sample_avg_fppl <- per_sample %>%
 ```
 
 {:.left}
-```{r}
+```R
 unique(per_sample_avg_fppl$Species_priority)
 ```
 
 
 {:.left}
-```{r}
+```R
 ## 9. Reorder legend: Critical → High → Medium
 priority_order <- c("Critical", "High", "Unidentified")
 
@@ -717,7 +716,7 @@ per_sample_avg_fppl <- per_sample_avg_fppl %>%
 
 
 {:.left}
-```{r}
+```R
 # 10. Define the overlapping species (between your color list and your data)
 valid_species <- intersect(names(species_colors), per_sample_avg_fppl$Species2)
 
@@ -729,14 +728,14 @@ species_colors_with_priority <- setNames(
 ```
 
 {:.left}
-```{r}
+```R
 colnames(per_sample_avg_fppl)
 unique(per_sample_avg_fppl$crop)
 unique(per_sample_avg_fppl$Species_priority)[1:5]
 ```
 
 {:.left}
-```{r}
+```R
 trialplot <- ggplot(per_sample_avg_fppl, aes(x = SampleID, y = Prop, fill = Species_priority)) +
   geom_col(width = 0.9) +
   facet_grid(~ crop, scales = "free_x", space = "free_x") +
@@ -767,7 +766,7 @@ trialplot
 ```
 
 {:.left}
-```{r}
+```R
 jpeg ("C:/Users/ASUS/Downloads/TrainingFAILSAFE/Result/TrainingComplete_persample.jpeg", units="in", width = 11.5, height = 9.8, res = 1200)
 trialplot
 dev.off()
@@ -776,7 +775,7 @@ dev.off()
 ## Extract percentage data
 
 {:.left}
-```{r}
+```R
 per_sample_avg.data <- per_sample_avg_fppl %>%
   group_by(SampleID, crop, Species2) %>%
   summarise(Prop = mean(Prop, na.rm = TRUE), .groups="drop") %>%
@@ -788,7 +787,7 @@ per_sample_avg.data <- per_sample_avg_fppl %>%
 ## View the percentage data
 
 {:.left}
-```{r}
+```R
 # Save as CSV
 write.csv(per_sample_avg.data, "Training-persample_percentage.csv", row.names = FALSE)
 ```
@@ -796,13 +795,13 @@ write.csv(per_sample_avg.data, "Training-persample_percentage.csv", row.names = 
 ## T3 ResGen
 
 {:.left}
-```{r}
+```R
 #Install only for the first time
 install.packages(c("httr", "jsonlite"))
 ```
 
 {:.left}
-```{r}
+```R
 
 library(tidyr)
 library(tidyverse)
@@ -826,7 +825,7 @@ library(jsonlite)
 ### Adjust the folder & pattern to your files (e.g., RK1.txt, RB1.csv, …)
 
 {:.left}
-```{r}
+```R
 ## 1. Path to folder containing all CSV report files
 folder <- "C:/Users/ASUS/Downloads/TrainingFAILSAFE/Training data/FungAMR"
 
@@ -835,7 +834,7 @@ files <- list.files(folder, pattern = "\\.csv$", full.names = TRUE)
 ```
 
 {:.left}
-```{r}
+```R
 ## 3. Define the expected columns (in order)
 expected_cols <- c(
   "qseqid", "sseqid", "pident", "length", "mismatch", "gapopen",
@@ -845,7 +844,7 @@ expected_cols <- c(
 ```
 
 {:.left}
-```{r}
+```R
 # 4. Safely read and combine all CSVs
 mmseqs_all <- map_dfr(files, function(f) {
   if (file.info(f)$size > 0) {  # skip empty files
@@ -870,19 +869,19 @@ mmseqs_all <- map_dfr(files, function(f) {
 ```
 
 {:.left}
-```{r}
+```R
 # 5. Inspect the combined dataframe
 head(mmseqs_all)
 str(mmseqs_all)
 ```
 
 {:.left}
-```{r}
+```R
 names(mmseqs_all)
 ```
 
 {:.left}
-```{r}
+```R
 # 6. Retrieve the species name in dataframe
 mmseqs_all <- mmseqs_all %>%
   mutate(
@@ -892,7 +891,7 @@ mmseqs_all <- mmseqs_all %>%
 ```
 
 {:.left}
-```{r}
+```R
 # 7.1 Clean the species name in dataframe
 mmseqs_all <- mmseqs_all %>%
   mutate(
@@ -912,19 +911,19 @@ mmseqs_all <- mmseqs_all %>%
 ```
 
 {:.left}
-```{r}
+```R
 print(mmseqs_all$Species)
 ```
 
 {:.left}
-```{r}
+```R
 # 7.2 Retrieve the genus name in dataframe
 mmseqs_all <- mmseqs_all %>%
   mutate(Genus = sub(" .*", "", Species))
 ```
 
 {:.left}
-```{r}
+```R
 # 8. Filter the percent identic genes
 mmseqs_filtered <- mmseqs_all %>%
   filter(pident >= 70)
@@ -935,7 +934,7 @@ mmseqs_filtered <- mmseqs_all %>%
 # Step 2 Data alignment from UniProt Database
 
 {:.left}
-```{r}
+```R
 # 9. Retrieve gene accession
 mmseqs_filtered <- mmseqs_filtered %>%
   mutate(Accession = str_extract(sseqid, "(?<=[\\|])[A-Z0-9]+(?=\\|)"))
@@ -943,19 +942,19 @@ mmseqs_filtered <- mmseqs_filtered %>%
 
 
 {:.left}
-```{r}
+```R
 print(mmseqs_filtered$Accession)
 ```
 
 {:.left}
-```{r}
+```R
 # 10. Retrieving gene information from UniProt Database
 #a. Add gene that wanted to search
 accessions <- unique(mmseqs_filtered$Accession)
 ```
 
 {:.left}
-```{r}
+```R
 #b. UniProt search
 get_uniprot_batch <- function(accessions_batch) {
   # Build query of the form: accession:D5MTG0 OR accession:S5UGJ8 ...
@@ -1010,7 +1009,7 @@ get_uniprot_batch <- function(accessions_batch) {
 
 
 {:.left}
-```{r}
+```R
 #c. Retrieving Uniprot information
 get_uniprot_info <- function(accessions, batch_size = 50) {
   acc_unique <- unique(accessions)
@@ -1027,14 +1026,14 @@ get_uniprot_info <- function(accessions, batch_size = 50) {
 ```
 
 {:.left}
-```{r}
+```R
 #d. Extract unique accessions
 accessions <- unique(mmseqs_filtered$Accession)
 ```
 
 
 {:.left}
-```{r}
+```R
 #e. Run UniProt annotation
 uniprot_info <- get_uniprot_info(accessions)
 
@@ -1042,7 +1041,7 @@ head(uniprot_info)
 ```
 
 {:.left}
-```{r}
+```R
 #f. Merge back into your main dataframe & view result
 mmseqs_annotated <- mmseqs_filtered %>%
   left_join(uniprot_info, by = "Accession")
@@ -1051,14 +1050,14 @@ head(mmseqs_annotated)
 ```
 
 {:.left}
-```{r}
+```R
 #g. Remove the NA genes
 mmseqs_annotated <- mmseqs_annotated %>%
   filter(!is.na(Protein) & Protein != "" & Protein != "NA")
 ```
 
 {:.left}
-```{r}
+```R
 #h. Change the NA gene to Putative gene
 mmseqs_annotated <- mmseqs_annotated %>%
   mutate(Gene = ifelse(is.na(Gene) | Gene == "", 
@@ -1070,7 +1069,7 @@ mmseqs_annotated <- mmseqs_annotated %>%
 # Step 3 Data analysis
 
 {:.left}
-```{r}
+```R
 # Data set calculation
 # 11. Count AMR genes per sample
 amr_counts <- mmseqs_annotated %>%
@@ -1078,7 +1077,7 @@ amr_counts <- mmseqs_annotated %>%
 ```
 
 {:.left}
-```{r}
+```R
 # 12. Eliminate fungal non WHO-FPPL
 amr_counts <- amr_counts %>%
   filter(!grepl("^Alternaria", Species))
@@ -1086,14 +1085,14 @@ amr_counts <- amr_counts %>%
 
 
 {:.left}
-```{r}
+```R
 # 13. Combining sequence & mapping file
 ## read mapping file (.txt, tab-delimited)
 map <- readr::read_tsv("D:/OneDrive/Dokumen/R/R data/FAILSAFE/Thailand/SakhonNakhonApril2025.mapping_file.txt")
 ```
 
 {:.left}
-```{r}
+```R
 # 14. Merge AMR gene abundance across crops / environments
 amr_by_crop <- amr_counts %>%
   left_join(map, by="SampleID") %>%
@@ -1107,7 +1106,7 @@ amr_by_crop <- amr_counts %>%
 ## Bargraph visualization
 
 {:.left}
-```{r}
+```R
 barplot <- ggplot(amr_by_crop, aes(x = crop, y = TotalHits, fill = Species)) +
   geom_col(position = "stack") +
   facet_wrap(~ Gene, scales = "free_y") +
@@ -1121,7 +1120,7 @@ barplot
 ```
 
 {:.left}
-```{r}
+```R
 jpeg ("C:/Users/ASUS/Downloads/TrainingFAILSAFE/Result/FungAMRHeatBarplotTraining.jpg", units="in", width = 12, height = 8.5, res = 800)
 barplot
 ```
@@ -1130,7 +1129,7 @@ barplot
 ## Heatmap visualization
 
 {:.left}
-```{r}
+```R
 Trialplot <- ggplot(amr_by_crop, aes(x = Protein, y = crop, fill = TotalHits)) +
   geom_tile(color = "gray80") +
   scale_fill_viridis_c() +
@@ -1149,7 +1148,7 @@ Trialplot
 ```
 
 {:.left}
-```{r}
+```R
 jpeg ("C:/Users/ASUS/Downloads/TrainingFAILSAFE/Result/FungAMRHeatMapTraining.jpg", units="in", width = 12, height = 8.5, res = 800)
 Trialplot
 ```
@@ -1163,14 +1162,14 @@ Trialplot
 # Step 4.2 Data visualization - per-sample
 
 {:.left}
-```{r}
+```R
 amr_by_sample <- amr_counts %>%
   group_by(SampleID, Species, Protein) %>%
   summarise(TotalHits = sum(Hits), .groups = "drop")
 ```
 
 {:.left}
-```{r}
+```R
 amr_by_sample <- amr_by_sample %>%
   mutate(
     SampleID = factor(SampleID, levels = sort(unique(SampleID))),
@@ -1179,7 +1178,7 @@ amr_by_sample <- amr_by_sample %>%
 ```
 
 {:.left}
-```{r}
+```R
 Heattrial <- ggplot(amr_by_sample, aes(x = SampleID, y = Species, fill = TotalHits)) +
   geom_tile(color = "white") +
   scale_fill_gradient(low = "white", high = "red") +
@@ -1201,7 +1200,7 @@ Heattrial
 ```
 
 {:.left}
-```{r}
+```R
 jpeg ("C:/Users/ASUS/Downloads/TrainingFAILSAFE/Result/FungAMRHeatMapPer-sample.jpg", units="in", width = 10, height = 4.5, res = 800)
 Heattrial
 ```
