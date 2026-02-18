@@ -7,6 +7,18 @@ image: AMPtk.jpg
 
 Metagenomics preprocessing refers to the initial computational steps applied to raw sequencing data to ensure data quality, consistency, and analytical readiness before downstream analyses. This stage focuses on data curation and primary analysis, aiming to minimize technical noise while preserving biologically relevant signals.
 
+<style>
+pre {
+  font-family: Consolas,"courier new";
+  width: 1188px;
+  color: lightgreen;
+  float: left;
+  background-color: #0a0101;
+  padding: 18px;
+  font-size: 100%;
+}
+</style>
+
 ## A: What is Pipeline ?
 “A bioinformatics pipeline is a set of complex algorithms (tools), which is used to process sequence data”
 
