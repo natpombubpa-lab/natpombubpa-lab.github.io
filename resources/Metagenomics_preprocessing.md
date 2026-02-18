@@ -22,6 +22,8 @@ pre {
 ## A: What is Pipeline ?
 “A bioinformatics pipeline is a set of complex algorithms (tools), which is used to process sequence data”
 
+![Pipeline](TutorialFigs/Post_MAG_1.png){:class="img-responsive"}
+
 This stage includes quality assessment, removal of low-quality reads and artifacts, adapter trimming, contaminant or host filtering, and metadata standardization, followed by basic normalization and preliminary taxonomic or functional profiling to validate data integrity and inform subsequent analyses.
 
 ## A: Pipeline overview
