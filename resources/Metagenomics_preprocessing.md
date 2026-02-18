@@ -53,6 +53,7 @@ Called as “shebang” or Run this script using the Bash shell
 ```
 
 Load module that is prepared in HPCC system
+
 {:.left}
 ```bash
 # Load required modules
@@ -61,6 +62,7 @@ module load megahit
 ```
 
 Configure where are the directory for the analysis located
+
 {:.left}
 ```bash
 # Configuration
@@ -73,6 +75,7 @@ ASSEMBLER="megahit"  # Options: "megahit" or "metaspades"
 ```
 
 Sample array or what is the name of the sample file
+
 {:.left}
 ```bash
 # Sample array
