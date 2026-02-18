@@ -28,9 +28,11 @@ This stage includes quality assessment, removal of low-quality reads and artifac
 
 ## A: Pipeline overview
 Pipeline part 1: Contig preparation
+
 ![Pipeline Part 1](TutorialFigs/Post_MAG_2.png){:class="img-responsive"}
 
 Pipeline part 2: Contigs analysis
+
 ![Pipeline Part 2](TutorialFigs/Post_MAG_3.png){:class="img-responsive"}
 
 ## B: HPCC and Shell script
@@ -94,9 +96,11 @@ SAMPLES=(
 ```
 
 Decontamination explanation
+
 ![Decontamination explanation](TutorialFigs/Post_MAG_4.png){:class="img-responsive"}
 
 Assembly explanation
+
 ![Assembly explanation](TutorialFigs/Post_MAG_5.png){:class="img-responsive"}
 
 ## C: Details on Script (Pipeline part 2)
@@ -488,4 +492,145 @@ else
 fi
 echo "================================================================================"
 
+```
+
+
+{:.left}
+```bash
+#!/bin/bash
+#SBATCH --job-name=kraken2_fungi5k_training_contigs
+#SBATCH --output=kraken2_fungi5k_training_contigs_%j.out
+#SBATCH --error=kraken2_fungi5k_training_contigs_%j.err
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=24
+#SBATCH --mem=256G
+#SBATCH --time=72:00:00
+#SBATCH --partition=batch
+
+# Load Kraken2 module
+module load kraken2/2.1.3
+
+# Set paths
+DB="/srv/projects/db/kraken2/fungi5k"
+INPUT_DIR="/bigdata/pombubpalab/shared/FAILSAFE/training_feb2026/assembly_results"
+OUTPUT_DIR="/bigdata/pombubpalab/shared/FAILSAFE/training_feb2026/kraken2_fungi5k_contigs_results"
+
+# Create output directory
+mkdir -p ${OUTPUT_DIR}
+
+# Number of threads
+THREADS=24
+
+echo "========================================="
+echo "Kraken2 Fungi Analysis on Assembled Contigs - Fungi5k Database"
+echo "Training Samples (Feb 2026) - Analysis Type: ASSEMBLED CONTIGS"
+echo "Database: ${DB} (fungi5k - 5000+ genomes)"
+echo "Input directory: ${INPUT_DIR}"
+echo "Output directory: ${OUTPUT_DIR}"
+echo "Threads: ${THREADS}"
+echo "Started at: $(date)"
+echo "========================================="
+
+# Array of sample names - Training samples CO884
+samples=(
+    "Unknown_CO884-001R0001"
+    "Unknown_CO884-001R0002"
+    "Unknown_CO884-001R0003"
+)
+
+# Process each sample
+for sample in "${samples[@]}"; do
+    echo ""
+    echo "Processing ${sample}..."
+    echo "Started at: $(date)"
+    
+    CONTIGS="${INPUT_DIR}/${sample}/${sample}_contigs.fa"
+    OUTPUT="${OUTPUT_DIR}/${sample}_fungi5k_contigs.output"
+    REPORT="${OUTPUT_DIR}/${sample}_fungi5k_contigs.report"
+    UNCLASSIFIED="${OUTPUT_DIR}/${sample}_fungi5k_unclassified_contigs.fa"
+    CLASSIFIED="${OUTPUT_DIR}/${sample}_fungi5k_classified_contigs.fa"
+    
+    # Check if input file exists
+    if [[ ! -f "${CONTIGS}" ]]; then
+        echo "ERROR: Contigs file not found for ${sample}"
+        echo "Expected: ${CONTIGS}"
+        continue
+    fi
+    
+    echo "Input contigs: ${CONTIGS}"
+    
+    # Run Kraken2 on assembled contigs
+    kraken2 --db ${DB} \
+            --threads ${THREADS} \
+            --output ${OUTPUT} \
+            --report ${REPORT} \
+            --use-names \
+            --unclassified-out ${UNCLASSIFIED} \
+            --classified-out ${CLASSIFIED} \
+            ${CONTIGS}
+    
+    echo "Finished ${sample} at: $(date)"
+    echo "Report saved to: ${REPORT}"
+    
+    # Compress output files
+    echo "Compressing output files..."
+    gzip ${CLASSIFIED} 2>/dev/null
+    gzip ${UNCLASSIFIED} 2>/dev/null
+    
+    # Generate contig-level statistics
+    if [ -f ${REPORT} ]; then
+        echo ""
+        echo "Top 10 fungal classifications for ${sample}:"
+        echo "Percent | Contigs | Taxon"
+        grep -P '\tS\t' ${REPORT} | sort -k1 -nr | head -10 | awk '{printf "%.2f%% | %d | %s\n", $1, $2, $6}'
+    fi
+done
+
+echo ""
+echo "========================================="
+echo "All samples processed with Fungi5k database!"
+echo "Finished at: $(date)"
+echo "Results are in: ${OUTPUT_DIR}"
+echo "========================================="
+
+# Generate summary statistics
+echo ""
+echo "Generating summary statistics..."
+echo "Sample,Total_Contigs,Classified,Unclassified,Percent_Classified" > ${OUTPUT_DIR}/fungi5k_contigs_summary.csv
+
+for sample in "${samples[@]}"; do
+    REPORT="${OUTPUT_DIR}/${sample}_fungi5k_contigs.report"
+    if [ -f ${REPORT} ]; then
+        # Extract classification statistics from the first line of report
+        stats=$(head -1 ${REPORT})
+        unclass_pct=$(echo "$stats" | awk '{print $1}')
+        unclass_seqs=$(echo "$stats" | awk '{print $2}')
+        
+        # Get total from second line (root)
+        total=$(sed -n '2p' ${REPORT} | awk '{print $2}')
+        classified=$((total - unclass_seqs))
+        class_pct=$(echo "scale=2; 100 - $unclass_pct" | bc)
+        
+        echo "${sample},${total},${classified},${unclass_seqs},${class_pct}" >> ${OUTPUT_DIR}/fungi5k_contigs_summary.csv
+    fi
+done
+
+echo "Summary saved to: ${OUTPUT_DIR}/fungi5k_contigs_summary.csv"
+echo ""
+echo "========================================="
+echo "SUMMARY TABLE:"
+echo "========================================="
+cat ${OUTPUT_DIR}/fungi5k_contigs_summary.csv
+
+echo ""
+echo "========================================="
+echo "ANALYSIS COMPLETE"
+echo "========================================="
+echo "This contig-based analysis provides:"
+echo "  ✓ High-confidence species identification"
+echo "  ✓ Better taxonomic resolution"
+echo "  ✓ Validation of read-based results"
+echo ""
+echo "Note: Use read-based analysis for accurate abundance!"
+echo "========================================="
 ```
