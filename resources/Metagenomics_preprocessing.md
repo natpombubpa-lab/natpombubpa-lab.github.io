@@ -7,7 +7,7 @@ image: AMPtk.jpg
 
 Metagenomics preprocessing refers to the initial computational steps applied to raw sequencing data to ensure data quality, consistency, and analytical readiness before downstream analyses. This stage focuses on data curation and primary analysis, aiming to minimize technical noise while preserving biologically relevant signals.
 
-▶️ Watch: [Metagenomics preprocessing Tutorial]()
+▶️ Watch: [Metagenomics preprocessing Tutorial](https://www.youtube.com/watch?v=WnICYdNGXxg)
 
 <style>
 pre {
