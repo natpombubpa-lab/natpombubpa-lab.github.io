@@ -25,7 +25,7 @@ R program is a free, open-source integrated development environment (IDE) for th
 [Install Rstudio](https://posit.co/download/rstudio-desktop/) <br>
 Tutorial for [basic R in ecology](https://www.youtube.com/playlist?list=PLh96tAU6Z8Zxgqrfon4EuWw4yPoCVi-WV) <br>
 <br>
-Please check our video tutorial ▶️[here](https://www.youtube.com/watch?v=DAsMhQBYsAo) and downloading our training data 📁[here](https://drive.google.com/drive/folders/1chxW09P_M5-IqBn10zDzvxOuCFexJ5EB). <br>
+Please check our **video tutorial WHO FPPL visualization** ▶️[here](https://www.youtube.com/watch?v=DAsMhQBYsAo) and downloading our **training data** 📁[here](https://drive.google.com/drive/folders/1chxW09P_M5-IqBn10zDzvxOuCFexJ5EB). <br>
 Additional information for R color palette [here](https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf) and ggplot [info1](https://r-graph-gallery.com/ggplot2-package.html) / [info2](https://ggplot2.tidyverse.org/). <br>
 
 ## Step 0: Open Rstudio cloud and Launch Console
