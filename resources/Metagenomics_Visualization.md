@@ -29,9 +29,9 @@ Tutorial for [basic R in ecology](https://www.youtube.com/playlist?list=PLh96tAU
 
 ![Landing Page](TutorialFigs/1_Microbiome.png){:class="img-responsive"}
 
-Once you log in to Rstudio cloud, your web browser should bring up a similar window as the picture shown above. Click the button on the top right corner to create a new Rstudio project. Then, the next step is to click "Terminal" which should look like a picture below after you click on it. Please check our video tutorial [here]() and downloading our training data [here](https://drive.google.com/drive/folders/1chxW09P_M5-IqBn10zDzvxOuCFexJ5EB)
+Once you log in to Rstudio cloud, your web browser should bring up a similar window as the picture shown above. Click the button on the top right corner to create a new Rstudio project. Then, the next step is to click "Terminal" which should look like a picture below after you click on it. Please check our video tutorial ▶️[here](https://www.youtube.com/watch?v=DAsMhQBYsAo) and downloading our training data 📁[here](https://drive.google.com/drive/folders/1chxW09P_M5-IqBn10zDzvxOuCFexJ5EB)
 
-## T1 Shotgun Metagenomic Data Preparation
+# R script: _T1_MGS data processing_HPCC.Rmd_
 Prerequisites
 Ensure you have the following R packages installed and loaded. These libraries are essential.
 
@@ -156,7 +156,7 @@ write.csv(merged_data, "training.metadata.csv", row.names=FALSE)
 ```
 
 
-## T2 MGS Taxonomy Barplot
+# R script: _T2_MGS Fungal  WHO Taxonomicbar_HPCC.Rmd_
 Load the package
 
 {:.left}
@@ -798,7 +798,7 @@ per_sample_avg.data <- per_sample_avg_fppl %>%
 write.csv(per_sample_avg.data, "Training-persample_percentage.csv", row.names = FALSE)
 ```
 
-## T3 ResGen
+# R script: _T3_ResGen FungAMR data_HPCC.Rmd_
 
 {:.left}
 ```R
