@@ -18,6 +18,12 @@ pre {
   font-size: 100%;
 }
 </style>
+## Glimpse of R program & R studio
+R program is a free, open-source integrated development environment (IDE) for the R programming language, widely used for data analysis, visualization, and statistical interpretation.
+
+(Install R)[https://cran.rstudio.com/] 
+(Install Rstudio)[https://posit.co/download/rstudio-desktop/]
+Tutorial for (basic R in ecology)[https://www.youtube.com/playlist?list=PLh96tAU6Z8Zxgqrfon4EuWw4yPoCVi-WV]
 
 ## Step 0: Open Rstudio cloud and Launch Console
 
