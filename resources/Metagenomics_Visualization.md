@@ -200,7 +200,7 @@ metadata %>% select(SampleID, crop) %>% distinct() %>% count(SampleID)
 
 
 
-## Step2 Merge Taxa and Select Only FPPL
+## Step 2 Merge Taxa and Select Only FPPL
 
 {:.left}
 ```R
@@ -352,7 +352,7 @@ fppl_meta <- fppl_meta %>%
 
 
 
-# Step 3.1 Visualization 1 - Shows crop aggregate
+## Step 3.1 Visualization 1 - Shows crop aggregate
 
 {:.left}
 ```R
@@ -553,7 +553,7 @@ write.csv(per_crop_avg, "Training-Agregate_percentage.csv", row.names = FALSE)
 
 
 
-# Step 3.2 Visualization 2 - Shows sample replication
+## Step 3.2 Visualization 2 - Shows sample replication
 
 {:.left}
 ```R
@@ -586,12 +586,11 @@ per_sample <- fppl_meta %>%
 per_sample <- per_sample %>%
   mutate(Species2 = ifelse(is.na(Species2), "Unidentified species", Species2))
 
-```
-
-## 5. Grouping & Data Normalization. 
+``` 
 
 {:.left}
 ```R
+## 5. Grouping & Data Normalization.
 per_sample_avg <- per_sample %>%
   group_by(SampleID, crop, Species2) %>%
   summarise(Prop = mean(Prop, na.rm = TRUE), .groups="drop") %>%
@@ -829,9 +828,9 @@ library(jsonlite)
 ```
 
 
-# Step 1 Data preparation
-### Put all txt file of kraken result into one folder
-### Adjust the folder & pattern to your files (e.g., RK1.txt, RB1.csv, …)
+## Step 1 Data preparation
+Put all txt file of kraken result into one folder
+Adjust the folder & pattern to your files (e.g., RK1.txt, RB1.csv, …)
 
 {:.left}
 ```R
@@ -940,7 +939,7 @@ mmseqs_filtered <- mmseqs_all %>%
 ```
 
 
-# Step 2 Data alignment from UniProt Database
+## Step 2 Data alignment from UniProt Database
 
 {:.left}
 ```R
@@ -1075,7 +1074,7 @@ mmseqs_annotated <- mmseqs_annotated %>%
 ```
 
 
-# Step 3 Data analysis
+## Step 3 Data analysis
 
 {:.left}
 ```R
@@ -1110,7 +1109,7 @@ amr_by_crop <- amr_counts %>%
 ```
 
 
-# Step 4.1 Data visualization - Agregate
+## Step 4.1 Data visualization - Agregate
 
 ## Bargraph visualization
 
@@ -1168,7 +1167,7 @@ Trialplot
 
 
 
-# Step 4.2 Data visualization - per-sample
+## Step 4.2 Data visualization - per-sample
 
 {:.left}
 ```R
