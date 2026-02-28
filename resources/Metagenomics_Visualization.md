@@ -21,15 +21,15 @@ pre {
 ## Glimpse of R program & R studio
 R program is a free, open-source integrated development environment (IDE) for the R programming language, widely used for data analysis, visualization, and statistical interpretation.
 
-(Install R)[https://cran.rstudio.com/] 
-(Install Rstudio)[https://posit.co/download/rstudio-desktop/]
-Tutorial for (basic R in ecology)[https://www.youtube.com/playlist?list=PLh96tAU6Z8Zxgqrfon4EuWw4yPoCVi-WV]
+[Install R](https://cran.rstudio.com/) 
+[Install Rstudio](https://posit.co/download/rstudio-desktop/)
+Tutorial for [basic R in ecology](https://www.youtube.com/playlist?list=PLh96tAU6Z8Zxgqrfon4EuWw4yPoCVi-WV)
 
 ## Step 0: Open Rstudio cloud and Launch Console
 
 ![Landing Page](TutorialFigs/1_Microbiome.png){:class="img-responsive"}
 
-Once you log in to Rstudio cloud, your web browser should bring up a similar window as the picture shown above. Click the button on the top right corner to create a new Rstudio project. Then, the next step is to click "Terminal" which should look like a picture below after you click on it.
+Once you log in to Rstudio cloud, your web browser should bring up a similar window as the picture shown above. Click the button on the top right corner to create a new Rstudio project. Then, the next step is to click "Terminal" which should look like a picture below after you click on it. Please check our video tutorial [here]() and downloading our training data [here](https://drive.google.com/drive/folders/1chxW09P_M5-IqBn10zDzvxOuCFexJ5EB)
 
 ## T1 Shotgun Metagenomic Data Preparation
 Prerequisites
