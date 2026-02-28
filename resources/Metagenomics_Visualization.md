@@ -700,7 +700,7 @@ unique(per_sample_avg_fppl$Species_priority)
 {:.left}
 ```R
 ## 9. Reorder legend: Critical → High → Medium
-priority_order <- c("Critical", "High", "Unidentified")
+priority_order <- c("Critical", "High", "Medium", "Unidentified")
 
 # a. Make Priority an ordered factor
 per_sample_avg_fppl <- per_sample_avg_fppl %>%
