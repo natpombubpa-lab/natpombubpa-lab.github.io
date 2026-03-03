@@ -45,7 +45,7 @@ Additional information for R color palette [here](https://www.nceas.ucsb.edu/sit
   width="750px"
 %}
 
-## Step 0: Open Rstudio cloud and Launch Console
+### Step 0: Open Rstudio cloud and Launch Console
 
 ![Landing Page](TutorialFigs/1_Microbiome.png){:class="img-responsive"}
 
@@ -63,7 +63,7 @@ library(stringr)
 library(readr)
 library(dplyr)
 ```
-## Step 1 Data preparation
+### Step 1: Data preparation
 Put all txt file of kraken result into one folder
 Adjust the folder & pattern to your files (e.g., RK1.txt, RB1.txt, …)
 
@@ -142,7 +142,7 @@ readr::write_csv(counts_long, "HPCC_training.csv")
 
 
 
-## Step 2 Combining sequence & mapping file
+### Step 2: Combining sequence & mapping file
 
 {:.left}
 ```R
@@ -195,7 +195,7 @@ library(colorspace)
 
 
 
-## Step 1 Load the data from combining kraken + mapping file
+### Step 1: Load the data from combining kraken + mapping file
 
 {:.left}
 ```R
@@ -217,7 +217,7 @@ metadata %>% select(SampleID, crop) %>% distinct() %>% count(SampleID)
 
 
 
-## Step 2 Merge Taxa and Select Only FPPL
+### Step 2: Merge Taxa and Select Only FPPL
 
 {:.left}
 ```R
@@ -369,7 +369,8 @@ fppl_meta <- fppl_meta %>%
 
 
 
-## Step 3.1 Visualization 1 - Shows crop aggregate
+### Step 3.1: Visualization 1 - Shows crop aggregate
+## Bargraph visualization
 
 {:.left}
 ```R
@@ -561,16 +562,8 @@ View the percentage data
 write.csv(per_crop_avg, "Training-Agregate_percentage.csv", row.names = FALSE)
 ```
 
-
-
-
-
-
-
-
-
-
-## Step 3.2 Visualization 2 - Shows sample replication
+### Step 3.2: Visualization 2 - Shows sample replication
+## Bargraph visualization
 
 {:.left}
 ```R
@@ -817,6 +810,11 @@ per_sample_avg.data <- per_sample_avg_fppl %>%
 write.csv(per_sample_avg.data, "Training-persample_percentage.csv", row.names = FALSE)
 ```
 
+
+
+
+
+
 ## **R script**: _T3_ResGen FungAMR data_HPCC.Rmd_
 
 {:.left}
@@ -845,7 +843,7 @@ library(jsonlite)
 ```
 
 
-## Step 1 Data preparation
+### Step 1: Data preparation
 Put all txt file of kraken result into one folder
 Adjust the folder & pattern to your files (e.g., RK1.txt, RB1.csv, …)
 
@@ -956,7 +954,7 @@ mmseqs_filtered <- mmseqs_all %>%
 ```
 
 
-## Step 2 Data alignment from UniProt Database
+### Step 2: Data alignment from UniProt Database
 
 {:.left}
 ```R
@@ -1090,8 +1088,7 @@ mmseqs_annotated <- mmseqs_annotated %>%
                          Gene))
 ```
 
-
-## Step 3 Data analysis
+### Step 3: Data analysis
 
 {:.left}
 ```R
@@ -1126,7 +1123,7 @@ amr_by_crop <- amr_counts %>%
 ```
 
 
-## Step 4.1 Data visualization - Agregate
+### Step 4.1: Data visualization - Agregate
 
 ## Bargraph visualization
 
@@ -1184,7 +1181,7 @@ Trialplot
 
 
 
-## Step 4.2 Data visualization - per-sample
+### Step 4.2: Data visualization - per-sample
 
 {:.left}
 ```R
