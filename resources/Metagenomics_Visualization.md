@@ -5,6 +5,15 @@ image: AMPtk.jpg
 
 # Metagenomics post processing (Data visualization and analysis)
 
+Metagenomics post-processing refers to the set of analytical and interpretative steps applied after raw sequencing data have been quality-controlled, assembled, and taxonomically or functionally profiled. This stage focuses on transforming complex metagenomic outputs into biologically meaningful insights through data visualization, statistical analysis, and integrative interpretation.
+
+{%
+  include figure.html
+  image="resources/TutorialFigs/Viz_MGS_2.jpg"
+  caption="Visual example of fungal metagenomics data"
+  width="750px"
+%}
+
 This tutorial combines the workflows for analyzing WHO Fungal Priority Pathogens (WHO FPPL) and Antimicrobial Resistance (AMR) Genes into a single, cohesive guide. It assumes you have already processed your raw reads into count tables (as covered in the previous data processing step).
 
 <style>
@@ -27,6 +36,14 @@ Tutorial for [basic R in ecology](https://www.youtube.com/playlist?list=PLh96tAU
 <br>
 Please check our **video tutorial WHO FPPL visualization** ▶️[here](https://www.youtube.com/watch?v=DAsMhQBYsAo) and downloading our **training data** 📁[here](https://drive.google.com/drive/folders/1chxW09P_M5-IqBn10zDzvxOuCFexJ5EB). <br>
 Additional information for R color palette [here](https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf) and ggplot [info1](https://r-graph-gallery.com/ggplot2-package.html) / [info2](https://ggplot2.tidyverse.org/). <br>
+
+## Fungal Metagenomics Data Visualization Pipeline
+
+{%
+  include figure.html
+  image="resources/TutorialFigs/Viz_MGS_1.jpg"
+  width="750px"
+%}
 
 ## Step 0: Open Rstudio cloud and Launch Console
 
@@ -1209,9 +1226,17 @@ Heattrial
 
 {:.left}
 ```R
+
 jpeg ("C:/Users/ASUS/Downloads/TrainingFAILSAFE/Result/FungAMRHeatMapPer-sample.jpg", units="in", width = 10, height = 4.5, res = 800)
 Heattrial
 ```
 
 
+## Fungal Metagenomics Data Pipeline Summary
+
+{%
+  include figure.html
+  image="resources/TutorialFigs/Viz_MGS_3.jpg"
+  width="750px"
+%}
 
