@@ -19,7 +19,9 @@ The training materials include: <br>
 - High-Performance Computing Cluster (HPCC) setup  <br>
 - Shell scripting - R-based data analysis and visualization  <br>
 - Detailed step-by-step scripts and documentation <br>
-Training resources are available at: <br>
+<br>
+**Training resources are available at** 
+<br>
 [https://natpombubpa-lab.github.io/resources/Metagenomics_preprocessing](https://natpombubpa-lab.github.io/resources/Metagenomics_preprocessing)
 and 
 [https://natpombubpa-lab.github.io/resources/Metagenomics_Visualization](https://natpombubpa-lab.github.io/resources/Metagenomics_Visualization)
