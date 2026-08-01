@@ -1,9 +1,10 @@
---- title: "SEA-ARMi 1st Online Training" 
+---
+title: "SEA-ARMi 1st Online Training" 
 author: Niar Ibrahim 
 member: Niar Ibrahim 
-tags: 
-- news 
-- update 
+tags:
+  - news
+  - update
 ---
 ## SEA-ARMi 1st Online Training 
 The **Southeast Asia Antifungal Resistance Monitoring Initiative (SEA-ARMi)** successfully launched its first online training session on **metagenomics preprocessing**, focusing on data curation and primary data analysis. 
@@ -19,6 +20,6 @@ The training materials include: <br>
 - Shell scripting - R-based data analysis and visualization  <br>
 - Detailed step-by-step scripts and documentation <br>
 Training resources are available at: <br>
-<br> [https://natpombubpa-lab.github.io/resources/Metagenomics_preprocessing](https://natpombubpa-lab.github.io/resources/Metagenomics_preprocessing)
+[https://natpombubpa-lab.github.io/resources/Metagenomics_preprocessing](https://natpombubpa-lab.github.io/resources/Metagenomics_preprocessing)
 and 
 [https://natpombubpa-lab.github.io/resources/Metagenomics_Visualization](https://natpombubpa-lab.github.io/resources/Metagenomics_Visualization)
