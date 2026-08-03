@@ -1,5 +1,177 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.1007/s00114-026-02134-y
+  title: Predicting the absence of World Health Organization fungal priority pathogens
+    in agricultural soils using machine learning and ITS metabarcoding
+  authors:
+  - Syahriar Nur Maulana Malik Ibrahim
+  - Chayawan Jaikla
+  - Nuttapon Pombubpa
+  publisher: The Science of Nature
+  date: '2026-07-21'
+  link: https://doi.org/hcdf5z
+  image: https://media.springernature.com/w120/springer-static/cover-hires/journal/114?as=webp
+  extra-links:
+  - type: journal
+  tags:
+  - WHO  fungal  priority  pathogens  list  (FPPL)
+  - Next-generation  sequencing  (NGS)
+  - Metabarcoding
+  - Machine  learning
+  - Decision  tree  models
+  - Environmental  thresholds
+- id: doi:10.1038/s41598-026-55443-7
+  title: 'Opportunistic fungi in tropical beaches: Diversity, WHO fungal priority
+    pathogens, and antifungal resistance case study'
+  authors:
+  - Syahriar Nur Maulana Malik Ibrahim
+  - Chayaporn Lakmuang
+  - Teeratat Kaewjon
+  - Panwad Tongchai
+  - Gregorius Nico Adi Setiawan
+  - Phetcharin Hinmo
+  - Ariya Chindamporn
+  - Nattapol Kraisitudomsook
+  - Nuttapon Pombubpa
+  publisher: Scientific Reports
+  date: '2026-06-04'
+  link: https://doi.org/hcdf52
+  image: https://media.springernature.com/full/nature-cms/uploads/product/srep/header-d3c533c187c710c1bedbd8e293815d5f.svg
+  extra-links:
+  - type: journal
+  tags:
+  - WHO  FPPL
+  - Opportunistic  pathogens
+  - Diversity
+  - Antifungal  resistance
+  - Fungal community structure
+  - Beach reservoirs
+- id: doi:10.1016/j.clet.2025.101075
+  title: Bio-hydrogel formulation for co-immobilization of microalgae and bacteria
+    in living biofilters for nutrient recovery from secondary industrial effluents
+  authors:
+  - Chalampol Janpum
+  - Jagroop Pandhal
+  - Nuttapon Pombubpa
+  - Tanakit Komkhum
+  - Chonnikarn Sirichan
+  - Piyakorn Srichuen
+  - Pichaya In-na
+  publisher: Cleaner Engineering and Technology
+  date: '2025-12-01'
+  link: https://doi.org/hcdf53
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S2666790825001983-ga1.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Wastewater treatment
+  - Nutrient recovery
+  - Hydrogel formulation
+  - Biofilters
+  - Co-immobilization
+- id: doi:10.1128/msystems.01166-24
+  title: Optimizing fungal DNA extraction and purification for Oxford Nanopore untargeted
+    shotgun metagenomic sequencing from simulated hemoculture specimens
+  authors:
+  - Nattapong Langsiri
+  - Wieland Meyer
+  - Laszlo Irinyi
+  - Navaporn Worasilchai
+  - Nuttapon Pombubpa
+  - Thidathip Wongsurawat
+  - Piroon Jenjaroenpun
+  - J. Jennifer Luangsa-ard
+  - Ariya Chindamporn
+  publisher: mSystems
+  date: '2025-06-17'
+  link: https://doi.org/hcdf54
+  image: https://journals.asm.org/pb-assets/images/pub-nav/MSYS-logo-1780605869780.png
+  extra-links:
+  - type: journal
+  tags:
+  - DNA preparation
+  - long read
+  - simulated hemoculture
+  - Oxford Nanopore Technology
+- id: doi:10.1002/ece3.71629
+  title: Population Persistence and Soil Microbial Communities of a Serpentine Endemic
+    Plant Outside Its Historic Elevation Range
+  authors:
+  - Courtney Collins
+  - Devin Dinwiddie
+  - Nuttapon Pombubpa
+  - Krista McGuire
+  - Marko J. Spasojevic
+  publisher: Ecology and Evolution
+  date: '2025-06-01'
+  link: https://doi.org/hcdf55
+  image: https://onlinelibrary.wiley.com/cms/asset/900638ab-6e28-4851-b636-a3c2f542807c/ece3.v15.6.cover.jpg
+  extra-links:
+  - type: journal
+  tags:
+  - Arbuscular mycorrhizal fungi
+  - climate change
+  - endemic
+  - microhabitat
+  - "plant\u2013microbe interactions"
+- id: doi:10.17504/protocols.io.3byl4w1krvo5/v1
+  title: Fungal Isolation and Cell DNA (c-DNA) Extraction from Soil Samples v1
+  authors:
+  - Nuttapon Pombubpa
+  - Ariya Chindamporn
+  - Nattapol Kraisitudomsook
+  - Neil Andrew Robert Gow
+  - Syahriar Nur Maulana Malik Ibrahim
+  - Fikran Aranda Fahrudin
+  publisher: Springer Science and Business Media LLC
+  date: '2025-01-30'
+  link: https://doi.org/hcdf56
+  image: https://onlinelibrary.wiley.com/cms/asset/a25c0500-6c32-466b-9f13-73b4e2c0896c/mec14694-fig-0004-m.png
+  extra-links:
+  - type: journal
+  tags:
+  - fungal cDNA extraction
+- id: doi:10.3390/life15030488
+  title: 'Exploring Fungal Abundance and WHO Fungal Priority Pathogens in Agricultural
+    Fields: A One Health Perspective in Northeast Thailand'
+  authors:
+  - Chayaporn Lakmuang
+  - Syahriar Nur Maulana Malik Ibrahim
+  - Teeratat Kaewjon
+  - Nattapol Kraisitudomsook
+  - Naraporn Somboonna
+  - Ratmanee Chanabun
+  - Ariya Chindamporn
+  - Nuttapon Pombubpa
+  publisher: Life
+  date: '2025-03-18'
+  link: https://doi.org/hcdf57
+  image: https://mdpi-res.com/cdn-cgi/image/width=32%2Cheight=32/https://mdpi-res.com/img/journals/life-logo-sq.png?6e8bab011f052a6d
+  extra-links:
+  - type: journal
+  tags:
+  - fungal pathogen
+  - WHO FPPL
+  - agriculture
+  - one health
+  - metabarcoding
+- id: doi:10.17504/protocols.io.dm6gp9295vzp/v1
+  title: Environmental DNA (e-DNA) extraction from soil v1
+  authors:
+  - Nuttapon Pombubpa
+  - Ariya Chindamporn
+  - Nattapol Kraisitudomsook
+  - Neil Andrew Robert Gow
+  - Syahriar Nur Maulana Malik Ibrahim
+  - Fikran Aranda Fahrudin
+  publisher: Springer Science and Business Media LLC
+  date: '2025-01-22'
+  link: https://doi.org/hcdf58
+  image: https://onlinelibrary.wiley.com/cms/asset/a25c0500-6c32-466b-9f13-73b4e2c0896c/mec14694-fig-0004-m.png
+  extra-links:
+  - type: journal
+  tags:
+  - soil eDNA extraction
 - id: doi:10.17504/protocols.io.6qpvr929pvmk/v1
   title: Soil Collection Protocol v1
   authors:
