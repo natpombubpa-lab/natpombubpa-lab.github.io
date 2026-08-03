@@ -1,5 +1,46 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.17504/protocols.io.6qpvr929pvmk/v1
+  title: Soil Collection Protocol v1
+  authors:
+  - Nuttapon Pombubpa
+  - Ariya Chindamporn
+  - Nattapol Kraisitudomsook
+  - Neil Andrew Robert Gow
+  - Syahriar Nur Maulana Malik Ibrahim
+  - Fikran Aranda Fahrudin
+  publisher: Springer Science and Business Media LLC
+  date: '2025-01-22'
+  link: https://doi.org/hcdf5h
+  image: https://onlinelibrary.wiley.com/cms/asset/a25c0500-6c32-466b-9f13-73b4e2c0896c/mec14694-fig-0004-m.png
+  extra-links:
+  - type: journal
+  tags:
+  - Microbial soil sampling
+- id: doi:10.3389/fmicb.2024.1452534
+  title: Plant community richness and foliar fungicides impact soil Streptomyces inhibition,
+    resistance, and resource use phenotypes
+  authors:
+  - Matthew Michalska-Smith
+  - Daniel C. Schlatter
+  - Nuttapon Pombubpa
+  - Sarah C. Castle
+  - A. Stuart Grandy
+  - Elizabeth T. Borer
+  - Eric W. Seabloom
+  - Linda L. Kinkel
+  publisher: Frontiers in Microbiology
+  date: '2024-10-07'
+  link: https://doi.org/hcdf5j
+  image: https://www.frontiersin.org/api/ipx/s=326x184&fit=cover&f=webp/https://d2csxpduxe849s.cloudfront.net/media/E32629C6-9347-4F84-81FEAEF7BFA342B3/D7C8E8F5-EB21-4B26-BE7D25D7B2089254/webimage-9F239CC8-42C5-479C-ADDCDB2931B331FF.png
+  extra-links:
+  - type: journal
+  tags:
+  - soil nutrients
+  - microbe-microbe interactions
+  - phenotypes
+  - co-evolution
+  - phylogeny
 - id: doi:10.1038/s41598-024-68250-9
   title: A large scale study of portable sweat test sensor for accurate, non-invasive
     and rapid COVID-19 screening based on volatile compound marker detection
