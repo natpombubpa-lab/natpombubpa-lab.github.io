@@ -1,5 +1,33 @@
 # GENERATED AUTOMATICALLY, DO NOT EDIT
 
+- id: doi:10.1038/s41598-024-68250-9
+  title: A large scale study of portable sweat test sensor for accurate, non-invasive
+    and rapid COVID-19 screening based on volatile compound marker detection
+  authors:
+  - Isaya Thaveesangsakulthai
+  - Kaywalee Chatdarong
+  - Naraporn Somboonna
+  - Nuttapon Pombubpa
+  - Tanapat Palaga
+  - Sureerat Makmuang
+  - Kanet Wongravee
+  - Voravee Hoven
+  - Pakpum Somboon
+  - Pattama Torvorapanit
+  - Thumnoon Nhujak
+  - Chadin Kulsing
+  publisher: Scientific Reports
+  date: '2024-08-30'
+  link: https://doi.org/hcdf5d
+  image: https://media.springernature.com/full/nature-cms/uploads/product/srep/header-d3c533c187c710c1bedbd8e293815d5f.svg
+  extra-links:
+  - type: journal
+  tags:
+  - COVID-19 screening
+  - Disease diagnosis
+  - Modified PID
+  - Sweat sensor
+  - VOCs
 - id: doi:10.1016/j.biortech.2024.130509
   title: Microalgal-bacterial immobilized co-culture as living biofilters for nutrient
     recovery from synthetic wastewater and their potential as biofertilizers
