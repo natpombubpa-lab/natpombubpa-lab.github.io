@@ -1,3 +1,84 @@
+- id: doi:10.1007/s00114-026-02134-y
+  image: https://media.springernature.com/w120/springer-static/cover-hires/journal/114?as=webp
+  extra-links:
+    - type: journal
+  tags:
+    - WHO  fungal  priority  pathogens  list  (FPPL)
+    - Next-generation  sequencing  (NGS) 
+    - Metabarcoding 
+    - Machine  learning 
+    - Decision  tree  models
+    - Environmental  thresholds
+
+- id: doi:10.1038/s41598-026-55443-7
+  image: https://media.springernature.com/full/nature-cms/uploads/product/srep/header-d3c533c187c710c1bedbd8e293815d5f.svg
+  extra-links:
+    - type: journal
+  tags:
+    - WHO  FPPL
+    - Opportunistic  pathogens 
+    - Diversity 
+    - Antifungal  resistance
+    - Fungal community structure
+    - Beach reservoirs
+
+- id: doi:10.1016/j.clet.2025.101075
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S2666790825001983-ga1.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Wastewater treatment
+    - Nutrient recovery 
+    - Hydrogel formulation 
+    - Biofilters
+    - Co-immobilization
+
+- id: doi:10.1128/msystems.01166-24
+  image: https://journals.asm.org/pb-assets/images/pub-nav/MSYS-logo-1780605869780.png
+  extra-links:
+    - type: journal
+  tags:
+    - DNA preparation
+    - long read 
+    - simulated hemoculture 
+    - Oxford Nanopore Technology
+
+- id: doi:10.1002/ece3.71629
+  image: https://onlinelibrary.wiley.com/cms/asset/900638ab-6e28-4851-b636-a3c2f542807c/ece3.v15.6.cover.jpg
+  extra-links:
+    - type: journal
+  tags:
+    - Arbuscular mycorrhizal fungi
+    - climate change 
+    - endemic 
+    - microhabitat
+    - plant–microbe interactions
+
+- id: doi:10.17504/protocols.io.3byl4w1krvo5/v1
+  image: https://onlinelibrary.wiley.com/cms/asset/a25c0500-6c32-466b-9f13-73b4e2c0896c/mec14694-fig-0004-m.png
+  extra-links:
+    - type: journal
+  tags:
+    - fungal cDNA extraction
+
+- id: doi:10.3390/life15030488
+  image: https://mdpi-res.com/cdn-cgi/image/width=32%2Cheight=32/https://mdpi-res.com/img/journals/life-logo-sq.png?6e8bab011f052a6d
+  extra-links:
+    - type: journal
+  tags:
+    - fungal pathogen
+    - WHO FPPL 
+    - agriculture 
+    - one health
+    - metabarcoding
+    
+- id: doi:10.17504/protocols.io.dm6gp9295vzp/v1
+  image: https://onlinelibrary.wiley.com/cms/asset/a25c0500-6c32-466b-9f13-73b4e2c0896c/mec14694-fig-0004-m.png
+  extra-links:
+    - type: journal
+  tags:
+    - soil eDNA extraction
+
 - id: doi:10.17504/protocols.io.6qpvr929pvmk/v1
   image: https://onlinelibrary.wiley.com/cms/asset/a25c0500-6c32-466b-9f13-73b4e2c0896c/mec14694-fig-0004-m.png
   extra-links:
