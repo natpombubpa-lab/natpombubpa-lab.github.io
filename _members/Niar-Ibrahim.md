@@ -5,7 +5,7 @@ aliases:
   - Syahriar Nur Maulana Malik Ibrahim
 
 image: images/team/Niar.jpg
-role: postdoc
+role: researchassist
 links:
   email: syahriarmicro@gmail.com
   orcid: 0000-0003-2468-7276
