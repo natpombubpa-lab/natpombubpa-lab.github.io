@@ -1,5 +1,5 @@
 ---
-name: Niar Ibrahim
+name: Niar Rose
 aliases:
   - Niar Ibrahim Rose
   - Syahriar Nur Maulana Malik Ibrahim
