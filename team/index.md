@@ -20,6 +20,7 @@ Our lab is recently established in 2021 and we are recruiting both graduate and 
 
 {% include list.html data="members" component="portrait" filters="role: pi, group: " %}
 {% include list.html data="members" component="portrait" filters="role: postdoc, group: " %}
+{% include list.html data="members" component="portrait" filters="role: research, group: " %}
 {% include list.html data="members" component="portrait" filters="role: phd, group: " %}
 {% include list.html data="members" component="portrait" filters="role: master, group: " %}
 {% include list.html data="members" component="portrait" filters="role: undergrad, group: " %}
