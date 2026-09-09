@@ -4,7 +4,7 @@ aliases:
   - Jurarak Hokoon
   - J. Hokoon
 
-image: images/team/Fah.jpg
+image: images/team/Fah1.JPG
 role: undergrad
 
 ---
