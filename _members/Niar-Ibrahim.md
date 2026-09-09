@@ -4,8 +4,8 @@ aliases:
   - Niar Ibrahim Rose
   - Syahriar Nur Maulana Malik Ibrahim
 
-image: images/team/Niar.jpg
-role: postdoc
+image: images/team/Niar_phd.jpg
+role: research
 links:
   email: syahriarmicro@gmail.com
   orcid: 0000-0003-2468-7276
