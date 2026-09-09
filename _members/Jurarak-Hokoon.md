@@ -5,9 +5,7 @@ aliases:
   - J. Hokoon
 
 image: images/team/Fah1.JPG
-role: undergrad
+role: master
 
 ---
-My name is Jurarak Hokoon (Fah), a senior Microbiology student at Chulalongkorn University with a passion for forensic science. My research explores how soil microbiomes can be used in forensic investigations, aiming to strengthen evidence analysis methods in Thailand and inspire future advancements in the field.
-
-จุฬาลักษณ์ โฮกอ่อน (ฟ้า) นิสิตชั้นปีที่ 4 สาขาจุลชีววิทยา คณะวิทยาศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย งานวิจัยมุ่งเน้นการศึกษาไมโครไบโอมในดินเพื่อนำมาประยุกต์ใช้ในกระบวนการสืบสวนทางนิติวิทยาศาสตร์ โดยมีเป้าหมายเพื่อพัฒนาวิธีการวิเคราะห์หลักฐานที่มีความถูกต้องและก้าวหน้ามากยิ่งขึ้นสำหรับประเทศไทย และเป็นแรงบันดาลใจในการสร้างแนวทางใหม่ให้แก่วงการนี้ในอนาคต
+My name is Jurarak Hokoon (Fah), a Master’s student in Microbiology at Chulalongkorn University with a strong interest in forensic science. My research focuses on the application of soil microbiomes in forensic investigations, particularly their potential for linking evidence to geographic locations. Through my research, I aim to contribute to the development of reliable microbiome based approaches for forensic evidence analysis and advance their potential applications in Thailand.
