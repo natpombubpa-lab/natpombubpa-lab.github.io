@@ -4,8 +4,8 @@ aliases:
   - Jurarak Hokoon
   - J. Hokoon
 
-image: images/team/Fah1.JPG
-role: master
+image: images/team/Fah2.JPEG
+role: research
 
 ---
-My name is Jurarak Hokoon (Fah), a Master’s student in Microbiology at Chulalongkorn University with a strong interest in forensic science. My research focuses on the application of soil microbiomes in forensic investigations, particularly their potential for linking evidence to geographic locations. Through my research, I aim to contribute to the development of reliable microbiome based approaches for forensic evidence analysis and advance their potential applications in Thailand.
+My name is Jurarak Hokoon (Fah), a Research Assistant at NatPom Lab, Chulalongkorn University, with a strong interest in forensic science. My research focuses on the application of soil microbiomes in forensic investigations, particularly their potential for linking soil evidence to geographic locations. In addition to my own research, I support other lab members with their research activities and provide assistance when needed.
